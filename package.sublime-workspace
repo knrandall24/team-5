@@ -1,0 +1,282 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"font",
+				"font-size\tproperty"
+			],
+			[
+				"proc",
+				"process_without_plots"
+			],
+			[
+				"ac",
+				"actorMap"
+			],
+			[
+				"out",
+				"outfile"
+			],
+			[
+				"unorde",
+				"unordered_map"
+			],
+			[
+				"gy",
+				"gy"
+			],
+			[
+				"tot",
+				"total_len"
+			],
+			[
+				"fet",
+				"fetchone"
+			],
+			[
+				"bu",
+				"button"
+			],
+			[
+				"nam",
+				"business_name"
+			],
+			[
+				"temp",
+				"temperature"
+			],
+			[
+				"re",
+				"redirect"
+			],
+			[
+				"comm",
+				"commit"
+			],
+			[
+				"te",
+				"temp_c"
+			],
+			[
+				"get",
+				"get_db"
+			],
+			[
+				"st",
+				"students_id"
+			],
+			[
+				"cour",
+				"course_id"
+			],
+			[
+				"r",
+				"room_id"
+			],
+			[
+				"pr",
+				"prof_id"
+			],
+			[
+				"course",
+				"coursename"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/BryantLiu/Documents/COGS120/lab4/routes/index.js",
+		"/Users/BryantLiu/Documents/COGS120/lab3/hello/app.js",
+		"/Users/BryantLiu/Documents/COGS120/lab3/hello/public/js/introHCI.js",
+		"/Volumes/GoogleDrive/My Drive/WI2k19/COGS120/introHCI/lab3/static/css/introHCI.css",
+		"/Volumes/GoogleDrive/My Drive/WI2k19/COGS120/introHCI/lab2/static/js/introHCI.js",
+		"/Volumes/GoogleDrive/My Drive/WI2k19/COGS120/introHCI/lab2/static/index.html",
+		"/Volumes/GoogleDrive/My Drive/WI2k19/COGS120/introHCI/lab2/static/css/introHCI.css",
+		"/Volumes/GoogleDrive/My Drive/WI2k19/COGS120/introHCI/lab1/static/index.html",
+		"/Volumes/GoogleDrive/My Drive/WI2k19/COGS120/introHCI/lab1/static/css/introHCI.css",
+		"/Users/BryantLiu/Google Drive/FA2k18/ECE16/ece16-fa18-makeitwayne17/Lab2/lab2_raw_heartbeat_BryantLiu.py",
+		"/Users/BryantLiu/Documents/CSE100/cs100fca/PA3/src/MovieNode.hpp",
+		"/Users/BryantLiu/Google Drive/FA2k18/ECE16/ece16-fa18-makeitwayne17/Lab3/my_hr_monitor.py",
+		"/Users/BryantLiu/Google Drive/FA2k18/ECE16/ece16-fa18-makeitwayne17/Lab1/Objective4/lab1_BLE_BryantLiu.py",
+		"/Users/BryantLiu/Desktop/unsupervised_bdr.py",
+		"/Users/BryantLiu/Downloads/live_plot_serial_slow.py",
+		"/Users/BryantLiu/Google Drive/Website/website.html",
+		"/Users/BryantLiu/Downloads/live_plot.py",
+		"/Users/BryantLiu/Downloads/live_plot_multiple.py",
+		"/Users/BryantLiu/.bash_profile",
+		"/Users/BryantLiu/Google Drive/FA2k18/ECE16/ece16-fa18-makeitwayne17/Lab1/Objective3/lab1_pyserial_BryantLiu.py",
+		"/Volumes/GoogleDrive/My Drive/SP2k18/ECE140B/website/ECE-140B-Spotter/Spotter/templates/get_example.html",
+		"/Volumes/GoogleDrive/My Drive/WI2k18/ECE140A/Assignment/6/assignment6-makeitwayne17/madlib/schema.sql",
+		"/Volumes/GoogleDrive/My Drive/SP2k18/ECE140B/website/ECE-140B-Spotter/Spotter/Spotter.py",
+		"/Volumes/GoogleDrive/My Drive/SP2k18/ECE140B/website/ECE-140B-Spotter/Spotter/templates/layout.html",
+		"/Volumes/GoogleDrive/My Drive/WI2k17/CSE 8B/Code/PSA8/SBNode.java",
+		"/Volumes/GoogleDrive/My Drive/WI2k18/ECE140A/Assignment/7/assignment7-makeitwayne17/madlib/__init__.py",
+		"/Users/BryantLiu/Google Drive/WI2k18/ECE140A/Assignment/6/assignment6-makeitwayne17/RUMPELSTILTSKIN/templates/layout.html",
+		"/Users/BryantLiu/Google Drive/WI2k18/ECE140A/Assignment/6/assignment6-makeitwayne17/RUMPELSTILTSKIN/templates/get_example.html",
+		"/Users/BryantLiu/Google Drive/WI2k18/ECE140A/Assignment/6/assignment6-makeitwayne17/RUMPELSTILTSKIN/static/RUMPELSTILTSKIN.css",
+		"/Users/BryantLiu/Google Drive/WI2k18/ECE140A/Assignment/6/assignment6-makeitwayne17/RUMPELSTILTSKIN/__init__.py",
+		"/Users/BryantLiu/Google Drive/WI2k18/ECE140A/Assignment/6/assignment6-makeitwayne17/RUMPELSTILTSKIN/RUMPELSTILTSKIN.py",
+		"/Volumes/GoogleDrive/My Drive/WI2k18/ECE140A/SmartPlug-brl072-ktantipa-s3bansal-sxing-tshambli/lab4/flask_server/lab4.py",
+		"/Users/BryantLiu/Google Drive/WI2k18/ECE140A/Assignment/6/assignment6-makeitwayne17/RUMPELSTILTSKIN/schema.sql",
+		"/Users/BryantLiu/Google Drive/WI2k18/ECE140A/Assignment/5/assignment5-makeitwayne17/queries.sql",
+		"/Users/BryantLiu/Google Drive/WI2k17/CSE 8B/Code/PSA7/Gui2048.java",
+		"/Users/BryantLiu/ece140a/data.json",
+		"/Users/BryantLiu/ece140a/test.html",
+		"/Users/BryantLiu/ece140a/script.js"
+	],
+	"find":
+	{
+		"height": 39.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 27.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "package.sublime-project",
+	"replace":
+	{
+		"height": 50.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 210.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 592.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 218.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

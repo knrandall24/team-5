@@ -1,4 +1,3 @@
-repo
+Music App
 ====
-
-Project Description
+Project for COGS 120
