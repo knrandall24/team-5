@@ -1,8 +1,70 @@
+<!doctype html>
 <html>
 <head>
-	<title>Test Page</title>
+	<title>Landing Page</title>
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/css/myCSS.css" rel="stylesheet">
 </head>
 <body>
-Begin here (or replace this with any static code already written).
+    <center>
+        <div id="titleBar">
+            <p id="landingTitle">Welcome to MusicSpot</p>
+        </div>
+
+        <div id="mainButtons">
+
+            <div id="topButtons" class="btn-group">
+                <a href="main">
+                    <button type="button" id="startBtn" onclick="document.getElementById('startBtn1').style.color = 'red'">
+                        Host a Session
+                    </button>
+                </a>
+                <a href="main">
+                    <button type="button" id="startBtn" onclick="document.getElementById('startBtn2').style.color = 'red'">
+                        Listen Solo/Manage Your Music
+                    </button>
+                </a>
+            </div>
+
+            <div id="bottomButtons" class="btn-group">
+                <a href="main">
+                    <button type="button" id="startBtn" onclick="document.getElementById('startBtn3').style.color = 'red'">
+                        Search For A Session
+                    </button>
+                </a>
+                <a href="main">
+                    <button type="button" id="startBtn" onclick="document.getElementById('startBtn4').style.color = 'red'">
+                        Edit Your Profile
+                    </button>
+                </a>
+            </div>
+
+        </div>
+
+        <div id="bottomBar">
+            <div id="albumCover">
+                <br>Album<br>
+                Cover
+            </div>
+            <div id="rightBottomBar">
+                <div id="songTitle">
+                    <h4>Title of Song</h4>
+                </div>
+                <div id="leaveOrAdd">
+                    <button id="leaveSesh">
+                        Leave<br>
+                        Session
+                    </button>
+                    <button id="addList">
+                        Add To Your List
+                    </button>
+                </div>
+            </div>
+        </div>
+
+    </center>
 </body>
 </html>
+
+
+
