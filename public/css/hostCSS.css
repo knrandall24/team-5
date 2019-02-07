@@ -181,6 +181,18 @@ body {
     margin: 15px;
     border-radius: 12px;
 }
+#inviteFriend{
+    height:10%;
+    width: 50%;
+    display:block;
+    border: 1px solid black;
+    margin: 15px;
+    border-radius: 100px;
+}
+#inviteText{
+    font-size: 5vw;
+    font-style: bold;
+}
 
 
 
