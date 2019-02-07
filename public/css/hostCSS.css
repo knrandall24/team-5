@@ -11,7 +11,7 @@ body {
     top:0%;
     height: 21%;
     width: 100%;
-    background-color: #DCDCDC;
+    background-color: gray;
     padding-top: 5%;
 }
 
@@ -43,14 +43,67 @@ body {
 }
 
 
+/*Inside the Top Section*/
+#moreOptions{
+    position:absolute;
+    top:0%;
+    height:100%;
+    width: 15%;
+    background-color: yellow;
+}
 
+#moreOptionsBtn{
+    position:absolute;
+    top:40%;
+    left:30%;
+    padding:10%;
+    border: 1px solid black;
+    background-color: white;
+}
 
+#albumCover{
+    position:absolute;
+    top:0%;
+    left:15%;
+    height:100%;
+    width: 30%;
+    background-color: cyan;
+}
+#albumCoverBtn{
+    position:absolute;
+    top:25%;
+    left:12%;
+    padding:30%;
+    border: 1px solid black;
+    background-color: white;
+}
 
+#musicControls{
+    position:absolute;
+    top:0%;
+    left:45%;
+    height:100%;
+    width: 55%;
+    background-color: orange;
+}
 
+#musicTitle{
+    position: absolute;
+    top: 0%;
+    width: 100%;
+    height:40%;
+    border: 1px solid black;
+    background-color: white;
+}
 
-
-
-
+#playerButtons{
+    position: absolute;
+    top: 40%;
+    width: 100%;
+    height:60%;
+    border: 1px solid black;
+    background-color: orange;
+}
 
 
 
@@ -151,16 +204,6 @@ body {
     height: 15%;
     bottom: 0%;
     /*background-color: #DCDCDC;*/
-}
-#albumCover{
-    position: absolute;
-    bottom: 0%;
-    left: 0%;
-    width: 25%;
-    height:100%;
-    border: 1px solid black;
-    background-color: white;
-    /*background-color: red;*/
 }
 #rightBottomBar{
     position: absolute;
