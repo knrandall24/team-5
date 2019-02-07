@@ -1,19 +1,55 @@
 <!doctype html>
 <html>
 <head>
-    <title>Host Page</title>
+    <title>Landing Page</title>
     <link href="/css/bootstrap.min.css" rel="stylesheet">
     <link href="/css/myCSS.css" rel="stylesheet">
 </head>
 <body>
-    <a href="back">
-        <button id="escapeButton">
-            <-
-        </button>
-    </a>
-
     <center>
-        <h1 class="landingTitleTemp">Host Page</h1>
+        <!-- Top Section of music controls -->
+        <div id="currentSong">
+
+            <!-- Left most section -->
+            <div id="moreOptions">
+                <button>Include Image here</button>
+            </div>
+
+            <!-- Middle section -->
+            <div id="albumCover">
+                Album<br>Cover
+            </div>
+
+            <!-- right most section -->
+            <div id="musicControls">
+                <div id="musicTitle">
+                    <h4>Your Session</h4>
+                    <h5>Artist Name, etc</h5>
+                </div>
+                <div id="playerButtons">
+                    <a href="back">
+                        <button id="endSesh">
+                            End<br>Session
+                        </button>
+                    </a>
+                    <button id="pause">Pause</button>
+                    <button id="next">Next</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Second Section of Session ID -->
+        <div id="SessionIDTab">
+            <h4> Your Session ID is: 53X</h4>
+        </div>
+
     </center>
 </body>
 </html>
+
+
+
+
+
+
+
