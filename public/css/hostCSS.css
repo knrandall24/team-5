@@ -24,7 +24,7 @@ body {
 #friendList{
     position: absolute;
     top:28%;
-    height: 52%;
+    height: 57%;
     width: 100%;
     background-color: red;
     padding-top: 5%;
@@ -32,8 +32,8 @@ body {
 
 #bottomTab{
     position: absolute;
-    top:80%;
-    height: 20%;
+    top:85%;
+    height: 15%;
     width: 100%;
     background-color: pink;
     padding-top: 5%;
@@ -161,7 +161,7 @@ body {
 /*Part 2's ID CSS*/
 #SessionID{
     text-align: center;
-    font-size: 7vw;
+    font-size: 6vw;
     margin: auto;
     font-style: bold;
 }
@@ -178,9 +178,44 @@ body {
     width: 95%;
     display:block;
     border: 1px solid black;
-    margin: 15px;
+    /*margin: 15px;*/
     border-radius: 12px;
+
+    background-color: lightgreen;
 }
+
+#friendImgContainer{
+    position: absolute;
+    width:15%;
+    height:9.5%;
+    left: 2.5%;
+
+    border: 1px solid black;
+    border-top-left-radius: 12px;
+    border-bottom-left-radius: 12px;
+    background-color: lightyellow;
+}
+
+#friendNameContainer{
+    position: absolute;
+    width: 82.5%;
+    height:9.5%;
+    left: 17.5%;
+    background-color: red;
+}
+
+#hello{
+    width:100%; 
+    height:100%; 
+    object-fit:cover; 
+}
+#friendName{
+    position: relative;
+    top: 50%;
+    transform: translateY(-100%); 
+    font-size: 4vw;
+}
+
 #inviteFriend{
     height:10%;
     width: 50%;
@@ -202,132 +237,3 @@ body {
 
 
 
-
-
-
-
-#landingTitle{
-    /*color: #4169E1;*/
-    font-size: 8vw;
-    font-weight: bold;
-}
-#escapeButton{
-    position: absolute;
-    left:5%;
-    top:2%;
-    border-radius: 50%;
-    border: 1px solid black;
-    background-color: white;
-    padding: 3%;
-}
-
-.landingTitleTemp{
-    /*color: #4169E1;*/
-    position: absolute;
-    top:5%;
-    left: 2%;
-    font-size: 20vw;
-    font-weight: bold;
-}
-
-#mainButtons{
-    position: absolute;
-    top:12%;
-    height: 73%;
-    /*background-color: #40E0D0;*/
-    width: 100%;
-}
-
-#topButtons{
-    height: 50%;
-    width: 100%;
-    margin: 0px;
-    /*background-color: yellow;*/
-}
-
-#bottomButtons{
-    height: 50%;
-    width: 100%;
-    margin:0px;
-    /*background-color: green;*/
-}
-
-.btn-group button {
-  /*background-color: #4CAF50; /* Green background */*/
-  /*border: 1px solid green; /* Green border */*/
-  /*color: white;*/
-  width: 50%;
-  height: 100%;
-  cursor: pointer; /* Pointer/hand icon */
-  float: left; /* Float the buttons side by side */
-}
-
-/* Clear floats (clearfix hack) */
-.btn-group:after {
-  content: "";
-  clear: both;
-  display: table;
-}
-
-.btn-group button:not(:last-child) {
-  border-right: none; /* Prevent double borders */
-}
-
-#startBtn{
-    width: 50%;
-    padding-top: 35%;
-    font-size: 5vw;
-    border: 1px solid black;
-    background-color: white;
-}
-
-#bottomBar{
-    position: absolute;
-    width: 100%;
-    height: 15%;
-    bottom: 0%;
-    /*background-color: #DCDCDC;*/
-}
-#rightBottomBar{
-    position: absolute;
-    bottom: 0%;
-    left: 25%;
-    width: 75%;
-    height:100%;
-    /*background-color: yellow;*/
-}
-#songTitle{
-    position: absolute;
-    top: 0%;
-    width: 100%;
-    height:30%;
-    border: 1px solid black;
-    background-color: white;
-
-}
-#leaveOrAdd{
-    position: absolute;
-    top: 30%;
-    width: 100%;
-    height:70%;
-}
-
-#leaveSesh{
-    position: absolute;
-    left:10%;
-    top:5%;
-    border-radius: 50%;
-    border: 1px solid black;
-    background-color: white;
-    padding: 3%;
-}
-
-#addList{
-    position: absolute;
-    /*top:20%;*/
-    right:10%;
-    top:12%;
-    border: 1px solid black;
-    background-color: white;
-    padding: 3%;
-}
