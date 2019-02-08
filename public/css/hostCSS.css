@@ -80,9 +80,9 @@
 #musicControls{
     position:absolute;
     top:0%;
-    left:45%;
+    left:43%;
     height:100%;
-    width: 55%;
+    width: 57%;
     /*background-color: orange;*/
 }
 
@@ -117,27 +117,27 @@
 
 #endSesh{
     position: absolute;
-    left:6%;
-    top: 22%;
+    left:3%;
+    top: 23%;
     border-radius: 50%;
     border: 1px solid black;
     background-color: white;
-    padding: 13%;
+    padding: 10%;
     font-size: 1vw;
 }
 
-#endSeshText{
+#endSeshText{/*
     position: absolute;
     top: 27%;
-    left: 25%;
+    left: 25%;*/ 
     font-size: 2vw;
 }
 
 #pause{
     position: absolute;
     left:37%;
-    top:25%;
-    padding: 12%;
+    top:23%;
+    padding: 14%;
     border: 1px solid black;
     background-color: white;
 }
@@ -153,8 +153,8 @@
 #next{
     position: absolute;
     left:67%;
-    top:25%;
-    padding: 12%;
+    top:23%;
+    padding: 14%;
     border: 1px solid black;
     background-color: white;
 }
