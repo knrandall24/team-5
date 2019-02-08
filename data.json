@@ -198,7 +198,7 @@
 		}, {
 			"name": "Nevsa Wickendon",
 			"description": "Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus vestibulum sagittis sapien. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Etiam vel augue. Vestibulum rutrum rutrum neque. Aenean auctor gravida sem. Praesent id massa id nisl venenatis lacinia. Aenean sit amet justo. Morbi ut odio. Cras mi pede, malesuada in, imperdiet et, commodo vulputate, justo.",
-			"imageURL": "error: undefined method `/' for nil:NilClass"
+			"imageURL": "/img/filler_profile.png"
 		}, {
 			"name": "Peria Stannislawski",
 			"description": "Proin leo odio, porttitor id, consequat in, consequat ut. Sed accumsan felis. Ut at dolor quis odio consequat varius. Integer ac leo. Pellentesque ultrices mattis odio.",

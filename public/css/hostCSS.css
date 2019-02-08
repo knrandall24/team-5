@@ -250,6 +250,8 @@
     width: 50%;
     height: 100%;
     border: 1px solid black;
+    
+    z-index: 100;
     /*background-color: lightgreen;*/
 }
 #chatPicContainer{
@@ -287,6 +289,9 @@
     top: 50%;
     transform: translateY(100%); 
     font-size: 4vw;
+}
+#btnChat{
+    z-index: 100;
 }
 h2{
     font-size: 200%;
