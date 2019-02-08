@@ -241,6 +241,8 @@
     width: 50%;
     height: 100%;
     border: 1px solid black;
+    
+    z-index: 100;
     /*background-color: lightyellow;*/
 }
 #editTheQueue{
@@ -250,7 +252,7 @@
     width: 50%;
     height: 100%;
     border: 1px solid black;
-    
+
     z-index: 100;
     /*background-color: lightgreen;*/
 }
