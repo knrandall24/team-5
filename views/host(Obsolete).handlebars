@@ -1,0 +1,117 @@
+<!doctype html>
+<html>
+<head>
+    <title>Landing Page</title>
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/css/hostCSS.css" rel="stylesheet">
+</head>
+<body>
+    <center>
+        <!-- First Section of music controls -->
+        <div id="currentSong">
+
+            <!-- Left most section -->
+            <div id="moreOptions">
+                <button id="moreOptionsBtn">Include<br>Image</button>
+            </div>
+
+            <!-- Middle section -->
+            <div id="albumCover">
+                <button id="albumCoverBtn">Album<br>Cover</button>
+            </div>
+
+            <!-- right most section -->
+            <div id="musicControls">
+                <div id="musicTitle">
+                    <h1 id="text1">Your Session</h1>
+                    <h2 id="text2">Artist Name, etc</h2>
+                </div>
+                <div id="playerButtons">
+                    <a href="back">
+                        <button id="endSesh">
+                            <p id="endSeshText">End<br>Session</p>
+                        </button>
+                    </a>
+                    <button id="pause">
+                        <p id="paNeText">Pause</p>
+                    </button>
+                    <button id="next">
+                        <p id="paNeText">Next</p>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Second Section of Session ID -->
+        <div id="SessionIDTab">
+            <h4 id="SessionID"> Your Session ID is: 53X</h4>
+        </div>
+
+        <!-- Third Section of Friend List -->
+        <div id="friendList">
+
+            {{#each friend}}
+            <div id="friend">
+                <div id="friendImgContainer">
+                    <img src={{imageURL}} id="hello">
+                </div>
+                <div id=friendNameContainer>
+                    <h3 id="friendName">{{name}}</h3>
+                </div>
+            </div>
+            <br>
+            {{/each}}
+
+
+            <button id="inviteFriend">
+                <p id="inviteText">Invite Friends +</p>
+            </button>
+        </div>
+
+        <!-- Last Section for Buttons -->
+        <div id="bottomTab">
+            <a href="chat">
+                <button id="viewTheChat" > <!-- add onlick-->
+                    <!-- add image-->
+                    <div id="chatPicContainer">
+
+                        <img src="/img/empty.jpg" id="chatPic">
+                    </div>
+                    <div id="chatText">
+                        <h4>View The Chat</h4>
+                    </div>
+                </button>
+            </a>
+            <a href="queue">
+                <button id="editTheQueue"> <!-- add onlick-->
+                    <!-- add image-->
+                    <div id="queuePicContainer">
+                        <img src="/img/empty.jpg" id="queuePic">
+                    </div>
+                    <div id="queueText">
+                        <h4>Edit The Queue</h4>
+                    </div>
+                </button>
+            </a>
+        </div>
+    </center>
+</body>
+</html>
+
+
+
+<!--             <button id="friend">
+                <img src="/img/filler_profile.png" alt="Name" id="friendImg">
+                <h3 id="friendName">Jake From StateFarm</h3>
+            </button>
+            <button id="friend">
+                <img src="/img/filler_profile.png" alt="Name" id="friendImg">
+                <h3 id="friendName">Mark ZuckEZuck</h3>
+            </button> -->
+
+
+
+
+
+
+
