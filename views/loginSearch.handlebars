@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+<head>
+    <title>Host Page</title>
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/css/myCSS.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="js/bootstrap.js"></script>
+</head>
+<body>
+    <center>
+        <div id="backView">
+            <div id="titleBar">
+                <p id="landingTitle">DJam</p>
+            </div>
+
+            <div id="mainButtons">
+
+                <div id="topButton" class="btn-group">
+                    <a href="host">
+                        <img id="myImg" src="/img/DJ_Page.png">
+                        <h2 id="hostTxt">Host a Session</h2>
+                    </a>
+                </div>
+
+                <div id="bottomButton" class="btn-group">
+                    <a href="search">
+                        <img id="myImg" src="/img/Search_Page.png">
+                        <h2 id="searchTxt">Search For A Session</h2>
+                    </a>
+                </div>
+            </div>
+
+            <div id="bottomBar">
+            </div>
+        </div>
+
+
+        <!-- Actual Login Stuff -->
+        <div id="overlay">
+            <div id="icon">
+                <img id="myIcon" src="/img/facebook.png">
+            </div>
+            <div id="the-form">
+                <form>
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">Email address</label>
+                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputPassword1">Password</label>
+                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                </div>
+                <div class="form-check">
+                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                    <label class="form-check-label" for="exampleCheck1">Remenber Me</label>
+                </div>
+                <button onclick="window.location.href = 'search';" type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+
+    </div>
+
+    </center>
+</body>
+</html>

@@ -1,9 +1,55 @@
-
-
-
 body {
     background-color: #000000;
 }
+
+
+/*Here is all for login*/
+
+#backView{
+  opacity: 0.35;
+}
+
+#overlay{
+    position: absolute;
+    top:28%;
+    left:7%;
+    height: 55%;
+    width: 86%;
+    z-index: 2;
+    border: 3px solid black;
+    background-color: #146be5;
+    padding: 3%;
+}
+#icon{
+    position: absolute;
+    top: 5%;
+    left:40%;
+    height: 20%;
+    width: 20%;
+}
+#myIcon{
+    position: absolute;
+    max-height: 100%;
+    top:0%;
+    left:0%;
+}
+#the-form{
+    position: absolute;
+    top: 25%;
+    left: 5%;
+    height: 80%;
+    width: 90%;
+    padding-top:5%;
+}
+
+#hello{
+    background-color: green;
+    z-index: 15;
+}
+
+
+
+/*Everything below is for index.handlebars*/
 
 #titleBar{
     position: absolute;
@@ -32,20 +78,12 @@ body {
 
 #landingTitle{
     color: #4b8be5;
-    font-size: 18vw;
-    text-align: center;
+    font-size: 19vw;
+    text-align: center;    
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+
     /*font-weight: bold;*/
 }
-#escapeButton{
-    position: absolute;
-    left:5%;
-    top:2%;
-    border-radius: 50%;
-    border: 1px solid black;
-    background-color: white;
-    padding: 3%;
-}
-
 
 #topButton{
     position: absolute;
@@ -56,7 +94,7 @@ body {
     /*
     margin: 0px;
     padding: 5%;*/
-    background-color: yellow;
+    background-color: black;
 }
 
 #bottomButton{
@@ -64,13 +102,12 @@ body {
     left:5%;
     top:50%;
     height: 40%;
-    width: 90%;
+    width: 90%;    
+    background-color: black;
+
 }
 
 .btn-group button {
-  /*background-color: #4CAF50; /* Green background */*/
-  /*border: 1px solid green; /* Green border */*/
-  /*color: white;*/
   width: 50%;
   height: 100%;
   cursor: pointer; /* Pointer/hand icon */
@@ -93,16 +130,9 @@ body {
     /*padding-top: 35%;*/
     font-size: 5vw;
     border: 1px solid black;
-    background-color: green;
+    background-color: black;
 }
-#hostImg{
-    height: 100%;
-    /*position: absolute;*/
-    /*bottom: 5%;*/
-    /*left: 25%;*/
-    /*z-index: -1;*/
-    align-content: center;
-}
+
 
 #hostTxt{
     position: absolute;
@@ -111,15 +141,8 @@ body {
     text-align: center;
     color: white;
     font-size: 8vw;
-    z-index: 2;
-}
-#searchImg{
-    height: 100%;
-    /*position: absolute;*/
-    /*bottom: 5%;*/
-    /*left: 25%;*/
-    /*z-index: -1;*/
-    align-content: center;
+    z-index: 2;    
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 #searchTxt{
     position: absolute;
@@ -129,35 +152,53 @@ body {
     color: #4b8be5;
     font-size: 8vw;
     z-index: 1;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 
 #albumCover{
     position: absolute;
     bottom: 0%;
     left: 0%;
-    width: 25%;
+    width: 35%;
     height:100%;
-    border: 1px solid black;
+    /*border: 1px solid black;*/
     background-color: white;
+    background-color: #9b9fa3;
     /*background-color: red;*/
 }
+#albumImg{  
+    position: absolute;
+    top:10%;
+    left:17%;
+    max-width: 83%;
+    max-height: 83%;  
+    border: 1px solid black;  
+    /*align-content: center;*/
+}
+
 #rightBottomBar{
     position: absolute;
     bottom: 0%;
-    left: 25%;
-    width: 75%;
-    height:100%;
+    left: 35%;
+    width: 65%;
+    height: 100%;
     /*background-color: yellow;*/
 }
-#songTitle{
+#songTitleContainer{
     position: absolute;
     top: 0%;
     width: 100%;
     height:30%;
-    border: 1px solid black;
-    background-color: white;
-
+    /*border: 1px solid black;*/
+    /*background-color: yellow;*/
 }
+#songTitle{
+    position: absolute;
+    top:-25%;
+    left:12%;
+    font-size: 8vw;
+}
+
 #leaveOrAdd{
     position: absolute;
     top: 30%;
@@ -167,20 +208,33 @@ body {
 
 #leaveSesh{
     position: absolute;
-    left:10%;
+    left: 2%;
     top:5%;
-    border-radius: 50%;
-    border: 1px solid black;
-    background-color: white;
-    padding: 3%;
+    width: 28%;
+    height: 75%;
 }
-
+#leave_img{  
+    position: absolute;
+    max-height: 100%;
+    top:0%;
+    left:0%;
+}
 #addList{
     position: absolute;
-    /*top:20%;*/
-    right:10%;
-    top:12%;
-    border: 1px solid black;
-    background-color: white;
-    padding: 3%;
+    right:9%;
+    top:20%;
+    max-width: 60%;
+}
+#addFont{
+    font-size: 5vw;
+}
+#myImg{  
+    width: 100%;
+    height: 100%;
+    align-content: center;
+}
+.myTxt{
+    color: #4b8be5;    
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+
 }

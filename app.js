@@ -10,6 +10,8 @@ var handlebars = require('express3-handlebars')
 
 var index = require('./routes/index');
 var main = require('./routes/main');
+var loginHost = require('./routes/loginHost');
+var loginSearch = require('./routes/loginSearch');
 
 var host = require('./routes/host');
 var solo = require('./routes/solo');
@@ -45,6 +47,8 @@ if ('development' == app.get('env')) {
 }
 
 app.get('/', index.view);
+app.get('/loginHost', loginHost.view);
+app.get('/loginSearch', loginSearch.view);
 app.get('/main', main.view);
 app.get('/host', host.view);
 app.get('/solo', solo.view);
