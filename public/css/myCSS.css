@@ -48,18 +48,23 @@ body {
 
 
 #topButton{
-    height: 50%;
-    width: 100%;
+    position: absolute;
+    left:5%;
+    top:5%;
+    height: 40%;
+    width: 90%;
+    /*
     margin: 0px;
-    padding: 5%;
+    padding: 5%;*/
     background-color: yellow;
 }
 
 #bottomButton{
-    height: 50%;
-    width: 100%;
-    margin:0px;
-    padding: 5%;
+    position: absolute;
+    left:5%;
+    top:50%;
+    height: 40%;
+    width: 90%;
 }
 
 .btn-group button {
@@ -102,13 +107,29 @@ body {
 #hostTxt{
     position: absolute;
     bottom: 5%;
-    left: 25%;
+    left: 20%;
     text-align: center;
     color: white;
     font-size: 8vw;
+    z-index: 2;
+}
+#searchImg{
+    height: 100%;
+    /*position: absolute;*/
+    /*bottom: 5%;*/
+    /*left: 25%;*/
+    /*z-index: -1;*/
+    align-content: center;
+}
+#searchTxt{
+    position: absolute;
+    bottom: 5%;
+    left: 5%;
+    text-align: center;
+    color: #4b8be5;
+    font-size: 8vw;
     z-index: 1;
 }
-
 
 #albumCover{
     position: absolute;
