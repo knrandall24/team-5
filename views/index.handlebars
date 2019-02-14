@@ -8,37 +8,29 @@
 <body>
     <center>
         <div id="titleBar">
-            <p id="landingTitle">Welcome to MusicSpot</p>
+            <p id="landingTitle">DJam</p>
         </div>
 
         <div id="mainButtons">
 
-            <div id="topButtons" class="btn-group">
+            <div id="topButton" class="btn-group">
                 <a href="host">
-                    <button type="button" id="startBtn" onclick="document.getElementById('startBtn1').style.color = 'red'">
-                        Host a Session
-                    </button>
-                </a>
-                <a href="solo">
-                    <button type="button" id="startBtn" onclick="document.getElementById('startBtn2').style.color = 'red'">
-                        Listen Solo/Manage Your Music
-                    </button>
+                    <div id="startBtn">
+                        <!-- <button type="button"  onclick="document.getElementById('startBtn1').style.color = 'red'"> -->
+                            <img id="hostImg" src="/img/DJ_Page.png">
+                            <h2 id="hostTxt">Host a Session</h2>
+                        <!-- </button> -->
+                    </div>
                 </a>
             </div>
 
-            <div id="bottomButtons" class="btn-group">
+            <div id="bottomButton" class="btn-group">
                 <a href="search">
                     <button type="button" id="startBtn" onclick="document.getElementById('startBtn3').style.color = 'red'">
                         Search For A Session
                     </button>
                 </a>
-                <a href="edit">
-                    <button type="button" id="startBtn" onclick="document.getElementById('startBtn4').style.color = 'red'">
-                        Edit Your Profile
-                    </button>
-                </a>
             </div>
-
         </div>
 
         <div id="bottomBar">

@@ -1,0 +1,312 @@
+/*body {
+    background-color: black;
+    }*/
+
+    /*Main Sections*/
+    #currentSong{
+        position: absolute;
+        top:0%;
+        height: 21%;
+        width: 100%;
+        /*background-color: gray;*/
+        padding-top: 5%;
+    }
+
+    #SessionIDTab{
+        position: absolute;
+        top:21%;
+        height: 7%;
+        width: 100%;
+        /*background-color: blue;*/
+        padding-top: 5%;
+        border: 1px solid black;
+    }
+
+    #friendList{
+        position: absolute;
+        top:28%;
+        height: 57%;
+        width: 100%;
+        /*background-color: red;*/
+        padding-top: 5%;
+    }
+
+    #bottomTab{
+        position: absolute;
+        top:85%;
+        height: 15%;
+        width: 100%;
+        /*background-color: pink;*/
+        padding-top: 5%;
+    }
+
+
+    /*Inside the Top Section*/
+    #moreOptions{
+        position:absolute;
+        top:0%;
+        height:100%;
+        width: 12%;
+        /*background-color: yellow;*/
+    }
+
+    #moreOptionsBtn{
+        position:absolute;
+        top:40%;
+        left:30%;
+        padding:10%;
+        border: 1px solid black;
+        /*background-color: white;*/
+    }
+
+    #albumCover{
+        position:absolute;
+        top:0%;
+        left:10%;
+        height:100%;
+        width: 45%;
+        /*background-color: cyan;*/
+    }
+    #albumCoverBtn{
+        font-size: 3vw;
+        position:absolute;
+        top:15%;
+        left:12%;
+        padding:20%;
+        border: 1px solid black;
+        /*background-color: white;*/
+    }
+
+    #musicControls{
+        position:absolute;
+        top:0%;
+        left:43%;
+        height:100%;
+        width: 57%;
+        /*background-color: orange;*/
+    }
+
+    #musicTitle{
+        position: absolute;
+        top: 0%;
+        width: 100%;
+        height:40%;
+        border: 1px solid black;
+        /*background-color: white;*/
+
+    }
+
+    #playerButtons{
+        position: absolute;
+        top: 40%;
+        width: 100%;
+        height:60%;
+        /*border: 1px solid black;*/
+        /*background-color: orange;*/
+    }
+
+    #text1{
+        font-weight: bold;
+        font-size: 5vw;
+    }
+
+    #text2{
+        font-weight: bold;
+        font-size: 3vw;
+    }
+
+    #endSesh{
+        position: absolute;
+        left:3%;
+        top: 16%;
+        border-radius: 50%;
+        border: 1px solid black;
+        background-color: white;
+        padding: 10%;
+        font-size: 1vw;
+    }
+
+#endSeshText{/*
+    position: absolute;
+    top: 27%;
+    left: 25%;*/ 
+    font-size: 2vw;
+}
+
+#pause{
+    position: absolute;
+    left:37%;
+    top:20%;
+    padding: 14%;
+    border: 1px solid black;
+    background-color: white;
+}
+
+#paNeText{
+    text-align: center;
+    position: absolute;
+    top: 30%;
+    left: 15%;
+    font-size: 3vw;
+}
+
+#next{
+    position: absolute;
+    left:67%;
+    top:20%;
+    padding: 14%;
+    border: 1px solid black;
+    background-color: white;
+}
+
+/*Part 2's ID CSS*/
+#SessionID{
+
+    position: relative;
+    top: 50%;
+    transform: translateY(-100%);
+    /*text-align: center;*/
+    font-size: 6vw;
+    /*margin: auto;*/
+    font-style: bold;
+}
+
+/*Third Section with friend's name*/
+#friendList{
+  /*background-color: lightblue;*/
+  width: 100%;
+  overflow: auto;
+}
+
+#friend{
+    height:10%;
+    width: 95%;
+    display:block;
+    border: 1px solid black;
+    /*margin: 15px;*/
+    border-radius: 12px;
+
+    /*background-color: lightgreen;*/
+}
+
+#friendImgContainer{
+    position: absolute;
+    width:15%;
+    height:9.5%;
+    left: 2.5%;
+
+    border: 1px solid black;
+    border-top-left-radius: 12px;
+    border-bottom-left-radius: 12px;
+    /*background-color: lightyellow;*/
+}
+
+#friendNameContainer{
+    position: absolute;
+    width: 82.5%;
+    height:9.5%;
+    left: 17.5%;
+    /*background-color: red;*/
+}
+
+#hello{
+    width:100%; 
+    height:100%; 
+    object-fit:cover; 
+}
+#friendName{
+    position: relative;
+    top: 50%;
+    transform: translateY(-100%); 
+    font-size: 4vw;
+}
+
+#inviteFriend{
+    height:10%;
+    width: 50%;
+    display:block;
+    border: 1px solid black;
+    margin: 15px;
+    border-radius: 100px;
+}
+#inviteText{
+    font-size: 5vw;
+    font-style: bold;
+}
+
+#viewTheChat{
+    position: absolute;
+    top:0%;
+    left: 0%;
+    width: 50%;
+    height: 100%;
+    border: 1px solid black;
+    
+    z-index: 100;
+    /*background-color: lightyellow;*/
+}
+#editTheQueue{
+    position: absolute;
+    top:0%;
+    left:50%;
+    width: 50%;
+    height: 100%;
+    border: 1px solid black;
+
+    z-index: 100;
+    /*background-color: lightgreen;*/
+}
+#chatPicContainer{
+    max-height: 100%;
+    z-index: -1;
+}
+#chatPic{
+    position: absolute;
+    top:0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    opacity: 0.2;
+}
+#chatText{
+    position: relative;
+    top: 50%;
+    transform: translateY(100%); 
+    font-size: 4vw;
+}
+#queuePicContainer{
+    max-height: 100%;
+    z-index: -1;
+}
+#queuePic{
+    position: absolute;
+    top:0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    opacity: 0.2;
+}
+#queueText{
+    position: relative;
+    top: 50%;
+    transform: translateY(100%); 
+    font-size: 4vw;
+}
+#btnChat{
+    z-index: 100;
+}
+h2{
+    font-size: 200%;
+}
+h4{
+    font-size: 100%;
+
+}
+
+
+
+
+
+
+
+
