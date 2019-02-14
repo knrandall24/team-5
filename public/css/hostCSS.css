@@ -303,6 +303,13 @@ h4{
 
 }
 
+#leave_img{  
+    position: absolute;
+    max-height: 80%;
+    top:5%;
+    left:0%;
+}
+
 
 
 

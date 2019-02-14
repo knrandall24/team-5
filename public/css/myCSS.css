@@ -42,11 +42,6 @@ body {
     padding-top:5%;
 }
 
-#hello{
-    background-color: green;
-    z-index: 15;
-}
-
 
 
 /*Everything below is for index.handlebars*/
