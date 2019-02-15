@@ -1,19 +1,99 @@
 <!doctype html>
 <html>
 <head>
-    <title>Queue Page</title>
+    <title>Landing Page</title>
     <link href="/css/bootstrap.min.css" rel="stylesheet">
-    <link href="/css/myCSS.css" rel="stylesheet">
+    <link href="/css/hostCSS.css" rel="stylesheet">
 </head>
 <body>
-    <a href="back">
-        <button id="escapeButton">
-            <-
-        </button>
-    </a>
-
     <center>
-        <h1 class="landingTitleTemp">Queue Page</h1>
+
+        <div id="titleBar">
+            <div id="hamburger">
+                <img id="hamImg" src="/img/hamburger.png">
+            </div>
+            <div id="albumCover">
+                <img id="albumImg" src="/img/Ellie_Goulding.png">
+            </div>
+            <div id="rightBottomBar">
+                <div id="songTitleContainer">
+                    <h4 id="songTitle" class="myTxt">Close To Me</h4>
+                    <marquee id="albumTitle" class="myTxt" behavior="scroll" direction="left" style="marquee-speed:slow;">Ellie Goulding and Diplo featuring Swae Lee</marquee>
+                </div>
+                <div id="leaveOrAdd">
+                    <a href="back">
+                        <div id="leaveSesh">
+                            <img id="leave_img" src="/img/end_session.png">
+                        </div>
+                    </a>
+                    <div id="pause">
+                        <img id="leave_img" src="/img/pause.png">
+                    </div>
+                    <div id="next">
+                        <img id="leave_img" src="/img/next.png">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="filler_grey"> 
+            <br>
+        </div>
+
+        <!-- Second Section of Session ID -->
+        <div id="SessionIDTab1">
+            <!-- <input id="searchTab"type="text" placeholder="Search.."> -->
+            <input type="text" class="form-control" placeholder="Search" aria-label="Username" aria-describedby="basic-addon1">
+        </div>
+    </div>
+
+        <div id="yourListen"> 
+        </div>
+
+        <!-- Third Section of Friend List -->
+        <div id="friendList">
+
+            {{#each songs}}
+            <div id="friend">
+                <div id="friendImgContainer">
+                    <img src={{imageURL}} id="hello">
+                </div>
+                <div id=friendNameContainer>
+                    <h3 id="friendName">{{name}}</h3>
+                </div>
+            </div>
+            <br>
+            {{/each}}
+
+
+            <button id="inviteFriend">
+                <p id="inviteText">Invite Friends +</p>
+            </button>
+        </div>
+
+        <!-- Last Section for Buttons -->
+        <div id="bottomTab"><!-- 
+            <a href="chat">
+                <button id="viewTheChat" >
+                    <div id="chatPicContainer">
+
+                        <img src="/img/message.png" id="chatPic">
+                    </div>
+                    <div id="chatText">
+                        <h4 id="hostTxt1">View The Chat</h4>
+                    </div>
+                </button>
+            </a>
+            <a href="queue">
+                <button id="editTheQueue"> 
+                    <div id="queuePicContainer">
+                        <img src="/img/queue.png" id="queuePic">
+                    </div>
+                    <div id="queueText">
+                        <h4 id="hostTxt1">Edit The Queue</h4>
+                    </div>
+                </button>
+            </a> -->
+        </div>
     </center>
 </body>
 </html>
