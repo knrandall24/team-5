@@ -3,7 +3,9 @@
 <head>
     <title>Search Page</title>
     <link href="/css/bootstrap.min.css" rel="stylesheet">
-    <link href="/css/searchCSS.css" rel="stylesheet">
+    <link href="/css/searchCSS.css" rel="stylesheet">    
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="js/bootstrap.js"></script>
 </head>
 <body>
     <center>
@@ -92,11 +94,20 @@
                 </a>
             </div>
         </div>
--->
-        <div id="bottomBar">
-        </div>
+    -->
+    <div id="bottomBar">
+    </div>
 
-    </center>
+</center>
+
+<script>
+    function added() {
+      document.getElementById("addFont").innerHTML = "Added";
+      document.getElementById("container").style.marginTop = "100px";
+      $("#addFont").css("background-color", "lightgreen");
+      $("#addList").css("left", "45");
+  }
+</script>
 </body>
 </html>
 

@@ -386,12 +386,18 @@ body {
     top:0%;
     left:0%;
 }
+
 #addList{
     position: absolute;
-    right:50%;
+    left:33%;
     top:27%;
     max-width: 20%;
 }
+#innerAddList{
+    position:relative;
+    align-content: center;
+}
+
 #addFont{
     font-size: 4vw;
 }

@@ -18,6 +18,13 @@
         height: 5%;
         width: 100%;
         background-color: #9b9fa3;
+    }    
+    #filler_greyq{
+        position: absolute;
+        bottom:0%;
+        height: 3%;
+        width: 100%;
+        background-color: #9b9fa3;
     }
     #SessionIDTab{
         position: absolute;
@@ -52,6 +59,16 @@
   width: 100%;
   padding-top: 5%;
   background-color: lightblue;
+  width: 100%;
+  overflow: auto;
+}
+#qfriendList{
+  position: absolute;
+  top:25%;
+  height: 72%;
+  width: 100%;
+  padding-top: 5%;
+  background-color: #76797c;
   width: 100%;
   overflow: auto;
 }
@@ -170,12 +187,6 @@
     max-height: 100%;
     top:0%;
     left:0%;
-}
-#addList{
-    position: absolute;
-    right:9%;
-    top:20%;
-    max-width: 60%;
 }
 #addFont{
     font-size: 5vw;
@@ -296,7 +307,7 @@
     /*margin: 15px;*/
     border-radius: 12px;
 
-    background-color: lightgreen;
+    background-color: #e6eaf2;
 }
 
 #friendImgContainer{
