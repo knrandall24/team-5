@@ -482,8 +482,8 @@ body {
 /*Third Section with friend's name*/
 #friendList{
   position: absolute;
-  top:25%;
-  height: 73%;
+  top:18%;
+  height: 80%;
   width: 100%;
   padding-top: 5%;
   background-color: lightblue;
