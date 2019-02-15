@@ -247,5 +247,21 @@ body {
 .myTxt{
     color: #4b8be5;    
     text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
 
+
+#back{
+    position: absolute;
+    top:3%;
+    right:5%;
+    height: 7%;
+    width: 7%;
+    z-index: 15;
+}
+#back_img{  
+    position: absolute;
+    max-height: 100%;
+    top:0%;
+    left:0%;
+}
 }
