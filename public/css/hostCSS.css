@@ -45,14 +45,16 @@
         z-index: 15;
     }
 
-    #friendList{
-        position: absolute;
-        top:25%;
-        height: 85%;
-        width: 100%;
-        /*background-color: #9b9fa3;*/
-        padding-top: 5%;
-    }
+#friendList{
+  position: absolute;
+  top:25%;
+  height: 75%;
+  width: 100%;
+  padding-top: 5%;
+  background-color: lightblue;
+  width: 100%;
+  overflow: auto;
+}
 
     #bottomTab{
         position: absolute;
@@ -109,7 +111,7 @@
     position: absolute;
     bottom: 0%;
     left: 43%;
-    width: 65%;
+    width: 57%;
     height: 100%;
     /*background-color: yellow;*/
 }
@@ -277,11 +279,15 @@
 
 /*Third Section with friend's name*/
 #friendList{
+  position: absolute;
+  top:25%;
+  height: 60%;
+  width: 100%;
+  padding-top: 5%;
   background-color: lightblue;
   width: 100%;
   overflow: auto;
 }
-
 #friend{
     height:10%;
     width: 95%;
@@ -327,12 +333,12 @@
 #otherInfo{
     position: relative;
     top: 0%;
-    transform: translateY(-200%); 
+    transform: translateY(-190%); 
     font-size: 4vw;
 }#otherInfo2{
     position: relative;
     top: 0%;
-    transform: translateY(-300%); 
+    transform: translateY(-330%); 
     font-size: 4vw;
 }
 

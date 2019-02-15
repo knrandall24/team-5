@@ -25,16 +25,57 @@
                             <img id="leave_img" src="/img/end_session.png">
                         </div>
                     </a>
-                    <div id="pause">
+                    <div id="addList">
+                        <button class="btn btn-info" id="addFont" onclick="added()">
+                            Add To Your List
+                        </button>
+                    </div>
+                  <!--   <div id="pause">
                         <img id="leave_img" src="/img/pause.png">
                     </div>
                     <div id="next">
                         <img id="leave_img" src="/img/next.png">
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </div>
+                <div id="filler_grey"> 
+            <br>
+        </div>
 
+        <!-- Second Section of Session ID -->
+        <div id="SessionIDTab1">
+            <!-- <input id="searchTab"type="text" placeholder="Search.."> -->
+            <input type="text" class="form-control" placeholder="Search to Add Song" aria-label="Username" aria-describedby="basic-addon1">
+        </div>
+    </div>
+ <!--        <div id="yourListen"> 
+            hello
+        </div> -->
+
+        <!-- Third Section of Friend List -->
+        <div id="friendList">
+
+            {{#each songs}}
+            <div id="friend">
+                <div id="friendImgContainer">
+                    <img src={{imageURL}} id="hello">
+                </div>
+                <div id=friendNameContainer>
+                    <h3 id="friendName">{{name}}</h3>
+                    <h3 id="otherInfo" style="color: green">{{artist}}</h3>
+                    <h3 id="otherInfo2" style="color: brown">{{album}}</h3>
+                </div>
+            </div>
+            <br>
+            {{/each}}
+
+
+<!--             <button id="inviteFriend">
+                <p id="inviteText">Invite Friends +</p>
+            </button> -->
+        </div>
+<!-- 
         <div id="mainButtons">
 
             <div id="topButton" class="btn-group">
@@ -51,7 +92,7 @@
                 </a>
             </div>
         </div>
-
+-->
         <div id="bottomBar">
         </div>
 
