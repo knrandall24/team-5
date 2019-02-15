@@ -48,7 +48,7 @@
                         </div>
                     </a>
                     <div id="addList">
-                        <button class="btn btn-info" id="addFont">
+                        <button class="btn btn-info" id="addFont" onclick="added()">
                             Add To Your List
                         </button>
                     </div>
@@ -57,6 +57,12 @@
         </div>
 
     </center>
+    <script>
+        function added() {
+          document.getElementById("addFont").innerHTML = "Added";
+          $("#addFont").css("background-color", "lightgreen");
+      }
+  </script>
 </body>
 </html>
 
