@@ -240,7 +240,7 @@ body {
     #filler_grey{
         position: absolute;
         top:17%;
-        height: 5%;
+        height: 15%;
         width: 100%;
         background-color: #9b9fa3;
     }
@@ -253,14 +253,6 @@ body {
         padding-top: 5%;
         border: 1px solid black;
     }    
-    #SessionIDTab1{
-        position: absolute;
-        top:18%;
-        height: 11%;
-        width: 100%;
-        background-color:  #9b9fa3;
-        border: 1px solid black;
-    }
     #yourListen{
         position: absolute;
         top:21%;
@@ -393,11 +385,6 @@ body {
     top:27%;
     max-width: 20%;
 }
-#innerAddList{
-    position:relative;
-    align-content: center;
-}
-
 #addFont{
     font-size: 4vw;
 }
@@ -502,7 +489,7 @@ body {
 #friendList{
   position: absolute;
   top:25%;
-  height: 75%;
+  height: 73%;
   width: 100%;
   padding-top: 5%;
   background-color: lightblue;
@@ -548,9 +535,9 @@ body {
 }
 #friendName{
     position: relative;
-    top: 0%;
-    transform: translateY(-100%); 
-    font-size: 4vw;
+    top: 15%;
+    /*transform: translateY(-100%); */
+    font-size: 5vw;
 }
 #otherInfo{
     position: relative;
