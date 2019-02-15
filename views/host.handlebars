@@ -3,15 +3,19 @@
 <head>
     <title>Landing Page</title>
     <link href="/css/bootstrap.min.css" rel="stylesheet">
-    <link href="/css/hostCSS.css" rel="stylesheet">
+    <link href="/css/hostCSS.css" rel="stylesheet">    
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="js/bootstrap.js"></script>
 </head>
 <body>
     <center>
 
         <div id="titleBar">
-            <div id="hamburger">
-                <img id="hamImg" src="/img/hamburger.png">
-            </div>
+            <a href="back">
+                <div id="hamburger">
+                    <img id="hamImg" src="/img/hamburger.png">
+                </div>
+            </a>
             <div id="albumCover">
                 <img id="albumImg" src="/img/Ellie_Goulding.png">
             </div>
@@ -57,14 +61,14 @@
                     <img src={{imageURL}} id="hello">
                 </div>
                 <div id=friendNameContainer>
-                    <h3 id="friendName">{{name}}</h3>
+                    <h3 id="friendNameH">{{name}}</h3>
                 </div>
             </div>
             <br>
             {{/each}}
 
 
-            <button id="inviteFriend">
+            <button id="inviteFriend" onclick="invited()">
                 <p id="inviteText">Invite Friends +</p>
             </button>
         </div>
@@ -95,6 +99,18 @@
             </a>
         </div>
     </center>
+
+    <script>
+        function added() {
+          document.getElementById("addFont").innerHTML = "Added";
+          $("#addFont").css("background-color", "lightgreen");
+          $("#addList").css("left", "50%");
+      }
+      function invited(){
+        document.getElementById("inviteText").innerHTML = "Invited";
+        $("#inviteFriend").css("background-color", "lightgreen");
+    }
+</script>
 </body>
 </html>
 

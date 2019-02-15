@@ -1,0 +1,19 @@
+{
+    "session": [
+        {
+            "name": "Jake",
+            "Code": "A1377X",
+            "imageURL": "/img/filler_profile.png"
+        },
+        {
+            "name": "Rando",
+            "Code": "A13781",
+            "imageURL": "/img/filler_profile.png"
+        },
+        {
+            "name": "Zuck",
+            "Code": "A13787",
+            "imageURL": "/img/filler_profile.png"
+        }
+    ]
+}

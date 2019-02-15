@@ -2,9 +2,9 @@
 /*
  * GET search for session page.
  */
-var friend = require('../data.json');
+var session = require('../session.json');
 
 exports.view = function(req, res){
-  res.render('search',friend);
+  res.render('search',session);
 };
 

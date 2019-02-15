@@ -10,19 +10,23 @@
 <body>
     <center>
         <div id="titleBar">
-            <div id="hamburger">
-                <img id="hamImg" src="/img/hamburger.png">
+            <a href="back">
+                <div id="hamburger">
+                    <img id="hamImg" src="/img/hamburger.png">
+                </div>
+            </a>
+            <div id="albumCover"><!-- 
+                <img id="albumImg" src="/img/Ellie_Goulding.png"> -->
             </div>
-            <div id="albumCover">
-                <img id="albumImg" src="/img/Ellie_Goulding.png">
-            </div>
-            <div id="rightBottomBar">
+            <div id="rightTopBar">
+                <input id="barS" type="text" class="form-control" placeholder="Search for People" aria-label="Username" aria-describedby="basic-addon1">
+
                 <div id="songTitleContainer">
-                    <h4 id="songTitle" class="myTxt">Close To Me</h4>
-                    <marquee id="albumTitle" class="myTxt" behavior="scroll" direction="left" style="marquee-speed:slow;">Ellie Goulding and Diplo featuring Swae Lee</marquee>
+                    <!-- <h4 id="songTitle" class="myTxt">Close To Me</h4>
+                    <marquee id="albumTitle" class="myTxt" behavior="scroll" direction="left" style="marquee-speed:slow;">Ellie Goulding and Diplo featuring Swae Lee</marquee> -->
                 </div>
                 <div id="leaveOrAdd">
-                    <a href="back">
+                    <!-- <a href="back">
                         <div id="leaveSesh">
                             <img id="leave_img" src="/img/end_session.png">
                         </div>
@@ -31,7 +35,7 @@
                         <button class="btn btn-info" id="addFont" onclick="added()">
                             Add To Your List
                         </button>
-                    </div>
+                    </div> -->
                   <!--   <div id="pause">
                         <img id="leave_img" src="/img/pause.png">
                     </div>
@@ -52,66 +56,41 @@
         </div>
 
         <!-- Second Section of Session ID -->
-        <div id="SessionIDTab">
-            <h4 id="SessionID"> Your Session ID is: Z7AX6</h4>
+        <div id="SessionIDTab"><!-- 
+            <h4 id="SessionID"> Your Session ID is: Z7AX6</h4> -->
         </div>        
-        <div id="yourListen"> 
-            <h4 class="myTxt" style="font-size: 5vw;">Whos Listening:</h4>
+        <div id="yourListen"> <!-- 
+            <h4 class="myTxt" style="font-size: 5vw;">Whos Listening:</h4> -->
         </div>
 
  <!--        <div id="yourListen"> 
             hello
         </div> -->
 
-              <!-- Third Section of Friend List -->
+        <!-- Third Section of Friend List -->
         <div id="friendList">
-            <div id="friend">
-                <div id="friendImgContainer">
-                    <img src="/img/filler_profile.png" id="hello">
+            {{#each session}}
+
+            <a href="inSession">
+                <div id="friend">
+                    <div id="friendImgContainer">
+                        <img src={{imageURL}} id="hello">
+                    </div>
+                    <div id=friendNameContainer>
+                        <h3 id="friendName">{{name}}'s Session ({{Code}})</h3>
+                    </div>
                 </div>
-                <div id=friendNameContainer>
-                    <h3 id="friendName">You</h3>
-                </div>
-            </div>
+            </a>
             <br>
-            
-            {{#each friend}}
-            <div id="friend">
-                <div id="friendImgContainer">
-                    <img src={{imageURL}} id="hello">
-                </div>
-                <div id=friendNameContainer>
-                    <h3 id="friendName">{{name}}</h3>
-                </div>
-            </div>
-            <br>
+
             {{/each}}
 
 
-            <button id="inviteFriend">
+            <button id="inviteFriend" onclick="invited()">
                 <p id="inviteText">Invite Friends +</p>
             </button>
         </div>
 
-
-<!-- 
-        <div id="mainButtons">
-
-            <div id="topButton" class="btn-group">
-                <a href="loginHost">
-                    <img id="myImg" src="/img/DJ_Page.png">
-                    <h2 id="hostTxt">Host a Session</h2>
-                </a>
-            </div>
-
-            <div id="bottomButton" class="btn-group">
-                <a href="loginSearch">
-                    <img id="myImg" src="/img/Search_Page.png">
-                    <h2 id="searchTxt">Search For A Session</h2>
-                </a>
-            </div>
-        </div>
-    -->
     <div id="bottomBar">
     </div>
 
@@ -123,6 +102,10 @@
       $("#addFont").css("background-color", "lightgreen");
       $("#addList").css("left", "50%");
   }
+  function invited(){
+    document.getElementById("inviteText").innerHTML = "Invited";
+    $("#inviteFriend").css("background-color", "lightgreen");
+}
 </script>
 </body>
 </html>
