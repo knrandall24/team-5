@@ -30,10 +30,10 @@
     }    
     #SessionIDTab1{
         position: absolute;
-        top:16%;
-        height: 5%;
+        top:18%;
+        height: 11%;
         width: 100%;
-        background-color: #76797c;
+        background-color:  #9b9fa3;
         border: 1px solid black;
     }
     #yourListen{
@@ -48,9 +48,9 @@
     #friendList{
         position: absolute;
         top:25%;
-        height: 60%;
+        height: 85%;
         width: 100%;
-        background-color: #9b9fa3;
+        /*background-color: #9b9fa3;*/
         padding-top: 5%;
     }
 
@@ -320,8 +320,19 @@
 }
 #friendName{
     position: relative;
-    top: 50%;
+    top: 0%;
     transform: translateY(-100%); 
+    font-size: 4vw;
+}
+#otherInfo{
+    position: relative;
+    top: 0%;
+    transform: translateY(-200%); 
+    font-size: 4vw;
+}#otherInfo2{
+    position: relative;
+    top: 0%;
+    transform: translateY(-300%); 
     font-size: 4vw;
 }
 

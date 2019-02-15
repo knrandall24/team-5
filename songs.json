@@ -28,6 +28,42 @@
             "artist": "Post Malone",
             "album": "beerbongs & bentleys",
             "imageURL": "/img/album.png"
+        },
+        {
+            "name": "Song",
+            "artist": "Artist",
+            "album": "Album",
+            "imageURL": "/img/album.png"
+        },
+        {
+            "name": "Song",
+            "artist": "Artist",
+            "album": "Album",
+            "imageURL": "/img/album.png"
+        },
+        {
+            "name": "Song",
+            "artist": "Artist",
+            "album": "Album",
+            "imageURL": "/img/album.png"
+        },
+        {
+            "name": "Song",
+            "artist": "Artist",
+            "album": "Album",
+            "imageURL": "/img/album.png"
+        },
+        {
+            "name": "Song",
+            "artist": "Artist",
+            "album": "Album",
+            "imageURL": "/img/album.png"
+        },
+        {
+            "name": "Song",
+            "artist": "Artist",
+            "album": "Album",
+            "imageURL": "/img/album.png"
         }
     ]
 }
