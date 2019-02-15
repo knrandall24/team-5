@@ -169,6 +169,13 @@ body {
     font-size: 8vw;
 }
 
+#albumTitle{
+    position: absolute;
+    top:60%;
+    left:0%;
+    font-size: 3vw;    
+}
+
 #leaveOrAdd{
     position: absolute;
     top: 30%;
@@ -178,11 +185,27 @@ body {
 
 #leaveSesh{
     position: absolute;
-    left: 2%;
-    top:5%;
-    width: 28%;
-    height: 75%;
+    left: 3%;
+    top: 17%;
+    width: 12%;
+    height: 55%;
 }
+#pause{
+    position: absolute;
+    left: 33%;
+    top: 17%;
+    width: 12%;
+    height: 55%;
+}
+
+#next{
+    position: absolute;
+    left: 60%;
+    top: 17%;
+    width: 12%;
+    height: 55%;
+}
+
 #leave_img{  
     position: absolute;
     max-height: 100%;
