@@ -13,6 +13,11 @@
     <script src="js/bootstrap.js"></script>
     {{> facebook}}
     <script src="/js/facebook.js"></script>
+    <style>
+        body {
+            opacity: 1;
+        }
+    </style>
 </head>
 <body>
     <center>
@@ -91,6 +96,9 @@
                     console.log("facebook login");
                     window.location.href = 'host';
                 }
+                $(window).load(function() {
+                    $("body").addClass('all-loaded');
+                });
             </script>
 
         </body>
