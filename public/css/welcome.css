@@ -16,9 +16,9 @@ body{
 
 #welcome{
     position: absolute;
-    height: 43%;
-    width: 100%;
-    top: 5%;
+    height: 50%;
+    width:100%;
+    top: 3%;
     left: 0%;  
     /*background-color: #9b9fa3;*/
 }
