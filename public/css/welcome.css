@@ -1,0 +1,81 @@
+body{
+    background-color: #eaeaea;
+}
+#welcome{
+    position: absolute;
+    height: 43%;
+    width: 100%;
+    top: 10%;
+    left: 0%;
+    /*background-color: #9b9fa3;*/
+}
+
+#welcomeTitle{
+    font-family: 'Amaranth';
+    /*font-variant: bold;*/
+    color: #4b8be5;
+    text-shadow: -1px 0 #013d9e, 0 1px #013d9e, 1px 0 #013d9e, 0 -1px #013d9e;
+}
+
+#middle{
+    position: absolute;
+    height: 7%;
+    width: 100%;
+    top: 50%;
+    left: 0%;
+    padding-top: 3%;
+    /*background-color: red;*/
+}
+#middleWords{
+    color: #098c28;
+}
+#firstLine{
+    position: absolute;
+    top: 10%;
+    left: 16%;
+}
+#secondLine{
+    position: absolute;
+    top: 55%;
+    left: 25%;
+}
+
+#login-container{
+    position: absolute;
+    padding-top: 10%;
+    height: 42%;
+    width: 100%;
+    top: 55%;
+    left: 0%;
+    /*background-color: black;*/
+}
+.button {
+  background-color: #306aff; 
+  border: none;
+  color: white;
+  /*padding: 15px 32px;*/
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 25vw;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+.button:active {
+  background-color: #1a3f9b;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+.button2 {
+    border-radius: 8%;
+    width: 75%;
+    height: 75%;
+    color: white;     
+    text-shadow: -3px 0 #3061db, 0 3px #3061db, 3px 0 #3061db, 0 -3px #3061db;
+    border: 2px solid #008CBA;
+}
+#DJAM{
+    position: absolute;
+    width: 100%;
+    top: 53%;
+}

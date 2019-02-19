@@ -22,6 +22,16 @@ var back = require('./routes/index');
 
 var queue= require('./routes/queue');
 var chat= require('./routes/chat');
+
+
+//v2.0:
+var welcome = require('./routes/welcome');
+var login = require('./routes/login');
+
+
+
+
+
 // Example route
 // var user = require('./routes/user');
 
@@ -47,7 +57,8 @@ if ('development' == app.get('env')) {
   app.use(express.errorHandler());
 }
 
-app.get('/', index.view);
+app.get('/', welcome.view);
+app.get('/login', login.view);
 app.get('/loginHost', loginHost.view);
 app.get('/loginSearch', loginSearch.view);
 app.get('/main', main.view);

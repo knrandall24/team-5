@@ -1,10 +1,10 @@
 
 /*
- * GET search for session page.
+ * GET search page.
  */
-var session = require('../session.json');
+
 
 exports.view = function(req, res){
-  res.render('search',session);
+  res.render('search');
 };
 
