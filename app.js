@@ -67,7 +67,7 @@ app.get('/solo', solo.view);
 app.get('/search', search.view);
 app.get('/inSession', inSession.view);
 app.get('/edit', edit.view);
-app.get('/back', index.view)
+app.get('/back', welcome.view)
 
 app.get('/chat', chat.view);
 app.get('/queue', queue.view);
