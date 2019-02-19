@@ -4,7 +4,8 @@
  */
 
 var express = require('express');
-var http = require('http');
+var fs = require('fs');
+var https = require('https');
 var path = require('path');
 var handlebars = require('express3-handlebars')
 
@@ -75,6 +76,9 @@ app.get('/queue', queue.view);
 // Example route
 // app.get('/users', user.list);
 
-http.createServer(app).listen(app.get('port'), function(){
+https.createServer({
+  key: fs.readFileSync('server.key'),
+  cert: fs.readFileSync('server.cert')
+}, app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));
 });
