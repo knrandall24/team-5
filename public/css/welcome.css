@@ -18,7 +18,7 @@ body{
     position: absolute;
     height: 43%;
     width: 100%;
-    top: 10%;
+    top: 5%;
     left: 0%;  
     /*background-color: #9b9fa3;*/
 }
@@ -112,5 +112,5 @@ body{
 #DJAM{
     position: absolute;
     width: 100%;
-    top: 53%;
+    top: 50%;
 }
