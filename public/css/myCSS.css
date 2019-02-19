@@ -11,9 +11,9 @@ body {
 
 #overlay{
     position: absolute;
-    top:28%;
+    top:15%;
     left:7%;
-    height: 55%;
+    height: 75%;
     width: 86%;
     z-index: 2;
     border: 3px solid black;
@@ -22,16 +22,18 @@ body {
 }
 #icon{
     position: absolute;
+    left: 0%;
     top: 5%;
-    left:38%;
     height: 20%;
-    width: 20%;
+    width: 100%;
 }
 #myIcon{
     position: absolute;
     max-height: 100%;
-    top:0%;
     left:0%;
+    right: 0%;
+    margin-left: auto;
+    margin-right: auto;
 }
 #the-form{
     position: absolute;
@@ -42,6 +44,11 @@ body {
     padding-top:5%;
     font-size: 4vw;
 }
+
+#emailHelp{
+    color: black;
+}
+
 #textboxid
 {
     height:300%;
@@ -262,6 +269,6 @@ body {
     position: absolute;
     max-height: 100%;
     top:0%;
-    left:0%;
+    right:2%;
 }
 }

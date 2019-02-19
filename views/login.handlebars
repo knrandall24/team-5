@@ -1,8 +1,13 @@
 <!doctype html>
 <html>
 <head>
-    <title>Host Page</title>
-    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <title>Login Page</title>
+    <!-- Default Header -->
+    <meta name="viewport" content="width=device-width, initial-scale=1"> 
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Amaranth' rel='stylesheet'>
+    <!-- End Default Header -->
+
     <link href="/css/myCSS.css" rel="stylesheet">
     <link href="/css/welcome.css" rel="stylesheet">
 
@@ -29,7 +34,7 @@
                     <h5 id="middleWords">A more sociable experience!</h5>
                 </div>
             </div>        
-            <div id="login-container">
+            <div id="in-login-container">
                 <button class="button button2">Login</button>
             </div>
         </div>
@@ -38,17 +43,20 @@
         <!-- Actual Login Stuff -->
         <div id="overlay">
             <div id="icon">
-                <img id="myIcon" src="/img/facebook.png">
+                <center>
+                    <img id="myIcon" src="/img/facebook.png">
+                </center>
             </div>
             <div id="the-form">
                 <form>
                   <div class="form-group">
-                    <label for="exampleInputEmail1">Email address</label>
+
+                    <h4 class="h4">Email address</h4>
                     <input id="textboxid" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-                    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                    <p><small>We'll never share your email with anyone else.</small></p>
                 </div>
                 <div class="form-group">
-                    <label for="exampleInputPassword1">Password</label>
+                    <h4 class="h4">Password</h4>
                     <input id="textboxid" type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
                 </div>
                 <div class="form-check">
@@ -56,7 +64,11 @@
                     <label class="form-check-label" for="exampleCheck1">Remenber Me</label>
                 </div>
                 <br>
-                <button id="submitButton" type="submit" class="btn btn-primary" onclick="window.location.href = 'host';">Submit</button>
+                <button type="submit" class="btn btn-success btn-lg" onclick="loggedIn()">Submit</button>
+                <br>
+                <br>
+                <p class="lead">--- OR ---</p>
+                <button type="submit" class="btn btn-primary btn-lg" onclick="loggedInFB()">Login with Facebook</button>
             </form>
         </div>
         <a href="back">
@@ -68,5 +80,16 @@
 
 
 </center>
+<script>
+function loggedIn() {
+    console.log("regular login");
+    // window.location.href = 'host';
+}
+function loggedInFB() {
+    console.log("facebook login");
+    // window.location.href = 'host';
+}
+</script>
+
 </body>
 </html>

@@ -63,6 +63,16 @@ body{
     animation: 3s ease-out 0s 1 fadeIn;
     /*background-color: black;*/
 }
+
+#in-login-container{
+    position: absolute;
+    padding-top: 10%;
+    height: 42%;
+    width: 100%;
+    top: 55%;
+    left: 0%;
+}
+
 .button {
   background-color: #4978f4; 
   border: none;
@@ -79,6 +89,7 @@ body{
   -moz-box-shadow: 0 8px 0 #264084, 0 15px 20px rgba(0, 0, 0, .35);
   box-shadow: 0 8px 0 #264084, 0 15px 20px rgba(0, 0, 0, .35);
 }
+
 .button:active {
   background-color: #1a3f9b;
   box-shadow: 0 5px #666;
