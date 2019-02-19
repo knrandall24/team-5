@@ -1,12 +1,25 @@
 body{
-    background-color: #eaeaea;
+    background-color: #eaeaea;    
+    animation: 1s ease-out 0s 1 fadeIn;
 }
+
+/*Animation definitions:*/
+@-webkit-keyframes fadeIn { 
+    from { opacity:0; } to { opacity:1; } 
+}
+@-moz-keyframes fadeIn { 
+    from { opacity:0; } to { opacity:1; } 
+}
+@keyframes fadeIn { 
+    from { opacity:0; } to { opacity:1; } 
+}
+
 #welcome{
     position: absolute;
     height: 43%;
     width: 100%;
     top: 10%;
-    left: 0%;
+    left: 0%;  
     /*background-color: #9b9fa3;*/
 }
 
@@ -23,8 +36,8 @@ body{
     width: 100%;
     top: 50%;
     left: 0%;
-    padding-top: 3%;
-    /*background-color: red;*/
+    padding-top: 3%;    
+    animation: 1.5s ease-out 0s 1 fadeIn;
 }
 #middleWords{
     color: #098c28;
@@ -46,20 +59,25 @@ body{
     height: 42%;
     width: 100%;
     top: 55%;
-    left: 0%;
+    left: 0%;    
+    animation: 3s ease-out 0s 1 fadeIn;
     /*background-color: black;*/
 }
 .button {
-  background-color: #306aff; 
+  background-color: #4978f4; 
   border: none;
   color: white;
-  /*padding: 15px 32px;*/
   text-align: center;
   text-decoration: none;
   display: inline-block;
   font-size: 25vw;
   margin: 4px 2px;
   cursor: pointer;
+
+  /*Box shadow:*/
+  -webkit-box-shadow:    0 8px 0 #264084, 0 15px 20px rgba(0, 0, 0, .35);
+  -moz-box-shadow: 0 8px 0 #264084, 0 15px 20px rgba(0, 0, 0, .35);
+  box-shadow: 0 8px 0 #264084, 0 15px 20px rgba(0, 0, 0, .35);
 }
 .button:active {
   background-color: #1a3f9b;
