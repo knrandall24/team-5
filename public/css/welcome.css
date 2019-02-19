@@ -83,6 +83,7 @@ body{
     font-size: 25vw;
     margin: 4px 2px;
     cursor: pointer;
+    padding: 0px;
 
     /*Box shadow:*/
     -webkit-box-shadow:    0 8px 0 #264084, 0 15px 20px rgba(0, 0, 0, .35);
@@ -91,11 +92,13 @@ body{
 }
 
 .button:active {
+    padding: 0px;
   background-color: #1a3f9b;
   box-shadow: 0 5px #666;
   transform: translateY(4px);
 }
 .button2 {
+    padding: 0px;
     border-radius: 8%;
     width: 75%;
     height: 75%;
