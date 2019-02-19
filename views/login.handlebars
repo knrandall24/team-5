@@ -13,12 +13,8 @@
     <script src="js/bootstrap.js"></script>
     {{> facebook}}
     <script src="/js/facebook.js"></script>
-    <style>
-        body {
-            opacity: 1;
-        }
-    </style>
 </head>
+
 <body>
     <center>
         <div id="backView">
@@ -74,32 +70,29 @@
                     <label class="form-check-label" for="exampleCheck1">Remenber Me</label>
                 </div>
                 <br>
-                <button onclick="loggedInEm()" type="submit" class="btn btn-success btn-lg" >Submit</button>
+                <fieldset disabled>
+                    <button onclick="loggedIn()"  class="btn btn-success btn-lg" >Submit</button>
+                </fieldset>
                 <br>
                 <br>
                 <p class="lead">--- OR ---</p>
-                <!-- <button type="submit" class="btn btn-primary btn-lg" onclick="loggedInFB()"> -->
-                    <fb:login-button scope="public_profile,email" onlogin="checkLoginState();" onclick="loggedInFB()" size="xlarge">Login with Facebook</fb:login-button>
+                <fb:login-button scope="public_profile,email" onlogin="checkLoginState();" onclick="loggedInFB()" size="xlarge">Login with Facebook</fb:login-button>
+                <!-- <button  class="btn btn-primary btn-lg" onclick="loggedInFB()"> -->
                     <!-- </button> -->
                 </form>
                 <br>
+            </div>
+        </div>
+    </center>
+    <script>
+        function loggedIn() {
+            window.location.href='host';
+        };
+        function loggedInFB() {
+            console.log("facebook login");
+            window.location.href = 'host';
+        };
+    </script>
 
-
-
-            </center>
-            <script>
-                function loggedInEm() {
-                    console.log("regular login");
-                    window.location.href = 'host';
-                };
-                function loggedInFB() {
-                    console.log("facebook login");
-                    window.location.href = 'host';
-                }
-                $(window).load(function() {
-                    $("body").addClass('all-loaded');
-                });
-            </script>
-
-        </body>
-        </html>
+</body>
+</html>
