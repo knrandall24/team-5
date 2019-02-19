@@ -18,7 +18,7 @@ var solo = require('./routes/solo');
 var search = require('./routes/search');
 var inSession = require('./routes/inSession');
 var edit = require('./routes/edit');
-var back = require('./routes/index');
+var back = require('./routes/welcome');
 
 var queue= require('./routes/queue');
 var chat= require('./routes/chat');
@@ -67,7 +67,8 @@ app.get('/solo', solo.view);
 app.get('/search', search.view);
 app.get('/inSession', inSession.view);
 app.get('/edit', edit.view);
-app.get('/back', welcome.view)
+
+app.get('/back',welcome.view);
 
 app.get('/chat', chat.view);
 app.get('/queue', queue.view);
