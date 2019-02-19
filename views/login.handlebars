@@ -70,13 +70,12 @@
                     <label class="form-check-label" for="exampleCheck1">Remenber Me</label>
                 </div>
                 <br>
-                <fieldset disabled>
-                    <button onclick="loggedIn()"  class="btn btn-success btn-lg" >Submit</button>
-                </fieldset>
-                <br>
+                <button onclick="loggedIn()"  class="btn btn-success btn-lg" >Submit</button>
                 <br>
                 <p class="lead">--- OR ---</p>
-                <fb:login-button scope="public_profile,email" onlogin="checkLoginState();" onclick="loggedInFB()" size="xlarge">Login with Facebook</fb:login-button>
+                <div id="fb-button">
+                    <fb:login-button scope="public_profile,email" onlogin="checkLoginState();" onclick="loggedInFB()" size="xlarge">Login with Facebook</fb:login-button>
+                </div>
                 <!-- <button  class="btn btn-primary btn-lg" onclick="loggedInFB()"> -->
                     <!-- </button> -->
                 </form>
