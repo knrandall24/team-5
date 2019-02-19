@@ -81,9 +81,10 @@ body{
     text-decoration: none;
     display: inline-block;
     font-size: 25vw;
-    margin: 4px 2px;
     cursor: pointer;
     padding: 0px;
+    text-align: center;
+    margin: auto;
 
     /*Box shadow:*/
     -webkit-box-shadow:    0 8px 0 #264084, 0 15px 20px rgba(0, 0, 0, .35);
@@ -105,6 +106,8 @@ body{
     color: white;     
     text-shadow: -3px 0 #3061db, 0 3px #3061db, 3px 0 #3061db, 0 -3px #3061db;
     border: 2px solid #008CBA;
+    text-align: center;
+    margin: auto;
 }
 #DJAM{
     position: absolute;
