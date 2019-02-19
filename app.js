@@ -11,27 +11,28 @@ var path = require('path');
 var handlebars = require('express3-handlebars')
 
 var index = require('./routes/index');
-var main = require('./routes/main');
-var loginHost = require('./routes/loginHost');
-var loginSearch = require('./routes/loginSearch');
 
 var host = require('./routes/host');
-var solo = require('./routes/solo');
-var search = require('./routes/search');
-var inSession = require('./routes/inSession');
-var edit = require('./routes/edit');
 var back = require('./routes/welcome');
 
 var queue= require('./routes/queue');
-var chat= require('./routes/chat');
 
 
 //v2.0:
 var welcome = require('./routes/welcome');
 var login = require('./routes/login');
+var home = require('./routes/home');
 
 
-
+//Obsolete:
+// var main = require('./routes/main');
+// var loginHost = require('./routes/loginHost');
+// var loginSearch = require('./routes/loginSearch');
+// var solo = require('./routes/solo');
+// var search = require('./routes/search');
+// var inSession = require('./routes/inSession');
+// var edit = require('./routes/edit');
+// var chat= require('./routes/chat');
 
 
 // Example route
@@ -60,20 +61,29 @@ if ('development' == app.get('env')) {
 }
 
 app.get('/', welcome.view);
-app.get('/login', login.view);
-app.get('/loginHost', loginHost.view);
-app.get('/loginSearch', loginSearch.view);
-app.get('/main', main.view);
-app.get('/host', host.view);
-app.get('/solo', solo.view);
-app.get('/search', search.view);
-app.get('/inSession', inSession.view);
-app.get('/edit', edit.view);
-
 app.get('/back',welcome.view);
+app.get('/login', login.view);
+app.get('/home', home.view);
 
-app.get('/chat', chat.view);
+
+app.get('/host', host.view);
 app.get('/queue', queue.view);
+
+
+
+
+// Obsolete:
+// app.get('/loginHost', loginHost.view);
+// app.get('/loginSearch', loginSearch.view);
+// app.get('/edit', edit.view);
+// app.get('/main', main.view);
+// app.get('/search', search.view);
+// app.get('/chat', chat.view);
+// app.get('/solo', solo.view);
+//app.get('/inSession', inSession.view);
+
+
+
 // Example route
 // app.get('/users', user.list);
 
