@@ -74,20 +74,20 @@ body{
 }
 
 .button {
-  background-color: #4978f4; 
-  border: none;
-  color: white;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 25vw;
-  margin: 4px 2px;
-  cursor: pointer;
+    background-color: #4978f4; 
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 25vw;
+    margin: 4px 2px;
+    cursor: pointer;
 
-  /*Box shadow:*/
-  -webkit-box-shadow:    0 8px 0 #264084, 0 15px 20px rgba(0, 0, 0, .35);
-  -moz-box-shadow: 0 8px 0 #264084, 0 15px 20px rgba(0, 0, 0, .35);
-  box-shadow: 0 8px 0 #264084, 0 15px 20px rgba(0, 0, 0, .35);
+    /*Box shadow:*/
+    -webkit-box-shadow:    0 8px 0 #264084, 0 15px 20px rgba(0, 0, 0, .35);
+    -moz-box-shadow: 0 8px 0 #264084, 0 15px 20px rgba(0, 0, 0, .35);
+    box-shadow: 0 8px 0 #264084, 0 15px 20px rgba(0, 0, 0, .35);
 }
 
 .button:active {
