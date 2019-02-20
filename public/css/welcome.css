@@ -1,5 +1,5 @@
 body{
-    background-color: #eaeaea;    
+    background-color: #d4d7d8;    
     animation: 1s ease-out 0s 1 fadeIn;
 }
 
@@ -26,15 +26,15 @@ body{
 #welcomeTitle{
     font-family: 'Amaranth';
     /*font-variant: bold;*/
-    color: #4b8be5;
-    text-shadow: -1px 0 #013d9e, 0 1px #013d9e, 1px 0 #013d9e, 0 -1px #013d9e;
+    color: #4834d4;
+    text-shadow: -1px 0 #270084, 0 1px #270084, 1px 0 #270084, 0 -1px #270084;
 }
 
 #middle{
     position: absolute;
     height: 7%;
     width: 100%;
-    top: 50%;
+    top: 48%;
     left: 0%;
     padding-top: 3%;    
     animation: 1.25s ease-out 0s 1 fadeIn;
@@ -105,8 +105,8 @@ body{
     width: 75%;
     height: 75%;
     color: white;     
-    text-shadow: -3px 0 #3061db, 0 3px #3061db, 3px 0 #3061db, 0 -3px #3061db;
-    border: 2px solid #008CBA;
+    text-shadow: -3px 0 #2c3e50, 0 3px #2c3e50, 3px 0 #2c3e50, 0 -3px #2c3e50;
+    border: 2px solid #2c3e50;
     text-align: center;
     margin: auto;
 }

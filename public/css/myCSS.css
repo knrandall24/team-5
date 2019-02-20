@@ -1,6 +1,6 @@
-body {
+/*body {
     background-color: #000000;
-}
+}*/
 /*Animation definitions:*/
 @-webkit-keyframes fadeIn { 
     from { opacity:0; } to { opacity:1; } 

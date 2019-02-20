@@ -5,8 +5,7 @@
     <!-- Default Header -->
     {{> default}}
     <!-- End Default Header -->
-    <!-- <link href="/css/bootstrap.min.css" rel="stylesheet"> -->
-    <link href="/css/welcome.css" rel="stylesheet">
+    <link href="/css/home.css" rel="stylesheet">
     <script src="https://code.jquery.com/jquery.js"></script>
     <script src="js/bootstrap.js"></script>
 </head>
@@ -14,22 +13,27 @@
 <body>   
     <center>
         <div id="welcome">
-            <h1 class="display-3" id="welcomeTitle">Welcome!</h1>
-            <h1 class="display-3" id="welcomeTitle">To</h1>
+            <h1 class="display-4" id="welcomeTitle">Welcome!</h1>
+            <div id="Title-to">
+                <h1 id="welcomeTitle">To</h1>
+            </div>
             <div id="DJAM">
-                <h1 class="display-1" id="welcomeTitle">DJAM</h1>
+                <h1 class="display-3" id="welcomeTitle">DJAM</h1>
             </div>
+        </div>         
+        <div id="host-container">
+            <button class="button button2" onclick="window.location.href = 'host';" id="host-btn">
+                <div id="btn-txt">Host
+                    <p class="lead">A New Session</p>
+                </div>
+            </button>
         </div>        
-        <div id="middle">
-            <div id="firstLine">
-                <h5 id="middleWords">Make listening to music</h5>
-            </div>
-            <div id="secondLine">
-                <h5 id="middleWords">A more sociable experience!</h5>
-            </div>
-        </div>        
-        <div id="login-container">
-            <button class="button button2" onclick="window.location.href = 'login';">Login</button>
+        <div id="stream-container">
+            <button class="button button2" onclick="window.location.href = 'stream';"id="stream-btn">
+                <div id="btn-txt">
+                    Stream<p class="lead">An Existing Session</p>
+                </div>
+            </button>
         </div>
     </center>
 

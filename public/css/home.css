@@ -1,0 +1,144 @@
+body{
+    background-color: #d7dce0;    
+    animation: 1s ease-out 0s 1 fadeIn;
+}
+
+/*Animation definitions:*/
+@-webkit-keyframes fadeIn { 
+    from { opacity:0; } to { opacity:1; } 
+}
+@-moz-keyframes fadeIn { 
+    from { opacity:0; } to { opacity:1; } 
+}
+@keyframes fadeIn { 
+    from { opacity:0; } to { opacity:1; } 
+}
+
+/*Start for heading*/
+#welcome{
+    position: absolute;
+    height: 50%;
+    width:100%;
+    top: 1%;
+    left: 0%;  
+    /*background-color: #9b9fa3;*/
+}
+
+#welcomeTitle{
+    font-family: 'Amaranth';
+    /*font-variant: bold;*/
+    color: #4834d4;
+    text-shadow: -1px 0 #270084, 0 1px #270084, 1px 0 #270084, 0 -1px #270084;
+}
+/*End for heading*/
+
+/*Start CSS for host button*/
+#host-container{    
+    position: absolute;
+    padding-top: 10%;
+    height: 42%;
+    width: 100%;
+    top: 25%;
+    left: 0%;    
+    animation: 1.75s ease-out 0s 1 fadeIn;
+    /*background-color: black;*/
+}
+#host-btn{
+    /*background-color: rgba(46, 204, 113,.6); */
+    text-shadow: -3px 0 #16a085, 0 3px #16a085, 3px 0 #16a085, 0 -3px #16a085;
+    border: 2px solid #16a085;
+
+    background-color: #6DCC5A; 
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#6DCC5A), to(#128532));
+    background-image: -webkit-linear-gradient(top, #6DCC5A, #128532);
+    background-image: -moz-linear-gradient(top, #6DCC5A, #128532);
+    background-image: -ms-linear-gradient(top, #6DCC5A, #128532);
+    background-image: -o-linear-gradient(top, #6DCC5A, #128532);
+    background-image: linear-gradient(to bottom, #6DCC5A, #128532);filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#6DCC5A, endColorstr=#128532);
+
+    /*Box shadow:*/
+    -webkit-box-shadow:    0 5px 0 #004c15, 0 15px 20px rgba(0, 0, 0, .35);
+    -moz-box-shadow: 0 5px 0 #004c15, 0 15px 20px rgba(0, 0, 0, .35);
+    box-shadow: 0 5px 0 #004c15, 0 15px 20px rgba(0, 0, 0, .35);
+}
+/*End CSS for host button*/
+
+
+/*Start CSS for stream button*/
+#stream-container{
+    position: absolute;
+    padding-top: 10%;
+    height: 42%;
+    width: 100%;
+    top: 58%;
+    left: 0%;    
+    animation: 1.75s ease-out 0s 1 fadeIn;
+    /*background-color: red;*/
+}
+
+#stream-btn{
+    /*background-color: rgba(52, 152, 219, .6);*/
+    text-shadow: -3px 0 #2d6bc6, 0 3px #2d6bc6, 3px 0 #2d6bc6, 0 -3px #2d6bc6;
+    border: 2px solid #2d6bc6;
+
+    background-color: #3498DB; 
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#3498DB), to(#2D6BC6));
+    background-image: -webkit-linear-gradient(top, #3498DB, #2D6BC6);
+    background-image: -moz-linear-gradient(top, #3498DB, #2D6BC6);
+    background-image: -ms-linear-gradient(top, #3498DB, #2D6BC6);
+    background-image: -o-linear-gradient(top, #3498DB, #2D6BC6);
+    background-image: linear-gradient(to bottom, #3498DB, #2D6BC6);filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#3498DB, endColorstr=#2D6BC6);
+
+
+    /*Box shadow:*/
+    -webkit-box-shadow:    0 5px 0 #1c2c6d, 0 15px 20px rgba(0, 0, 0, .35);
+    -moz-box-shadow: 0 5px 0 #1c2c6d, 0 15px 20px rgba(0, 0, 0, .35);
+    box-shadow: 0 5px 0 #1c2c6d, 0 15px 20px rgba(0, 0, 0, .35);
+}
+/*End CSS for stream button*/
+
+#btn-txt{
+    z-index: 3;
+    opacity: 1;
+}
+
+.button {
+    /*background-color: #4978f4; */
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20vw;
+    cursor: pointer;
+    padding: 0px;
+    text-align: center;
+    margin: auto;
+
+}
+
+.button:active {
+    padding: 0px;
+    background-color: #1a3f9b;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+.button2 {
+    padding: 0px;
+    border-radius: 8%;
+    width: 75%;
+    height: 75%;
+    color: white;     
+    text-align: center;
+    margin: auto;
+}
+#DJAM{
+    position: absolute;
+    width: 100%;
+    top: 25%;
+}
+#Title-to{
+    position: absolute;
+    width: 100%;
+    top: 15%;
+}
