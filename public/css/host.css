@@ -30,4 +30,30 @@ body {
     background-color: #9ec2dd;
 }
 
+/*Within the title bar*/
+#back-container{
+    position: absolute;
+    top:14%;
+    left:4%;
+    height:50%;
+    width: 10%;
+    /*background-color: red;*/
+}
+#title-container{
+    position: absolute;
+    top:23%;
+    left:12%;
+    height:100%;
+    width: 88%;
+}
+#title{
+    font-family: 'Amaranth';
+    font-size: 12vw;
+    color: #4834d4;
+    text-shadow: -1px 0 #270084, 0 1px #270084, 1px 0 #270084, 0 -1px #270084;
+
+}
+#instructions{
+  letter-spacing: 1px;
+}
 
