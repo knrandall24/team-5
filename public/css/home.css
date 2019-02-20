@@ -54,7 +54,7 @@ body{
     position: absolute;
     height: 50%;
     width:100%;
-    top: 1%;
+    top: 8%;
     left: 0%;  
     /*background-color: #9b9fa3;*/
     -webkit-animation: bounce 1s 1;
@@ -72,9 +72,9 @@ body{
 #host-container{    
     position: absolute;
     padding-top: 10%;
-    height: 42%;
+    height: 40%;
     width: 100%;
-    top: 25%;
+    top: 40%;
     left: 0%;    
     animation: 1.75s ease-out 0s 1 fadeIn;
     /*background-color: black;*/
@@ -104,9 +104,9 @@ body{
 #stream-container{
     position: absolute;
     padding-top: 10%;
-    height: 42%;
+    height: 40%;
     width: 100%;
-    top: 58%;
+    top: 65%;
     left: 0%;    
     animation: 1.75s ease-out 0s 1 fadeIn;
     /*background-color: red;*/
@@ -136,6 +136,7 @@ body{
 #btn-txt{
     z-index: 3;
     opacity: 1;
+    margin-top: -3%;
 }
 
 .button {
@@ -145,7 +146,7 @@ body{
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 20vw;
+    font-size: 15vw;
     cursor: pointer;
     padding: 0px;
     text-align: center;
@@ -161,10 +162,9 @@ body{
     transform: translateY(4px);
 }
 .button2 {
-    padding: 0px;
     border-radius: 8%;
-    width: 75%;
-    height: 75%;
+    width: 70%;
+    height: 48%;
     color: white;     
     text-align: center;
     margin: auto;
