@@ -14,6 +14,41 @@ body{
     from { opacity:0; } to { opacity:1; } 
 }
 
+@-webkit-keyframes bounce {
+    0% {
+        transform: scale(1,1) translate(0px, 0px);
+    }
+
+    30%{
+        transform: scale(1,0.9) translate(0px, 5px); 
+    }
+
+    75%{
+        transform: scale(1,1.05) translate(0px, -15px); 
+    }
+
+    100% {
+        transform: scale(1,1) translate(0px, 0px);
+    }
+}
+@-webkit-keyframes bounceTitle {
+    0% {
+        transform: scale(1,1) translate(0px, -5px);
+    }
+
+    30%{
+        transform: scale(1,0.9) translate(0px, 5px); 
+    }
+
+    75%{
+        transform: scale(1,1.05) translate(0px, -15px); 
+    }
+
+    100% {
+        transform: scale(1,1) translate(0px, 0px);
+    }
+}
+
 /*Start for heading*/
 #welcome{
     position: absolute;
@@ -22,6 +57,7 @@ body{
     top: 1%;
     left: 0%;  
     /*background-color: #9b9fa3;*/
+    -webkit-animation: bounce 1s 1;
 }
 
 #welcomeTitle{
@@ -114,6 +150,7 @@ body{
     padding: 0px;
     text-align: center;
     margin: auto;
+    -webkit-animation: bounce 1s 1;
 
 }
 

@@ -1,103 +1,29 @@
 <!doctype html>
 <html>
 <head>
-    <title>Landing Page</title>
+    <title>Start Host Page</title>
+    <!-- Default Header -->
+    {{> default}}
+    <!-- End Default Header -->
     <link href="/css/bootstrap.min.css" rel="stylesheet">
-    <link href="/css/hostCSS.css" rel="stylesheet">    
+    <link href="/css/host.css" rel="stylesheet">    
     <script src="https://code.jquery.com/jquery.js"></script>
     <script src="js/bootstrap.js"></script>
 </head>
 <body>
     <center>
-
         <div id="titleBar">
-            <a href="back">
-                <div id="hamburger">
-                    <img id="hamImg" src="/img/hamburger.png">
-                </div>
-            </a>
-            <div id="albumCover">
-                <img id="albumImg" src="/img/Ellie_Goulding.png">
-            </div>
-            <div id="rightBottomBar">
-                <div id="songTitleContainer">
-                    <h4 id="songTitle" class="myTxt">Close To Me</h4>
-                    <marquee id="albumTitle" class="myTxt" behavior="scroll" direction="left" style="marquee-speed:slow;">Ellie Goulding and Diplo featuring Swae Lee</marquee>
-                </div>
-                <div id="leaveOrAdd">
-                    <a href="back">
-                        <div id="leaveSesh">
-                            <img id="leave_img" src="/img/end_session.png">
-                        </div>
-                    </a>
-                    <div id="pause">
-                        <img id="leave_img" src="/img/pause.png">
-                    </div>
-                    <div id="next">
-                        <img id="leave_img" src="/img/next.png">
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div id="filler_grey"> 
-            <br>
+            <!-- <div class="row"> -->
+              <div class="col-8">col-8</div>
+              <div class="col-4">col-4</div>
+          <!-- </div> -->
+      </div>
+      <div id="middle">
+      </div>
+        <div id="bottomBar">
         </div>
 
-        <!-- Second Section of Session ID -->
-        <div id="SessionIDTab">
-            <h4 id="SessionID"> Your Session ID is: 53X</h4>
-        </div>
 
-        <div id="yourListen"> 
-            <h4 class="myTxt" style="font-size: 5vw;">Your Listeners:</h4>
-        </div>
-
-        <!-- Third Section of Friend List -->
-        <div id="friendList">
-
-            {{#each friend}}
-            <div id="friend">
-                <div id="friendImgContainer">
-                    <img src={{imageURL}} id="hello">
-                </div>
-                <div id=friendNameContainer>
-                    <h3 id="friendNameH">{{name}}</h3>
-                </div>
-            </div>
-            <br>
-            {{/each}}
-
-
-            <button id="inviteFriend" onclick="invited()">
-                <p id="inviteText">Invite Friends +</p>
-            </button>
-        </div>
-
-        <!-- Last Section for Buttons -->
-        <div id="bottomTab">
-<!--             <a href="chat">
-                <button id="viewTheChat" > 
-                    <div id="chatPicContainer">
-
-                        <img src="/img/message.png" id="chatPic">
-                    </div>
-                    <div id="chatText">
-                        <h4 id="hostTxt1">View The Chat</h4>
-                    </div>
-                </button> -->
-            </a>
-            <a href="queue">
-                <button id="editTheQueue"> <!-- add onlick-->
-                    <!-- add image-->
-                    <div id="queuePicContainer">
-                        <img src="/img/queue.png" id="queuePic">
-                    </div>
-                    <div id="queueText">
-                        <h4 id="hostTxt1">Edit The Queue</h4>
-                    </div>
-                </button>
-            </a>
-        </div>
     </center>
 
     <script>
@@ -114,16 +40,7 @@
 </body>
 </html>
 
-
-
-<!--             <button id="friend">
-                <img src="/img/filler_profile.png" alt="Name" id="friendImg">
-                <h3 id="friendName">Jake From StateFarm</h3>
-            </button>
-            <button id="friend">
-                <img src="/img/filler_profile.png" alt="Name" id="friendImg">
-                <h3 id="friendName">Mark ZuckEZuck</h3>
-            </button> -->
+>
 
 
 

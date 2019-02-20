@@ -1,0 +1,33 @@
+body {
+    background-color: black;
+}
+
+/*Main Sections*/
+#titleBar{
+    position: absolute;
+    top:0%;
+    height: 13%;
+    width: 100%;
+    background-color:#bac5c9;
+    text-align: center;
+    /*padding: 2%;*/
+}
+
+#middle{
+    position: absolute;
+    top:13%;
+    height: 75%;
+    width: 100%;
+    background-color: #eaf3fa;
+}
+
+#bottomBar{
+    position: absolute;
+    top:88%;
+    left:0%;
+    height:12%;
+    width: 100%;
+    background-color: #9ec2dd;
+}
+
+
