@@ -52,38 +52,38 @@
         z-index: 15;
     }
 
-#friendList{
-  position: absolute;
-  top:25%;
-  height: 75%;
-  width: 100%;
-  padding-top: 5%;
-  background-color: lightblue;
-  width: 100%;
-  overflow: auto;
+    #friendList{
+      position: absolute;
+      top:25%;
+      height: 75%;
+      width: 100%;
+      padding-top: 5%;
+      background-color: lightblue;
+      width: 100%;
+      overflow: auto;
+  }
+  #qfriendList{
+      position: absolute;
+      top:25%;
+      height: 72%;
+      width: 100%;
+      padding-top: 5%;
+      background-color: #76797c;
+      width: 100%;
+      overflow: auto;
+  }
+
+  #bottomTab{
+    position: absolute;
+    top:85%;
+    height: 15%;
+    width: 100%;
+    background-color: #9b9fa3;
+    padding-top: 5%;
 }
-#qfriendList{
-  position: absolute;
-  top:25%;
-  height: 72%;
-  width: 100%;
-  padding-top: 5%;
-  background-color: #76797c;
-  width: 100%;
-  overflow: auto;
-}
-
-    #bottomTab{
-        position: absolute;
-        top:85%;
-        height: 15%;
-        width: 100%;
-        background-color: #9b9fa3;
-        padding-top: 5%;
-    }
 
 
-    /*Inside the Top Section*/
+/*Inside the Top Section*/
 
 #hamburger{
     position: absolute;
@@ -202,78 +202,78 @@
 
 }
 
-    #moreOptions{
-        position:absolute;
-        top:0%;
-        height:100%;
-        width: 12%;
-        /*background-color: yellow;*/
-    }
+#moreOptions{
+    position:absolute;
+    top:0%;
+    height:100%;
+    width: 12%;
+    /*background-color: yellow;*/
+}
 
-    #moreOptionsBtn{
-        position:absolute;
-        top:40%;
-        left:30%;
-        padding:10%;
-        border: 1px solid black;
-        /*background-color: white;*/
-    }
+#moreOptionsBtn{
+    position:absolute;
+    top:40%;
+    left:30%;
+    padding:10%;
+    border: 1px solid black;
+    /*background-color: white;*/
+}
 
-    #albumCoverBtn{
-        font-size: 3vw;
-        position:absolute;
-        top:15%;
-        left:12%;
-        padding:20%;
-        border: 1px solid black;
-        /*background-color: white;*/
-    }
+#albumCoverBtn{
+    font-size: 3vw;
+    position:absolute;
+    top:15%;
+    left:12%;
+    padding:20%;
+    border: 1px solid black;
+    /*background-color: white;*/
+}
 
-    #musicControls{
-        position:absolute;
-        top:0%;
-        left:43%;
-        height:100%;
-        width: 57%;
-        /*background-color: orange;*/
-    }
+#musicControls{
+    position:absolute;
+    top:0%;
+    left:43%;
+    height:100%;
+    width: 57%;
+    /*background-color: orange;*/
+}
 
-    #musicTitle{
-        position: absolute;
-        top: 0%;
-        width: 100%;
-        height:40%;
-        border: 1px solid black;
+#musicTitle{
+    position: absolute;
+    top: 0%;
+    width: 100%;
+    height:40%;
+    border: 1px solid black;
 
-    }
+}
 
-    #playerButtons{
-        position: absolute;
-        top: 40%;
-        width: 100%;
-        height:60%;
-    }
+#playerButtons{
+    position: absolute;
+    top: 40%;
+    width: 100%;
+    height:60%;
+}
 
-    #text1{
-        font-weight: bold;
-        font-size: 5vw;
-    }
+#text1{
+    font-weight: bold;
+    font-size: 5vw;
+}
 
-    #text2{
-        font-weight: bold;
-        font-size: 3vw;
-    }
+#text2{
+    font-weight: bold;
+    font-size: 3vw;
+}
 
-    #endSesh{
-        position: absolute;
-        left:3%;
-        top: 16%;
-        border-radius: 50%;
-        border: 1px solid black;
-        background-color: white;
-        padding: 10%;
-        font-size: 1vw;
-    }
+#endSesh{
+    position: absolute;
+    left:3%;
+    top: 16%;
+    border-radius: 50%;
+    border: 1px solid black;
+    background-color: white;
+    padding: 10%;
+    font-size: 1vw;
+}
 
 
 /*Part 2's ID CSS*/
@@ -361,156 +361,156 @@
     top: 0%;
     transform: translateY(-190%); 
     font-size: 4vw;
-}#otherInfo2{
-    position: relative;
-    top: 0%;
-    transform: translateY(-330%); 
-    font-size: 4vw;
-}
-#otherInfoQ{
-    position: relative;
-    top: 0%;
-    transform: translateY(-60%); 
-    font-size: 4vw;
-}
-#otherInfo2Q{
-    position: relative;
-    top: 0%;
-    transform: translateY(-100%); 
-    font-size: 4vw;
-}
+    }#otherInfo2{
+        position: relative;
+        top: 0%;
+        transform: translateY(-330%); 
+        font-size: 4vw;
+    }
+    #otherInfoQ{
+        position: relative;
+        top: 0%;
+        transform: translateY(-60%); 
+        font-size: 4vw;
+    }
+    #otherInfo2Q{
+        position: relative;
+        top: 0%;
+        transform: translateY(-100%); 
+        font-size: 4vw;
+    }
 
-#inviteFriend{
-    height:10%;
-    width: 50%;
-    display:block;
-    border: 1px solid black;
-    margin: 15px;
-    border-radius: 100px;
-}
-#inviteText{
-    font-size: 5vw;
-    font-style: bold;
-}
+    #inviteFriend{
+        height:10%;
+        width: 50%;
+        display:block;
+        border: 1px solid black;
+        margin: 15px;
+        border-radius: 100px;
+    }
+    #inviteText{
+        font-size: 5vw;
+        font-style: bold;
+    }
 
-#viewTheChat{
-    position: absolute;
-    top:0%;
-    left: 0%;
-    width: 50%;
-    height: 100%;
-    border: 1px solid black;
-    
-    z-index: 100;
-    /*background-color: lightyellow;*/
-}
-#editTheQueue{
-    position: absolute;
-    top:0%;
-    left:50%;
-    width: 50%;
-    height: 100%;
-    border: 1px solid black;
+    #viewTheChat{
+        position: absolute;
+        top:0%;
+        left: 0%;
+        width: 50%;
+        height: 100%;
+        border: 1px solid black;
+        
+        z-index: 100;
+        /*background-color: lightyellow;*/
+    }
+    #editTheQueue{
+        position: absolute;
+        top:0%;
+        left:50%;
+        width: 50%;
+        height: 100%;
+        border: 1px solid black;
 
-    z-index: 100;
-    /*background-color: lightgreen;*/
-}
-#chatPicContainer{
-    max-height: 100%;
-    z-index: -1;
-}
-#chatPic{
-    position: absolute;
-    top:0%;
-    left: 0%;
-    width: 100%;
-    height: 100%;
-    opacity: 0.2;
-}
-#chatText{
-    position: relative;
-    top: 50%;
-    transform: translateY(100%); 
-    font-size: 4vw;
-}
-#queuePicContainer{
-    max-height: 100%;
-    z-index: -1;
-}
-#queuePic{
-    position: absolute;
-    top:0%;
-    left: 0%;
-    width: 100%;
-    height: 100%;
-    opacity: 0.2;
-}
-#queueText{
-    position: relative;
-    top: 50%;
-    transform: translateY(100%); 
-    font-size: 4vw;
-}
+        z-index: 100;
+        /*background-color: lightgreen;*/
+    }
+    #chatPicContainer{
+        max-height: 100%;
+        z-index: -1;
+    }
+    #chatPic{
+        position: absolute;
+        top:0%;
+        left: 0%;
+        width: 100%;
+        height: 100%;
+        opacity: 0.2;
+    }
+    #chatText{
+        position: relative;
+        top: 50%;
+        transform: translateY(100%); 
+        font-size: 4vw;
+    }
+    #queuePicContainer{
+        max-height: 100%;
+        z-index: -1;
+    }
+    #queuePic{
+        position: absolute;
+        top:0%;
+        left: 0%;
+        width: 100%;
+        height: 100%;
+        opacity: 0.2;
+    }
+    #queueText{
+        position: relative;
+        top: 50%;
+        transform: translateY(100%); 
+        font-size: 4vw;
+    }
 
-#hostTxt1{
-    position: absolute;
-    top: 75%;
-    left: 10%;
-    color: #4b8be5;  
-    font-size: 5vw;
-    z-index: 2;    
-    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
-}
+    #hostTxt1{
+        position: absolute;
+        top: 75%;
+        left: 10%;
+        color: #4b8be5;  
+        font-size: 5vw;
+        z-index: 2;    
+        text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    }
 
-#btnChat{
-    z-index: 100;
-}
-h2{
-    font-size: 200%;
-}
-h4{
-    font-size: 100%;
+    #btnChat{
+        z-index: 100;
+    }
+    h2{
+        font-size: 200%;
+    }
+    h4{
+        font-size: 100%;
 
-}
-
-
-
-body {
-    background-color: #000000;
-}
+    }
 
 
-#mainButtons{
-    position: absolute;
-    top:18%;
-    height: 73%;
-    background-color: #828689;
-    width: 100%;
-    padding-top:5%;
-}
-#bottomBar{
-    position: absolute;
-    width: 100%;
-    height: 15%;
-    bottom: 0%;
-    background-color: #9b9fa3;
-}
 
-#landingTitle{
-    color: #4b8be5;
-    font-size: 19vw;
-    text-align: center;    
-    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    body {
+        background-color: #000000;
+    }
 
-    /*font-weight: bold;*/
-}
 
-#topButton{
-    position: absolute;
-    left:5%;
-    top:5%;
-    height: 43%;
-    width: 90%;
+    #mainButtons{
+        position: absolute;
+        top:18%;
+        height: 73%;
+        background-color: #828689;
+        width: 100%;
+        padding-top:5%;
+    }
+    #bottomBar{
+        position: absolute;
+        width: 100%;
+        height: 15%;
+        bottom: 0%;
+        background-color: #9b9fa3;
+    }
+
+    #landingTitle{
+        color: #4b8be5;
+        font-size: 19vw;
+        text-align: center;    
+        text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+
+        /*font-weight: bold;*/
+    }
+
+    #topButton{
+        position: absolute;
+        left:5%;
+        top:5%;
+        height: 43%;
+        width: 90%;
     /*
     margin: 0px;
     padding: 5%;*/
@@ -551,29 +551,29 @@ body {
     font-size: 5vw;
     border: 1px solid black;
     background-color: black;
-}*/
+    }*/
 
 
-#hostTxt{
-    position: absolute;
-    bottom: 5%;
-    left: 20%;
-    text-align: center;
-    color: white;
-    font-size: 8vw;
-    z-index: 2;    
-    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
-}
-#searchTxt{
-    position: absolute;
-    bottom: 5%;
-    left: 5%;
-    text-align: center;
-    color: #4b8be5;
-    font-size: 8vw;
-    z-index: 1;
-    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
-}
+    #hostTxt{
+        position: absolute;
+        bottom: 5%;
+        left: 20%;
+        text-align: center;
+        color: white;
+        font-size: 8vw;
+        z-index: 2;    
+        text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    }
+    #searchTxt{
+        position: absolute;
+        bottom: 5%;
+        left: 5%;
+        text-align: center;
+        color: #4b8be5;
+        font-size: 8vw;
+        z-index: 1;
+        text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    }
 
 
 

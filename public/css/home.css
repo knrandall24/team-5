@@ -77,7 +77,7 @@ body{
     top: 40%;
     left: 0%;    
     animation: 1.75s ease-out 0s 1 fadeIn;
-    /*background-color: black;*/
+    /*background-color: green;*/
 }
 #host-btn{
     /*background-color: rgba(46, 204, 113,.6); */
@@ -162,7 +162,7 @@ body{
     transform: translateY(4px);
 }
 .button2 {
-    border-radius: 8%;
+    border-radius: 9px;
     width: 70%;
     height: 48%;
     color: white;     
@@ -178,4 +178,14 @@ body{
     position: absolute;
     width: 100%;
     top: 15%;
+}
+
+#fine-txt{
+    position: absolute;
+    left:0%;
+    right:0%;
+    margin-left:auto;
+    margin-right:auto;
+    top:45%;
+    font-size: 4.5vw;
 }

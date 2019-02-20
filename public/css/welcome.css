@@ -69,7 +69,7 @@ body{
     position: absolute;
     height: 7%;
     width: 100%;
-    top: 50%;
+    top: 52%;
     left: 0%;
     padding-top: 3%;    
     animation: 1.25s ease-out 0s 1 fadeIn;
@@ -119,11 +119,11 @@ body{
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 20vw;
+    font-size: 15vw;
     cursor: pointer;
-    padding: 0px;
+    padding-top: 0px;
     text-align: center;
-    margin: auto;
+    /*margin: auto;*/
 
     background-color: #0c77e3; 
     background-image: -webkit-gradient(linear, left top, left bottom, from(#0c77e3), to(#29458F));
@@ -134,9 +134,9 @@ body{
     background-image: linear-gradient(to bottom, #0c77e3, #29458F);filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#0c77e3, endColorstr=#29458F);
     
     /*Box shadow:*/
-    -webkit-box-shadow:    0 5px 0 #1d46af, 0 15px 20px rgba(0, 0, 0, .35);
-    -moz-box-shadow: 0 5px 0 #1d46af, 0 15px 20px rgba(0, 0, 0, .35);
-    box-shadow: 0 5px 0 #1d46af, 0 15px 20px rgba(0, 0, 0, .35);
+    -webkit-box-shadow:    0 5px 0 #132d72, 0 15px 20px rgba(0, 0, 0, .35);
+    -moz-box-shadow: 0 5px 0 #132d72, 0 15px 20px rgba(0, 0, 0, .35);
+    box-shadow: 0 5px 0 #132d72, 0 15px 20px rgba(0, 0, 0, .35);
 
     -webkit-animation: fadeDown.75s 1;
 }
@@ -149,8 +149,8 @@ body{
 }
 
 .button2 {
-    padding: 0px;
-    border-radius: 8%;
+    /*padding: 0px;*/
+    border-radius: 9px;
     width: 65%;
     height: 45%;
     color: white;     

@@ -53,7 +53,87 @@ body {
     text-shadow: -1px 0 #270084, 0 1px #270084, 1px 0 #270084, 0 -1px #270084;
 
 }
+/*End of the title Bar*/
+
+/*Start the middle section*/
 #instructions{
-  letter-spacing: 1px;
+    position: absolute;
+    top: 1%;
+    left: 0%;
+    right:0%;
+    height: 8%;
+    margin-left: auto;
+    margin-right: auto;
+    /*background-color:red;*/
 }
+
+#instructions-txt{
+    letter-spacing: 1px;
+    font-family: 'Amaranth';
+    font-size: 7vw;
+}
+
+#friend-list{
+    position: absolute;
+    padding-top: 15px;
+    top: 10%;
+    height: 89%;
+    left: 8%;
+    right: 8%;
+    margin-right: auto;
+    margin-left: auto;
+    /*background-color: brown;*/
+    overflow: auto;
+}
+.friend{
+    height:10%;
+    width: 95%;
+    display:block;
+    border: 1px solid black;
+    /*margin: 15px;*/
+    border-radius: 12px;
+
+    background-color: #e6eaf2;
+}
+
+#friendImgContainer{
+    position: absolute;
+    width:15%;
+    height:9.5%;
+    left: 2.5%;
+
+    border: 1px solid black;
+    border-top-left-radius: 12px;
+    border-bottom-left-radius: 12px;
+    /*background-color: lightyellow;*/
+}
+
+#friendNameContainer{
+    z-index: 3;
+    position: absolute;
+    width: 82.5%;
+    height:9.5%;
+    left: 17.5%;
+    /*background-color: red;*/
+}
+#hello{
+    position: absolute;
+    left:-2.5%;
+    top: -2.5%;
+    width:105%; 
+    height:105%; 
+    object-fit:cover; 
+}
+#friendName{
+    position: relative;
+    top: 0%;
+    bottom: 0%;
+    margin-top: auto;
+    margin-bottom: auto;
+    /*transform: translateY(-100%); */
+    font-size: 4vw;
+}
+
+
+/*End of the middle section*/
 

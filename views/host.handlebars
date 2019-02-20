@@ -22,9 +22,37 @@
             </div>
         </div>
         <div id="middle">
-            <div id="instructions" class="lead">1. Select your listeners:
+            <div id="instructions" >
+                <p class="lead" id="instructions-txt">
+                    1. Select your listeners:
+                </p>
+            </div>
+
+            <div id="friend-list">
+                {{#each friend}}
+<!--                 <div class="friend" id="friend{{id}}">
+                    <div id="friendImgContainer">
+                        <img src={{imageURL}} id="hello">
+                    </div>
+                    <div id=friendNameContainer>
+                        <h3 id="friendName">{{name}}</h3>
+                    </div>
+                </div>
+                <br> -->
+                
+                <button type="button" id="friend{{id}}" class=" friend btn btn-primary btn-lg btn-block">
+                    <div id="friendImgContainer">
+                        <img src={{imageURL}} id="hello">
+                    </div>
+                    <div id=friendNameContainer>
+                        <h3 id="friendName">{{name}}</h3>
+                    </div>
+                </button>
+                {{/each}} 
+                <br>
             </div>
         </div>
+
         <div id="bottomBar">
         </div>
 
