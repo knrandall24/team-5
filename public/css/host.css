@@ -77,10 +77,10 @@ body {
     position: absolute;
     padding-top: 4%;
     top: 10%;
-    width: 84%;
-    height: 89%;
-    left: 8%;
-    right: 8%;
+    width: 80%;
+    height: 90%;
+    left: 10%;
+    right: 10%;
     margin-right: auto;
     margin-left: auto;
     /*background-color: brown;*/
@@ -96,12 +96,16 @@ body {
     align-content: left;
     border: 1px solid black;
     border-radius: 12px;
+    /*Box shadow:*/
+    -webkit-box-shadow:    0 1px 0 #462c95, 0 15px 20px rgba(0, 0, 0, .35);
+    -moz-box-shadow: 0 1px 0 #462c95, 0 15px 20px rgba(0, 0, 0, .35);
+    box-shadow: 0 1px 0 #462c95, 0 15px 20px rgba(0, 0, 0, .35);
 
-    background-color: #e6eaf2;
+
+    /*background-color: #e6eaf2;*/
 }
 
 #friendImgContainer{
-
     position: absolute;
     top:0%;
     left: 0%;
@@ -130,7 +134,7 @@ body {
     padding-top: 3%;
     border-top-right-radius: 12px;
     border-bottom-right-radius: 12px;
-    background-color: lightblue;
+    background-color: #fffff0;
 }
 
 #hello{
@@ -144,14 +148,7 @@ body {
 }
 #friendName{
     font-family: 'Helvetica Neue';
-    /*
-    position: relative;
-    top: 0%;
-    bottom: 0%;
-    margin-top: auto;
-    margin-bottom: auto;*/
-    /*transform: translateY(-100%); */
-    /*font-size: 4vw;*/
+    color: #000080;  
 }
 
 
