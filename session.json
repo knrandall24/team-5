@@ -1,18 +1,28 @@
 {
     "session": [
         {
-            "name": "Jake",
+            "name": "Clark",
             "Code": "A1377X",
             "imageURL": "/img/filler_profile.png"
         },
         {
-            "name": "Rando",
+            "name": "Khosla",
+            "Code": "A23181",
+            "imageURL": "/img/filler_profile.png"
+        },
+        {
+            "name": "Tony",
+            "Code": "B2321D",
+            "imageURL": "/img/filler_profile.png"
+        },
+        {
+            "name": "Peter",
             "Code": "A13781",
             "imageURL": "/img/filler_profile.png"
         },
         {
-            "name": "Zuck",
-            "Code": "A13787",
+            "name": "Jake",
+            "Code": "A23987",
             "imageURL": "/img/filler_profile.png"
         }
     ]

@@ -8,11 +8,11 @@ var express = require('express');
 // var https = require('https');
 var http = require('http');
 var path = require('path');
-var handlebars = require('express3-handlebars')
+var handlebars = require('express3-handlebars');
+var session = require('express-session');
 
 var index = require('./routes/index');
 
-var host = require('./routes/host');
 var back = require('./routes/welcome');
 
 var queue= require('./routes/queue');
@@ -22,6 +22,13 @@ var queue= require('./routes/queue');
 var welcome = require('./routes/welcome');
 var login = require('./routes/login');
 var home = require('./routes/home');
+var host = require('./routes/host');
+var hostSong = require('./routes/hostSong');
+var hosting = require('./routes/hosting');
+
+
+// Add function:
+var add = require('./routes/add')
 
 
 //Obsolete:
@@ -55,6 +62,7 @@ app.use(express.session());
 app.use(app.router);
 app.use(express.static(path.join(__dirname, 'public')));
 
+
 // development only
 if ('development' == app.get('env')) {
   app.use(express.errorHandler());
@@ -67,7 +75,13 @@ app.get('/home', home.view);
 
 
 app.get('/host', host.view);
+app.get('/hostSong', hostSong.view);
+app.get('/hosting', hosting.view);
 app.get('/queue', queue.view);
+
+
+//To add function:
+app.get('/add', add.addFunction);
 
 
 

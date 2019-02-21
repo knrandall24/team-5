@@ -3,70 +3,70 @@
 			"name": "Jake From StateFarm",
 			"description": "Only friend with a Navy ship named after them",
 			"imageURL": "/img/filler_profile.png",
-			"id": "1",
+			"id": 1,
 			"slected": "0"
 		},
 		{
 			"name": "Mark ZuckEZuck",
 			"description": "Only friend with a Navy ship named after them",
 			"imageURL": "/img/filler_profile.png",
-			"id": "4",
+			"id": 2,
 			"slected": "0"
 		},
 		{
 			"name": "Clark Kent",
 			"description": "Clark Kent, aka Superman, is Earth's greatest hero.",
 			"imageURL": "/img/clark-kent.jpg",
-			"id": "3",
+			"id": 3,
 			"slected": "0"
 		},
 		{
 			"name": "Bruce Wayne",
 			"description": "A wealthy American playboy, philanthropist, and owner of Wayne Enterprises.",
 			"imageURL": "/img/bruce-wayne.jpg",
-			"id": "4",
+			"id": 4,
 			"slected": "0"
 		},
 		{
 			"name": "Tony Stark",
 			"description": "Genius. Billionaire. Playboy. Philanthropist. Tony Stark's confidence is only matched by his high-flying abilities as the hero called Iron Man.",
 			"imageURL": "/img/tony-stark.png",
-			"id": "5",
+			"id": 5,
 			"slected": "0"
 		},
 		{
 			"name": "Pradeep Khosla",
 			"description": "No parking for you.",
 			"imageURL": "/img/pradeep-khosla.jpg",
-			"id": "6",
+			"id": 6,
 			"slected": "0"
 		},
 		{
 			"name": "Peter Parker",
 			"description": "Bitten by a radioactive spider, Peter Parker's arachnid abilities give him powers he uses to help others, while his personal life offers plenty of obstacles.",
 			"imageURL": "/img/peter-parker.png",
-			"id": "7",
+			"id": 7,
 			"slected": "0"
 		},
 		{
 			"name": "Floyd Lawton",
 			"description": "Floyd Lawton, known under the codename Deadshot, is the world's deadliest marksman.",
 			"imageURL": "/img/floyd-lawton.png",
-			"id": "8",
+			"id": 8,
 			"slected": "0"
 		},
 		{
 			"name": "Harley Quinn",
 			"description": "Harleen Quinzel was once a psychologist at Arkham Asylum and was assigned to treat the Joker. ",
 			"imageURL": "/img/harley-quinn.png",
-			"id": "9",
+			"id": 9,
 			"slected": "0"
 		},
 		{
 			"name": "T-800",
 			"description": "0001010101010111010100100011100010",
 			"imageURL": "/img/terminator.jpeg",
-			"id": "10",
+			"id": 10,
 			"slected": "0"
 		}
 	]

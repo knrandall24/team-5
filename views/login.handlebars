@@ -106,6 +106,15 @@
             </div>
         </center>
         <script>
+              if (typeof(Storage) !== "undefined") {
+                sessionStorage.hello = 5;
+                console.log(sessionStorage.friends);
+              } else {
+                console.log("Sorry, your browser does not support web storage...");
+              }
+        </script>
+
+        <script>
             function loggedIn() {
                 window.location.href='home';
             };
@@ -130,7 +139,7 @@
           console.log(form.checkValidity()===true);
           window.location.href='home';
       }
-      }, false);
+  }, false);
       form.classList.add('was-validated');
   });
 }, false);

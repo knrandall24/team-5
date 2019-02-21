@@ -8,9 +8,16 @@
     <link href="/css/host.css" rel="stylesheet">    
     <script src="https://code.jquery.com/jquery.js"></script>
     <script src="js/bootstrap.js"></script>
+    <script src="/js/host.js"></script>
+<!--     <style type="text/css"> 
+    #friendName{
+        color: #000080; 
+    }
+</style> -->
 </head>
-<body>
+<body>   
     <center>
+        <p id="chillin"></p>
         <div id="titleBar">
             <a href="home">
                 <div id="back-container">
@@ -30,12 +37,21 @@
             <div id="friend-list">
 
                 {{#each friend}}
+                <script>
+                    sessionStorage.setItem('friend{{id}}', JSON.stringify({
+                            "name": '{{name}}',
+                            "description": "{{description}}",
+                            "imageURL": '{{imageURL}}',
+                            "id": '{{id}}',
+                            "slected": "{{slected}}"
+                        }));
+                </script>
                 <div class="friend" id="friend{{id}}">
                     <div id="friendImgContainer">
                         <img src={{imageURL}} id="hello">
                     </div>
                     <div id="friendNameContainer">
-                        <p class="h5" id="friendName">{{name}}</p>
+                        <p class="h5 friendName{{id}}" id="friendName">{{name}}</p>
                     </div>
                 </div>
                 <br>
@@ -62,7 +78,18 @@
         document.getElementById("inviteText").innerHTML = "Invited";
         $("#inviteFriend").css("background-color", "lightgreen");
     }
-</script>
+    </script>
+
+       
+    <script>
+          if (typeof(Storage) !== "undefined") {
+            var storaged = sessionStorage.hello;
+            console.log(storaged);
+          } else {
+            console.log("Sorry, your browser does not support web storage...");
+          }
+    </script>
+
 </body>
 </html>
 

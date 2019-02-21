@@ -48,6 +48,15 @@ body{
         transform: scale(1,1) translate(0px, 0px);
     }
 }
+#back-container{
+    position: absolute;
+    top:1%;
+    left:4%;
+    height:50%;
+    width: 10%;
+    animation: 2s ease-out 0s 1 fadeIn;
+    /*background-color: red;*/
+}
 
 /*Start for heading*/
 #welcome{
@@ -82,7 +91,7 @@ body{
 #host-btn{
     /*background-color: rgba(46, 204, 113,.6); */
     text-shadow: -3px 0 #16a085, 0 3px #16a085, 3px 0 #16a085, 0 -3px #16a085;
-    border: 2px solid #16a085;
+    
 
     background-color: #6DCC5A; 
     background-image: -webkit-gradient(linear, left top, left bottom, from(#6DCC5A), to(#128532));

@@ -1,0 +1,82 @@
+<!doctype html>
+<html>
+<head>
+    <title>Hosting</title>
+    <!-- Default Header -->
+    {{> default}}
+    <!-- End Default Header -->
+    <link href="/css/host.css" rel="stylesheet">    
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="/js/host.js"></script>
+<!--     <style type="text/css"> 
+    #friendName{
+        color: #000080; 
+    }
+</style> -->
+</head>
+<body>   
+    <center>
+        <p id="chillin"></p>
+        <div id="titleBar">
+            <a href="home">
+                <div id="back-container">
+                    <h1 class="display-4"><</h1>
+                </div>
+            </a>
+            <div id="title-container">
+                <h1 id="title">Hosting</h1>
+            </div>
+        </div>
+        <div id="middle">
+            <div id="instructions" >
+                <p class="lead on-air" id="instructions-txt">
+                    ● ON AIR
+                </p>
+                <p class="lead" id="instructions-txt-id">
+                </p>
+            </div>
+            <div id="buttons"></div>
+            <div id="albumArt">
+            </div>
+        </div>
+
+        <div id="bottomBar">
+            <button type="button" class="block" id="bottom-txt">
+                Continue to Song Selection
+            </button>
+        </div>
+
+
+    </center>
+
+    <script>
+        function added() {
+          document.getElementById("addFont").innerHTML = "Added";
+          $("#addFont").css("background-color", "lightgreen");
+          $("#addList").css("left", "50%");
+      }
+      function invited(){
+        document.getElementById("inviteText").innerHTML = "Invited";
+        $("#inviteFriend").css("background-color", "lightgreen");
+    }
+    </script>
+
+       
+    <script>
+          if (typeof(Storage) !== "undefined") {
+            var storaged = sessionStorage.hello;
+            console.log(storaged);
+          } else {
+            console.log("Sorry, your browser does not support web storage...");
+          }
+
+
+        document.getElementById("instructions-txt-id").innerHTML = "You session ID: " + sessionStorage.sessionID;
+    </script>
+
+</body>
+</html>
+
+
+
