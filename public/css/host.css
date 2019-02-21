@@ -28,7 +28,7 @@ body {
 #middle{
     position: absolute;
     top:13%;
-    height: 78%;
+    height: 60%;
     width: 100%;
 }
 
@@ -40,6 +40,15 @@ body {
     width: 100%;
     /*background-color: #9ec2dd;*/
 }
+#bottomPlayer{
+    position: absolute;
+    top:73%;
+    left:0%;
+    height:27%;
+    width: 100%;
+    /*background-color: #9ec2dd;*/
+}
+
 
 /*Within the title bar*/
 #back-container{
@@ -72,7 +81,7 @@ body {
     top: 1%;
     left: 0%;
     right:0%;
-    height: 10%;
+    height: 15%;
     margin-left: auto;
     margin-right: auto;
     /*background-color: blue;*/
@@ -96,11 +105,41 @@ body {
 .on-air{
     color: red;
 }
+
+#top-buttons{
+    position: absolute;
+    top:16%;
+    width: 100%;
+    height: 15%;
+    /*background-color: red;*/
+}
+
 #albumArt{
     position: absolute;
+    top: 31%;
     width: 100%;
-    height: 50%;
+    height: 69%;
+    /*background-color: green;*/
 }
+
+#img{
+    overflow: hidden;
+    position: absolute;
+    width:75%; 
+    height:75%; 
+    left: 0%;
+    right: 0%;
+    margin-left: auto;
+    margin-right: auto;
+    bottom: 10%;
+    object-fit:cover; 
+}
+
+
+
+
+/*Below are for host and hostSong*/
+
 #friend-list{
     position: absolute;
     padding-top: 4%;
@@ -172,6 +211,26 @@ body {
 
 
 /*Start of bottom section*/
+
+#songInfo{
+    position: absolute;
+    top:0%;
+    left: 0%;
+    height: 35%;
+    width: 100%;
+    background-color: blue;
+}
+#playerControls{
+    position: absolute;
+    top:35%;
+    left: 0%;
+    height: 65%;
+    width: 100%;
+    background-color: red;
+}
+
+
+/*Below is for host and hostsongs only*/
 #bottom-txt{
     font-family: 'Amaranth';
     font-size: 6.5vw;
