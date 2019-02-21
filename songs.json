@@ -3,35 +3,35 @@
             "name": "a lot",
             "artist": "21 Savage",
             "album": "i am >i am",
-            "imageURL": "/img/album.png",
+            "imageURL": "/img/iam>iam.png",
             "id": "1"
         },
         {
             "name": "STARGAZING",
             "artist": "Travis Scott",
             "album": "ASTROWORLD",
-            "imageURL": "/img/album.png",
+            "imageURL": "/img/ASTROWORLD.png",
             "id": "2"
         },
         {
             "name": "Plain Jane",
             "artist": "A$AP Ferg",
             "album": "Still Striving",
-            "imageURL": "/img/album.png",
+            "imageURL": "/img/StillStriving.png",
             "id": "3"
         },
         {
-            "name": "Ric Flair Drip(& Metro Boomin)",
+            "name": "Ric Flair Drip",
             "artist": "Offset, Metro Boomin",
             "album": "Without Warning",
-            "imageURL": "/img/album.png",
+            "imageURL": "/img/WithoutWarning.png",
             "id": "4"
         },
         {
             "name": "Better Now",
             "artist": "Post Malone",
             "album": "beerbongs & bentleys",
-            "imageURL": "/img/album.png",
+            "imageURL": "/img/beerbongs&bentleys.png",
             "id": "5"
         },
         {

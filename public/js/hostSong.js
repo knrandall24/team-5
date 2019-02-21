@@ -47,7 +47,8 @@ function clickSong(e){
         toAppend = '<style type="text/css"> .' + cla + '{color: white;}</style>';
 
         // console out put:
-        console.log("User clicked on user " + friendID + ' clicked');
+        console.log("User clicked on song " + friendID + ' clicked');
+        added = (friendID).substr('friend'.length);
 
         if(start === true){
             var temp = 'friend' + sessionStorage.songs;
@@ -65,10 +66,11 @@ function clickSong(e){
         // console out put:
         console.log("User clicked on song " + friendID + ' unclicked');
     }
+
     $('body').append(toAppend.toString()); 
     toAppend = "";
-    console.log("add" +added);
     sessionStorage.songs = added;
+    console.log("added song: " + sessionStorage.songs);
     start = true;
 }
 
