@@ -224,8 +224,18 @@ body {
     left: 0%;
     height: 35%;
     width: 100%;
-    background-color: blue;
+    background-color: white;
 }
+
+#songTitle{
+    font-family: 'Amaranth';
+    font-size: 10vw;
+    color: navy;
+    /*color: white;*/
+    text-shadow: -1px 0 #270084, 0 1px #270084, 1px 0 #270084, 0 -1px #270084;
+
+}
+
 #audio{
     position: absolute;
     top:35%;
