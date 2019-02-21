@@ -16,102 +16,103 @@
 </head>
 
 <body>
-    <center>
-        <div id="backView">
-            <div id="welcome">
-                <h1 class="display-3" id="welcomeTitle">Welcome!</h1>
-                <h1 class="display-3" id="welcomeTitle">To</h1>
-                <div id="DJAM">
-                    <h1 class="display-1" id="welcomeTitle">DJAM</h1>
-                </div>
-            </div>        
-            <div id="middle">
-                <div id="firstLine">
-                    <h5 id="middleWords">Make listening to music</h5>
-                </div>
-                <div id="secondLine">
-                    <h5 id="middleWords">A more sociable experience!</h5>
-                </div>
-            </div>        
-            <div id="in-login-container">
-                <button class="button button2" disabled>Login</button>
-            </div>
-        </div>
-
-
-        <!-- Actual Login Stuff -->
-        <div id="overlay">                
-            <div>
-                <a href="back">
-                    <div id="back">
-                        <img id="back_img" src="/img/exit.png">
+    <body2 class="body2">
+        <center>
+            <div id="backView">
+                <div id="welcome">
+                    <h1 class="display-3" id="welcomeTitle">Welcome!</h1>
+                    <h1 class="display-3" id="welcomeTitle">To</h1>
+                    <div id="DJAM">
+                        <h1 class="display-1" id="welcomeTitle">DJAM</h1>
                     </div>
-                </a>
-            </div>
-            <div id="icon">
-                <center>
-                    <img id="myIcon" src="/img/facebook.png">
-                </center>
-            </div>
-            <div id="the-form">
-                <form class="needs-validation" novalidate>
-
-                    <!-- Start of Entering the Email: -->
-                    <div class="form-group">
-
-                        <h4 class="h4">Email address</h4>
-                        <!-- Email input: -->
-                        <input id="textboxid" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="name@example.com" required>
-
-                        <!-- Email validation: -->
-                        <div class="valid-feedback">
-                            Looks good!
-                        </div>
-                        <div class="invalid-feedback">
-                            Please enter a valid email.
-                        </div>
-
-                        <p><small>We'll never share your email with anyone else.</small></p>
+                </div>        
+                <div id="middle">
+                    <div id="firstLine">
+                        <h5 id="middleWords">Make listening to music</h5>
                     </div>
-                    <!-- End of the Email -->
-
-                    <div class="form-group">
-                        <h4 class="h4">Password</h4>
-                        <input id="textboxid" type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" required>
-                        <!-- Password validation: -->
-                        <div class="valid-feedback">
-                            Looks good!
-                        </div>
-                        <div class="invalid-feedback">
-                            Please enter a valid email.
-                        </div>
+                    <div id="secondLine">
+                        <h5 id="middleWords">A more sociable experience!</h5>
                     </div>
-
-                    <div class="form-check">
-                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                        <label class="form-check-label" for="exampleCheck1">Remenber Me</label>
-                    </div>
-                    <br>
-                    <button class="btn btn-success btn-lg" type="submit">Submit</button>
-                    <br>
-                    <p class="lead">--- OR ---</p>
-                    <div id="fb-button">
-                        <fb:login-button scope="public_profile,email" onlogin="checkLoginState();" onclick="loggedInFB()" size="xlarge">Login with Facebook</fb:login-button>
-                    </div>
-                    <!-- <button  class="btn btn-primary btn-lg" onclick="loggedInFB()"> -->
-                        <!-- </button> -->
-                    </form>
-                    <br>
+                </div>        
+                <div id="in-login-container">
+                    <button class="button button2" disabled>Login</button>
                 </div>
             </div>
-        </center>
-        <script>
+
+
+            <!-- Actual Login Stuff -->
+            <div id="overlay">                
+                <div>
+                    <a href="back">
+                        <div id="back">
+                            <img id="back_img" src="/img/exit.png">
+                        </div>
+                    </a>
+                </div>
+                <div id="icon">
+                    <center>
+                        <img id="myIcon" src="/img/facebook.png">
+                    </center>
+                </div>
+                <div id="the-form">
+                    <form class="needs-validation" novalidate>
+
+                        <!-- Start of Entering the Email: -->
+                        <div class="form-group">
+
+                            <h4 class="h4">Email address</h4>
+                            <!-- Email input: -->
+                            <input id="textboxid" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="name@example.com" required>
+
+                            <!-- Email validation: -->
+                            <div class="valid-feedback">
+                                Looks good!
+                            </div>
+                            <div class="invalid-feedback">
+                                Please enter a valid email.
+                            </div>
+
+                            <p><small>We'll never share your email with anyone else.</small></p>
+                        </div>
+                        <!-- End of the Email -->
+
+                        <div class="form-group">
+                            <h4 class="h4">Password</h4>
+                            <input id="textboxid" type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" required>
+                            <!-- Password validation: -->
+                            <div class="valid-feedback">
+                                Looks good!
+                            </div>
+                            <div class="invalid-feedback">
+                                Please enter a valid email.
+                            </div>
+                        </div>
+
+                        <div class="form-check">
+                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                            <label class="form-check-label" for="exampleCheck1">Remenber Me</label>
+                        </div>
+                        <br>
+                        <button class="btn btn-success btn-lg" type="submit">Submit</button>
+                        <br>
+                        <p class="lead">--- OR ---</p>
+                        <div id="fb-button">
+                            <fb:login-button scope="public_profile,email" onlogin="checkLoginState();" onclick="loggedInFB()" size="xlarge">Login with Facebook</fb:login-button>
+                        </div>
+                        <!-- <button  class="btn btn-primary btn-lg" onclick="loggedInFB()"> -->
+                            <!-- </button> -->
+                        </form>
+                        <br>
+                    </div>
+                </div>
+            </center>
+            <script>
               if (typeof(Storage) !== "undefined") {
                 sessionStorage.hello = 5;
                 console.log(sessionStorage.friends);
-              } else {
+            } else {
                 console.log("Sorry, your browser does not support web storage...");
-              }
+            }
         </script>
 
         <script>
@@ -145,6 +146,6 @@
 }, false);
           })();
       </script>
-
-  </body>
-  </html>
+  </body2>
+</body>
+</html>
