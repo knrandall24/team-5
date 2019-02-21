@@ -18,6 +18,9 @@
 <body>   
     <center>
         <p id="chillin"></p>
+        <script>
+            console.log("song is:" + sessionStorage.songs);
+        </script>
         <div id="titleBar">
             <a href="hostSong">
                 <div id="back-container">
@@ -28,7 +31,7 @@
                 <h1 id="title">Hosting</h1>
             </div>
         </div>
-        <div id="middle">
+        <div id="middle2">
             <div id="instructions" >
                 <p class="lead on-air" id="instructions-txt">
                     ● ON AIR
@@ -41,6 +44,9 @@
 
             <div id="albumArt">
                 <img src="/img/album.png" id="img">
+                <script>
+                    document.getElementById("img").src = "/img/" + sessionStorage.songs + ".png";
+                </script>
             </div>
 
         </div>
@@ -48,40 +54,45 @@
         <div id="bottomPlayer">
             <div id="songInfo">
             </div>
-            <div id="playerControls">
-                <audio controls>
-                    <source src="/songs/rockstar.mp3" type="audio/mpeg">
-                </audio>
+            <div id="audio">
+                <audio controls id="crt">
+                    <source src="/songs/rockstar.mp3" type="audio/mpeg" id="player">
+                    </audio>
+                    <script>
+                        document.getElementById("player").src = "/songs/" + sessionStorage.songs + ".mp3";
+                    </script>
+                </div>
+                <div id="playerControls">
+                </div>
             </div>
-        </div>
 
 
-    </center>
+        </center>
 
-    <script>
-        function added() {
-          document.getElementById("addFont").innerHTML = "Added";
-          $("#addFont").css("background-color", "lightgreen");
-          $("#addList").css("left", "50%");
-      }
-      function invited(){
-        document.getElementById("inviteText").innerHTML = "Invited";
-        $("#inviteFriend").css("background-color", "lightgreen");
-    }
-    </script>
-
-       
-    <script>
-          if (typeof(Storage) !== "undefined") {
-            var storaged = sessionStorage.hello;
-            console.log(storaged);
-          } else {
-            console.log("Sorry, your browser does not support web storage...");
+        <script>
+            function added() {
+              document.getElementById("addFont").innerHTML = "Added";
+              $("#addFont").css("background-color", "lightgreen");
+              $("#addList").css("left", "50%");
           }
-
-
-        document.getElementById("instructions-txt-id").innerHTML = "You session ID: " + sessionStorage.sessionID;
+          function invited(){
+            document.getElementById("inviteText").innerHTML = "Invited";
+            $("#inviteFriend").css("background-color", "lightgreen");
+        }
     </script>
+
+
+    <script>
+      if (typeof(Storage) !== "undefined") {
+        var storaged = sessionStorage.hello;
+        console.log(storaged);
+    } else {
+        console.log("Sorry, your browser does not support web storage...");
+    }
+
+
+    document.getElementById("instructions-txt-id").innerHTML = "You session ID: " + sessionStorage.sessionID;
+</script>
 
 </body>
 </html>
