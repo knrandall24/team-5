@@ -30,15 +30,6 @@
             <div id="friend-list">
 
                 {{#each friend}}
-<!--                 <div class="friend" id="friend{{id}}">
-                    <div id="friendImgContainer">
-                        <img src={{imageURL}} id="hello">
-                    </div>
-                    <div id=friendNameContainer>
-                        <h3 id="friendName">{{name}}</h3>
-                    </div>
-                </div>
-                <br> -->
                 <div class="friend" id="friend{{id}}">
                     <div id="friendImgContainer">
                         <img src={{imageURL}} id="hello">
@@ -47,24 +38,15 @@
                         <p class="h5" id="friendName">{{name}}</p>
                     </div>
                 </div>
-<!-- 
-                <div class="friend"  id="friend{{id}}">
-                    <button type="button"class="btn btn-outline-info btn-lg btn-block">
-                        <div id="friendImgContainer">
-                            <img src={{imageURL}} id="hello">
-                        </div>
-                        <div id="friendNameContainer">
-                            <h3 id="friendName">{{name}}</h3>
-                        </div>
-                    </button>
-                </div>   -->
-
                 <br>
                 {{/each}} 
             </div>
         </div>
 
         <div id="bottomBar">
+            <button type="button" class="block" id="bottom-txt">
+                Continue to Song Selection
+            </button>
         </div>
 
 
