@@ -44,8 +44,10 @@ function clickFriend(e){
 
 //     var clicked = false;
     var friendID = $(this).closest('.friend').attr('id');
-    var hostCode = friendID.substr('friend'.length);
-    console.log("host code: " + hostCode);
+    var hCode = friendID.substr('friend'.length);
+    sessionStorage.setItem(hostCode, hCode);
+
+    console.log("host code: " + hCode);
 //     var id = friendID.substr('friend'.length);
 
 //     // get class name of the friend's name's text

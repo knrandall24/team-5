@@ -33,7 +33,7 @@
         </div>
         <div id="middle2">
             <div id="instructions" >
-                <p class="lead on-air" id="instructions-txt">● ON AIR</p>
+                <p class="lead on-air" id="instructions-txt"></p>
                 <p class="lead" id="instructions-txt-id">
                 </p>
             </div>
@@ -43,8 +43,7 @@
             <div id="albumArt">
                 <img src="/img/album.png" id="img">
                 <script>
-                    sessionStorage.setItem("songImg","/img/" + sessionStorage.songs + ".png");
-                    document.getElementById("img").src = "/img/" + sessionStorage.songs + ".png";
+                    document.getElementById("img").src = "/img/" + sessionStorage.songImg;
                 </script>
             </div>
 
@@ -60,12 +59,13 @@
 
 
                 <script>
-                    var input = 'artist'+ sessionStorage.songs;
+                    var sessionID = sessionStorage.getItem(hostCode);
+                    var input = 'artist'+ sessionID;
                     var artist = sessionStorage.getItem(input);
-                    input = 'album'+ sessionStorage.songs;
+                    input = 'album'+ sessionID;
                     var album = sessionStorage.getItem(input);
 
-                    input = 'title' + sessionStorage.songs;
+                    input = 'title' + sessionID;
 
                     console.log("input is: " + 'songList' + sessionStorage.songs);
                     var title = sessionStorage.getItem(input);
@@ -82,13 +82,13 @@
                     <source src="/songs/rockstar.mp3" type="audio/mpeg" id="player">
                     </audio>
                     <script>
-                        document.getElementById("player").src = "/songs/" + sessionStorage.songs + ".mp3";
+                        document.getElementById("player").src = "/songs/" + sessionStorage.songID + ".mp3";
                     </script>
                 </div>
 
 
                 <div id="playerControls">
-                    <div id="playerButtons" class="btn-group-lg" role="group" aria-label="Basic example">
+                    <!-- <div id="playerButtons" class="btn-group-lg" role="group" aria-label="Basic example">
                         <div id="prevContainer">
                             <button type="button" class="btn btn-secondary" id="player-btn-prev">l◄</button>
                         </div>
@@ -99,23 +99,25 @@
                         <div id="nextContainer">
                             <button type="button" class="btn btn-secondary" id="player-btn-next">►l</button>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
-                <script>
+
+<!--                 <script>
                     if(sessionStorage.songs >= 11){
                         document.getElementById('player-btn-next').disabled = true;
                     }
                     if(sessionStorage.songs <= 1){
                         document.getElementById('player-btn-prev').disabled = true;
                     }
-                </script>
+                </script> -->
+
             </div>
 
 
 
 
 
-            <form name="myForm" id="hosting-form" role="form" method="get" action="/add">
+<!--             <form name="myForm" id="hosting-form" role="form" method="get" action="/add">
 
                 <input type="text" name="hostName">
                 <input type="text" name="hostCode">
@@ -138,7 +140,7 @@
                 document.forms["myForm"]["songImg"].value = sessionStorage.songImg;
                 document.forms["myForm"]["songID"].value = sessionStorage.songs;
                 document.forms["myForm"]["friends"].value = sessionStorage.friends; 
-            </script>
+            </script> -->
 <!-- 
             "name": "Clark",
             "Code": "A1377X",
