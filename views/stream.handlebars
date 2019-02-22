@@ -34,7 +34,7 @@
             {{#each session}}
                     <div class="friend" id="friend{{hostCode}}">
                         <div id="friendImgContainer">
-                            <img src={{hostPic}} id="hello">
+                            <img class="picLoc{{hostCode}}" src="{{hostPic}}" id="hello" >
                         </div>
                         <div id="friendNameContainer">
                             <p class="h5 friendName{{hostCode}}" id="friendName">{{hostName}} ({{hostCode}})</p>
@@ -43,14 +43,15 @@
                     <br>
 
 
-            <script>
+                    <script>
                         //assignm song+host number
                         sessionStorage.setItem('song{{hostCode}}', "{{songTitle}}");
-                         sessionStorage.setItem('artist{{hostCode}}', "{{artist}}");
-                         sessionStorage.setItem('album{{hostCode}}', "{{album}}");
-                         sessionStorage.setItem('songImg{{hostCode}}', "{{songImg}}");
-                         sessionStorage.setItem('host{{hostCode}}', "{{hostName}}");
-                         sessionStorage.setItem('songID{{hostCode}}', "{{songID}}");
+                        sessionStorage.setItem('artist{{hostCode}}', "{{artist}}");
+                        sessionStorage.setItem('album{{hostCode}}', "{{album}}");
+                        sessionStorage.setItem('songImg{{hostCode}}', "{{songImg}}");
+                        sessionStorage.setItem('host{{hostCode}}', "{{hostName}}");
+                        sessionStorage.setItem('songID{{hostCode}}', "{{songID}}");
+                        
                     </script>
                     {{/each}} 
 

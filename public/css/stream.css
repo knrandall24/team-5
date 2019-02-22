@@ -66,14 +66,14 @@ body {
 }
 #title-container{
     position: absolute;
-    top:23%;
+    top:25%;
     left:12%;
     height:100%;
     width: 88%;
 }
 #title{
     font-family: 'Amaranth';
-    font-size: 12vw;
+    font-size: 10.5vw;
     color: #4834d4;
     text-shadow: -1px 0 #270084, 0 1px #270084, 1px 0 #270084, 0 -1px #270084;
 
