@@ -1,27 +1,48 @@
 {
     "session": [
         {
-            "name": "Clark",
-            "Code": "A1377X",
+            "hostName": "Clark",
+            "hostCode": "A1377X",
             "hostPic": "/img/clark-kent.jpg",
-            "imageURL": "/img/filler_profile.png"
+            "songTitle": "Better Now",
+            "artist": "Post Malone",
+            "album": "beerbongs & bentleys",
+            "songImg": "/img/10.png",
+            "songID": "10",
+            "friends": "1,2,3,6"
         },
         {
-            "name": "Khosla",
-            "Code": "A23181",
-            "hostPic": "pradeep-khosla.jpg",
-            "imageURL": "/img/filler_profile.png"
+            "hostName": "Khosla",
+            "hostCode": "A23181",
+            "hostPic": "/img/pradeep-khosla.jpg",
+            "songTitle": "Plain Jane",
+            "artist": "A$AP Ferg",
+            "album": "Still Striving",
+            "songImg": "/img/3.png",
+            "songID": "3",
+            "friends": "3,4,7"
         },
         {
-            "name": "Tony",
-            "Code": "B2321D",
-            "hostPic": "tony-stark",
-            "imageURL": "/img/filler_profile.png"
+            "hostName": "Tony",
+            "hostCode": "B2321D",
+            "hostPic": "/img/tony-stark.png",
+            "songTitle": "Startender",
+            "artist": "A Boogie Wit da Hoodie, Offset, Tyga",
+            "album": "Hoodie SZN",
+            "songImg": "/img/11.png",
+            "songID": "11",
+            "friends": "2,3,4,5,6,7,8,9,10"
         },
         {
-            "name": "Jake",
-            "Code": "A23987",
-            "hostPic":"/img/filler_profile.png"
+            "hostName": "Bruce",
+            "hostCode": "A23987",
+            "hostPic": "/img/bruce-wayne.jpg",
+            "songTitle": "Without Me",
+            "artist": "Halsey",
+            "album": "Without Me",
+            "songImg": "/img/6.png",
+            "songID": "6",
+            "friends": "1,7,8"
         }
     ]
 }

@@ -5,116 +5,67 @@
     <!-- Default Header -->
     {{> default}}
     <!-- End Default Header -->
-    <link href="/css/host.css" rel="stylesheet">    
+    <link href="/css/stream.css" rel="stylesheet">    
     <script src="https://code.jquery.com/jquery.js"></script>
     <script src="js/bootstrap.js"></script>
-    <script src="/js/host.js"></script>
+    <script src="/js/stream.js"></script>
 <!--     <style type="text/css"> 
     #friendName{
         color: #000080; 
     }
 </style> -->
 </head>
-<body>   
+<body>       
     <center>
         <p id="chillin"></p>
-        <script>
-            console.log("song is:" + sessionStorage.songs);
-        </script>
         <div id="titleBar">
-            <a href="hostSong">
+            <a href="home">
                 <div id="back-container">
                     <h1 class="display-4"><</h1>
                 </div>
             </a>
             <div id="title-container">
-                <h1 id="title">Hosting</h1>
+                <h1 id="title">Choose a Stream:</h1>
             </div>
         </div>
-        <div id="middle2">
-            <div id="instructions" >
-                <p class="lead on-air" id="instructions-txt">● ON AIR</p>
-                <p class="lead" id="instructions-txt-id">
-                </p>
-            </div>
+        <div id="middle">
+            <div id="friend-list">
 
-            <div id="top-buttons"></div>
-
-            <div id="albumArt">
-                <img src="/img/album.png" id="img">
-                <script>
-                    document.getElementById("img").src = "/img/" + sessionStorage.songs + ".png";
-                </script>
-            </div>
-
-        </div>
-
-        <div id="bottomPlayer">
-            <div id="songInfo">
-
-                <h1 class="display-4" id="songTitle">
-                </h1>
-                <p class="lead" id="songDet">
-                </p>
-
-
-                <script>
-                    var input = 'artist'+ sessionStorage.songs;
-                    var artist = sessionStorage.getItem(input);
-                    input = 'album'+ sessionStorage.songs;
-                    var album = sessionStorage.getItem(input);
-
-                    input = 'title' + sessionStorage.songs;
-
-                    console.log("input is: " + 'songList' + sessionStorage.songs);
-                    var title = sessionStorage.getItem(input);
-                    console.log("title is: " + title);
-
-                    document.getElementById("songTitle").innerHTML=title;
-
-                    console.log("It works: "+ artist);
-                    document.getElementById("songDet").innerHTML = artist + " - " + album;
-                </script>
-            </div>
-            <div id="audio">
-                <audio controls id="crt" autoplay>
-                    <source src="/songs/rockstar.mp3" type="audio/mpeg" id="player">
-                    </audio>
-                    <script>
-                        document.getElementById("player").src = "/songs/" + sessionStorage.songs + ".mp3";
-                    </script>
-                </div>
-
-
-                <div id="playerControls">
-                    <div id="playerButtons" class="btn-group-lg" role="group" aria-label="Basic example">
-                        <div id="prevContainer">
-                            <button type="button" class="btn btn-secondary" id="player-btn-prev">l◄</button>
+            {{#each session}}
+                    <div class="friend" id="friend{{hostCode}}">
+                        <div id="friendImgContainer">
+                            <img src={{hostPic}} id="hello">
                         </div>
-                        <div id="pauseContainer">
-                            <button type="button" class="btn btn-secondary" id="player-btn-pause">II</button>
-                        </div>
-
-                        <div id="nextContainer">
-                            <button type="button" class="btn btn-secondary" id="player-btn-next">►l</button>
+                        <div id="friendNameContainer">
+                            <p class="h5 friendName{{hostCode}}" id="friendName">{{hostName}} ({{hostCode}})</p>
                         </div>
                     </div>
+                    <br>
+                    {{/each}} 
                 </div>
-                <script>
-                    if(sessionStorage.songs >= 11){
-                        document.getElementById('player-btn-next').disabled = true;
-                    }
-                    if(sessionStorage.songs <= 1){
-                        document.getElementById('player-btn-prev').disabled = true;
-                    }
-                </script>
             </div>
-            <form id="hosting-form">
-            </form>
 
-      </center>
+            <div id="bottomBar">
+                <button type="button" class="block" id="bottom-txt">
+                    Continue to Song Selection
+                </button>
+            </div>
 
-      <script>
+
+        </center>
+
+        <script>
+            document.getElementById("bottom-txt").addEventListener("click", function(event){
+                document.getElementById("bottom-txt").innerHTML = "Please Select a Session";
+
+
+               var toAppend = '<style type="text/css"> #bottom-txt{background-color: #DE7A7A; background-image: -webkit-gradient(linear, left top, left bottom, from(#DE7A7A), to(#DE2626));background-image: -webkit-linear-gradient(top, #DE7A7A, #DE2626);background-image: -moz-linear-gradient(top, #DE7A7A, #DE2626);background-image: -ms-linear-gradient(top, #DE7A7A, #DE2626);background-image: -o-linear-gradient(top, #DE7A7A, #DE2626);background-image: linear-gradient(to bottom, #DE7A7A, #DE2626);filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#DE7A7A, endColorstr=#DE2626); font-size: 6vw;}</style>';
+
+               $('#bottom-txt').append(toAppend.toString()); 
+
+               event.stopPropagation();
+               event.preventDefault();
+           });
             function added() {
               document.getElementById("addFont").innerHTML = "Added";
               $("#addFont").css("background-color", "lightgreen");
@@ -125,19 +76,6 @@
             $("#inviteFriend").css("background-color", "lightgreen");
         }
     </script>
-
-
-    <script>
-      if (typeof(Storage) !== "undefined") {
-        var storaged = sessionStorage.hello;
-        console.log(storaged);
-    } else {
-        console.log("Sorry, your browser does not support web storage...");
-    }
-
-
-    document.getElementById("instructions-txt-id").innerHTML = "You session ID: " + sessionStorage.sessionID;
-</script>
 
 </body>
 </html>

@@ -3,7 +3,7 @@
  * Add function
  */
 
- var addLoc = require('../data.json');
+ var addLoc = require('../session.json');
  var songLoc = require('../songs.json');
 
  exports.addFunction = function(req, res){
@@ -19,15 +19,20 @@
     //     newData = window.sessionStorage.getItem(next);
     // }
 
-    // var newData = {
-    //     "name": "New player",
-    //     "description": "Only friend with a Navy ship named after them",
-    //     "imageURL": "/img/filler_profile.png",
-    //     "id": "55",
-    //     "slected": "0"
-    // };
+    var newData = {
+            "hostName": req.query.hostName,
+            "hostCode": req.query.hostCode,
+            "hostPic": req.query.hostPic,
+            "songTitle": req.query.songTitle,
+            "artist": req.query.artist,
+            "album": req.query.album,
+            "songImg": req.query.songImg,
+            "songID": req.query.songID,
+            "friends": req.query.friends
+    };
 
-    // addLoc.friend.push(newData);
+    addLoc.session.push(newData);
     res.render('hostSong', songLoc);
+    // res.render('hostSong', addLoc);
 };
 
