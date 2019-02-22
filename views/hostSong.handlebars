@@ -36,7 +36,15 @@
             </div>
             <div id="friend-list">
 
-                {{#each songs}}
+
+              {{#each songs}}
+              <!-- make array of song info -->
+              <script>
+                sessionStorage.setItem("title{{id}}","{{name}}");
+                sessionStorage.setItem("artist{{id}}","{{artist}}");
+                sessionStorage.setItem("album{{id}}","{{album}}");
+              </script>
+
                 <div class="friend" id="friend{{id}}" onclick="window.location.href = 'hosting';">
                     <div id="friendImgContainer">
                         <img src={{imageURL}} id="hello">
@@ -44,9 +52,13 @@
                     <div id="friendNameContainer">
                         <p class="h5 friendName{{id}}" id="friendName">{{name}}</p>
                     </div>
-                </div>
-                <br>
-                {{/each}} 
+                    <div id="songDetails">
+                      <p class="artist"> {{artist}}</p>
+                      <p class="album">{{album}}</p>
+                    </div>
+                  </div>
+                  <br>
+                  {{/each}} 
             </div>
         </div>
 

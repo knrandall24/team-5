@@ -9,6 +9,7 @@ $(document).ready(function() {
 // Variables declared here
 var original;
 var added;
+var pause;
 
 
 function initializePage() {
@@ -16,15 +17,90 @@ function initializePage() {
 
     added = [];
     original = "green";
+    pause = true;
     sessionStorage.sessionID = "000000";
     // $('.project a').click(addProjectDetails);
     $('.friend').click(clickFriend);
     $('#bottom-txt').click(testJSON);
     $('#bottom-txt').click(postList);
     $('back-container').click(back);
+    $('#player-btn-prev').click(prev);
+    $('#player-btn-pause').click(togglePause);
+    $('#player-btn-next').click(next);
 
     // $('#colorBtn').click(randomizeColors);
 }
+
+
+
+
+// This is for music controls:
+function prev(e){
+    if(sessionStorage.songs > 1){
+        sessionStorage.songs = sessionStorage.songs - 1;
+        window.location.href = 'hosting';
+    } else{
+        document.getElementById('player-btn-prev').disabled = true;
+    }
+}
+
+function togglePause(e){
+    console.log("inner player");
+    console.log("currently playing: " + document.getElementById('player').src);
+    if(document.getElementById('crt').paused){ 
+        document.getElementById('crt').play();
+        document.getElementById('player-btn-pause').innerHTML = "II";
+        document.getElementById('Instructions-txt').innerHTML = "■ OFF AIR";
+        document.getElementById('Instructions-txt').style.color = "black";
+    } else {
+        document.getElementById('crt').pause();
+        document.getElementById('player-btn-pause').innerHTML = "►";
+        document.getElementById('Instructions-txt').innerHTML = "● ON AIR";
+        document.getElementById('Instructions-txt').style.color = "red";
+    }
+
+    console.log("Testing pause button:" + sessionStorage.songs);
+}
+
+function next(e){
+    if(sessionStorage.songs < 5){
+        var temp = sessionStorage.songs;
+        temp++;
+        sessionStorage.songs = temp;
+        console.log( "next to: " + sessionStorage.songs);
+        window.location.href = 'hosting';
+    } else{
+        document.getElementById('player-btn-next').disabled = true;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// end for music controls
+
+
+
+
+
+
+
+
 
 
 function makeAlert(e){

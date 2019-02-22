@@ -52,7 +52,7 @@ body {
     left:0%;
     height:27%;
     width: 100%;
-    /*background-color: #9ec2dd;*/
+    background-color: rgba(86, 182, 255,.2);
 }
 
 
@@ -116,13 +116,13 @@ body {
     position: absolute;
     top:16%;
     width: 100%;
-    height: 15%;
+    height: 12%;
     /*background-color: red;*/
 }
 
 #albumArt{
     position: absolute;
-    top: 31%;
+    top: 27%;
     width: 100%;
     height: 69%;
     /*background-color: green;*/
@@ -211,7 +211,9 @@ body {
     font-family: 'Helvetica Neue';
     /*color: #000080; */ 
 }
-
+#songDetails {
+  visibility: hidden;
+}
 
 /*End of the middle section*/
 
@@ -224,7 +226,7 @@ body {
     left: 0%;
     height: 35%;
     width: 100%;
-    background-color: white;
+    /*background-color: white;*/
 }
 
 #songTitle{
@@ -238,11 +240,11 @@ body {
 
 #audio{
     position: absolute;
-    top:35%;
+    top:38%;
     left: 0%;
     height: 30%;
     width: 100%;
-    background-color: green;
+    /*background-color: green;*/
 }
 #crt{
     width: 100%;
@@ -254,8 +256,19 @@ body {
     left: 0%;
     height: 35%;
     width: 100%;
-    background-color: red;
+    /*background-color: red;*/
 }
+
+#playerButtons{
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+}
+#prevContainer{ position: absolute; top: 0%; left: 0%; width: 33.333%; height: 100%; /*background-color: red;*/ } #pauseContainer{ position: absolute; top: 0%; left: 33.333%; width: 33.333%; height: 100%; /*background-color: blue;*/ } #nextContainer{ position: absolute; top: 0%; right: 0%; width: 33.333%; height: 100%; /*background-color: black;*/ }
+
+#player-btn-prev{ position: absolute; top: 10%; left: 0%; right: 0%; margin-right: auto; margin-left: auto; width: 50%; height: 80%; } #player-btn-pause{ position: absolute; top: 10%; left: 0%; right: 0%; margin-right: auto; margin-left: auto; width: 50%; height: 80%; } #player-btn-next{position: absolute;top: 10%;left: 0%; right: 0%; margin-right: auto; margin-left: auto; width: 50%; height: 80%; }
 
 
 /*Below is for host and hostsongs only*/
@@ -289,3 +302,77 @@ body {
 }
 
 /*End of bottom section*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*For scrolling text:*/
+
+
+#songDet {
+ height: 50px;  
+ overflow: hidden;
+ position: absolute;
+ top: 65%;
+}
+#songDet {
+/* font-size: 3em;
+ color: limegreen;
+ position: absolute;
+ width: 100%;
+ height: 100%;
+ margin: 0;
+ line-height: 50px;
+ text-align: center;*/
+ /* Starting position */
+ -moz-transform:translateX(100%);
+ -webkit-transform:translateX(100%);    
+ transform:translateX(100%);
+ /* Apply animation to this element */  
+ -moz-animation: example1 20s linear infinite;
+ -webkit-animation: example1 20s linear infinite;
+ animation: example1 20s linear infinite;
+}
+/* Move it (define the animation) */
+@-moz-keyframes example1 {
+ 0%   { -moz-transform: translateX(100%); }
+ 100% { -moz-transform: translateX(-100%); }
+}
+@-webkit-keyframes example1 {
+ 0%   { -webkit-transform: translateX(100%); }
+ 100% { -webkit-transform: translateX(-100%); }
+}
+@keyframes example1 {
+ 0%   { 
+ -moz-transform: translateX(100%); /* Firefox bug fix */
+ -webkit-transform: translateX(100%); /* Firefox bug fix */
+ transform: translateX(100%);       
+ }
+ 100% { 
+ -moz-transform: translateX(-100%); /* Firefox bug fix */
+ -webkit-transform: translateX(-100%); /* Firefox bug fix */
+ transform: translateX(-100%); 
+ }
+}

@@ -70,6 +70,13 @@ function clickSong(e){
     $('body').append(toAppend.toString()); 
     toAppend = "";
     sessionStorage.songs = added;
+    sessionStorage.songsTitle = document.getElementById(friendID).children[1].children[0].innerHTML;
+    sessionStorage.songsArtist = document.getElementById(friendID).children[2].children[0].innerHTML;
+    sessionStorage.songsAlbum = document.getElementById(friendID).children[2].children[1].innerHTML;
+
+    console.log("song artist: " +sessionStorage.songsArtist);
+    console.log("song album: " +sessionStorage.songsAlbum);
+
     console.log("added song: " + sessionStorage.songs);
     start = true;
 }
