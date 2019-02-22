@@ -22,9 +22,6 @@ function initializePage() {
     // $('.project a').click(addProjectDetails);
     $('.friend').click(clickFriend);
     $('back-container').click(back);
-    $('#player-btn-prev').click(prev);
-    $('#player-btn-pause').click(togglePause);
-    $('#player-btn-next').click(next);
 
     // $('#colorBtn').click(randomizeColors);
 }

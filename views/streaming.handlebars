@@ -34,8 +34,7 @@
         <div id="middle2">
             <div id="instructions" >
                 <p class="lead on-air" id="instructions-txt"></p>
-                <p class="lead" id="instructions-txt-id">
-                </p>
+                <p class="lead" id="instructions-txt-id"></p>
             </div>
 
             <div id="top-buttons"></div>
@@ -201,9 +200,15 @@
 
     document.getElementById("instructions-txt").innerHTML = "You session ID: " + sessionStorage.hostCode;
 
+
+
     if((sessionStorage.hostCode).length < 3){
         document.getElementById("instructions-txt").innerHTML = "You session ID: 000000";
-    }
+    } else {
+            var input = "host" + sessionStorage.hostCode;
+    document.getElementById("instructions-txt-id").innerHTML = sessionStorage.getItem(input) + "'s Session";
+}    document.getElementById("instructions-txt").style.fontWeight = 150%;
+
     document.getElementById("instructions-txt").style.color = "green";
 </script>
 
