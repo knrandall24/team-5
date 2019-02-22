@@ -73,7 +73,7 @@
                     document.getElementById("songTitle").innerHTML=title;
 
                     console.log("It works: "+ artist);
-                    document.getElementById("songDet").innerHTML = artist + "    " + album;
+                    document.getElementById("songDet").innerHTML = artist + " - " + album;
                 </script>
             </div>
             <div id="audio">
@@ -101,7 +101,7 @@
                     </div>
                 </div>
                 <script>
-                    if(sessionStorage.songs >= 5){
+                    if(sessionStorage.songs >= 11){
                         document.getElementById('player-btn-next').disabled = true;
                     }
                     if(sessionStorage.songs <= 1){

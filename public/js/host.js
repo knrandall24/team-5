@@ -58,7 +58,7 @@ function togglePause(e){
 }
 
 function next(e){
-    if(sessionStorage.songs < 5){
+    if(sessionStorage.songs < 11){
         var temp = sessionStorage.songs;
         temp++;
         sessionStorage.songs = temp;
