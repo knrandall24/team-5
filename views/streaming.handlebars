@@ -28,7 +28,7 @@
                 </div>
             </a>
             <div id="title-container">
-                <h1 id="title">Hosting</h1>
+                <h1 id="title">Streaming</h1>
             </div>
         </div>
         <div id="middle2">
@@ -43,7 +43,7 @@
             <div id="albumArt">
                 <img src="/img/album.png" id="img">
                 <script>
-                    document.getElementById("img").src = "/img/" + sessionStorage.songImg;
+                    document.getElementById("img").src = sessionStorage.getItem("songImg"+sessionStorage.hostCode);
                 </script>
             </div>
 
@@ -59,14 +59,18 @@
 
 
                 <script>
-                    var sessionID = sessionStorage.getItem(hostCode);
+                    console.log("host code inside is: " +sessionStorage.hostCode)
+                    var sessionID = sessionStorage.hostCode;
                     var input = 'artist'+ sessionID;
+                    console.log("input1: " +  input);
                     var artist = sessionStorage.getItem(input);
                     input = 'album'+ sessionID;
+                    console.log("input2: " +  input);
                     var album = sessionStorage.getItem(input);
 
-                    input = 'title' + sessionID;
+                    input = 'song' + sessionID;
 
+                    console.log("input3: " +  input);
                     console.log("input is: " + 'songList' + sessionStorage.songs);
                     var title = sessionStorage.getItem(input);
                     console.log("title is: " + title);
@@ -77,12 +81,12 @@
                     document.getElementById("songDet").innerHTML = artist + " - " + album;
                 </script>
             </div>
-            <div id="audio">
+            <div id="audio2">
                 <audio controls id="crt" autoplay>
                     <source src="/songs/rockstar.mp3" type="audio/mpeg" id="player">
                     </audio>
                     <script>
-                        document.getElementById("player").src = "/songs/" + sessionStorage.songID + ".mp3";
+                        document.getElementById("player").src = "/songs/" + sessionStorage.getItem("songID"+sessionStorage.hostCode) + ".mp3";
                     </script>
                 </div>
 
@@ -180,7 +184,8 @@
     }
 
 
-    document.getElementById("instructions-txt-id").innerHTML = "You session ID: " + sessionStorage.sessionID;
+    document.getElementById("instructions-txt").innerHTML = "You session ID: " + sessionStorage.hostCode;
+    document.getElementById("instructions-txt").style.color = "green";
 </script>
 
 </body>

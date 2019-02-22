@@ -251,6 +251,15 @@ body {
     width: 100%;
     /*background-color: green;*/
 }
+#audio2{
+    position: absolute;
+    top:60%;
+    left: 0%;
+    height: 30%;
+    width: 100%;
+    /*background-color: green;*/
+}
+
 #crt{
     width: 100%;
 }
