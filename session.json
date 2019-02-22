@@ -3,27 +3,25 @@
         {
             "name": "Clark",
             "Code": "A1377X",
+            "hostPic": "/img/clark-kent.jpg",
             "imageURL": "/img/filler_profile.png"
         },
         {
             "name": "Khosla",
             "Code": "A23181",
+            "hostPic": "pradeep-khosla.jpg",
             "imageURL": "/img/filler_profile.png"
         },
         {
             "name": "Tony",
             "Code": "B2321D",
-            "imageURL": "/img/filler_profile.png"
-        },
-        {
-            "name": "Peter",
-            "Code": "A13781",
+            "hostPic": "tony-stark",
             "imageURL": "/img/filler_profile.png"
         },
         {
             "name": "Jake",
             "Code": "A23987",
-            "imageURL": "/img/filler_profile.png"
+            "hostPic":"/img/filler_profile.png"
         }
     ]
 }
