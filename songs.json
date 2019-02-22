@@ -35,45 +35,45 @@
             "id": "5"
         },
         {
-            "name": "Song6",
-            "artist": "Artist",
-            "album": "Album",
-            "imageURL": "/img/album.png",
+            "name": "Without Me",
+            "artist": "Halsey",
+            "album": "Without Me",
+            "imageURL": "/img/6.png",
             "id": "6"
         },
         {
             "name": "Song7",
             "artist": "Artist",
             "album": "Album",
-            "imageURL": "/img/album.png",
+            "imageURL": "/img/7.png",
             "id": "7"
         },
         {
-            "name": "Song8",
-            "artist": "Artist",
+            "name": "Wow.",
+            "artist": "Post Malone",
             "album": "Album",
-            "imageURL": "/img/album.png",
+            "imageURL": "/img/8.png",
             "id": "8"
         },
         {
-            "name": "Song9",
-            "artist": "Artist",
-            "album": "Album",
-            "imageURL": "/img/album.png",
+            "name": "Mo Bamba",
+            "artist": "Sheck Wes",
+            "album": "MUDBOY",
+            "imageURL": "/img/9.png",
             "id": "9"
         },
         {
-            "name": "Song10",
-            "artist": "Artist",
-            "album": "Album",
-            "imageURL": "/img/album.png",
+            "name": "Better Now",
+            "artist": "Post Malone",
+            "album": "beerbongs & bentleys",
+            "imageURL": "/img/10.png",
             "id": "10"
         },
         {
-            "name": "Song11",
-            "artist": "Artist",
-            "album": "Album",
-            "imageURL": "/img/album.png",
+            "name": "Startender",
+            "artist": "A Boogie Wit da Hoodie, Offset, Tyga",
+            "album": "Hoodie SZN",
+            "imageURL": "/img/11.png",
             "id": "11"
         }
     ]
