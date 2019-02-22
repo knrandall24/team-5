@@ -45,6 +45,7 @@ function clickFriend(e){
 //     var clicked = false;
     var friendID = $(this).closest('.friend').attr('id');
     var hCode = friendID.substr('friend'.length);
+    sessionStorage.hostCode = "";
     sessionStorage.setItem(hostCode, hCode);
 
     console.log("host code: " + hCode);
