@@ -50,15 +50,10 @@ function togglePause(e){
     if(document.getElementById('crt').paused){ 
         document.getElementById('crt').play();
         document.getElementById('player-btn-pause').innerHTML = "II";
-        document.getElementById('Instructions-txt').innerHTML = "■ OFF AIR";
-        document.getElementById('Instructions-txt').style.color = "black";
     } else {
         document.getElementById('crt').pause();
         document.getElementById('player-btn-pause').innerHTML = "►";
-        document.getElementById('Instructions-txt').innerHTML = "● ON AIR";
-        document.getElementById('Instructions-txt').style.color = "red";
     }
-
     console.log("Testing pause button:" + sessionStorage.songs);
 }
 
