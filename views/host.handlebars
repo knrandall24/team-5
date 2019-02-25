@@ -55,7 +55,7 @@
                     </div>
                 </div>
                 <br>
-                {{/each}} 
+                {{/each}}
             </div>
         </div>
 
@@ -82,6 +82,7 @@
 
        
     <script>
+        sessionStorage.hostingSendButtonDisable = false;
           if (typeof(Storage) !== "undefined") {
             var storaged = sessionStorage.hello;
             console.log(storaged);

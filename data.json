@@ -69,5 +69,83 @@
 			"id": 10,
 			"slected": "0"
 		}
-	]
+	],
+	"songs": [{
+            "name": "a lot",
+            "artist": "21 Savage",
+            "album": "i am >i am",
+            "imageURL": "/img/1.png",
+            "id": "1"
+        },
+        {
+            "name": "STARGAZING",
+            "artist": "Travis Scott",
+            "album": "ASTROWORLD",
+            "imageURL": "/img/2.png",
+            "id": "2"
+        },
+        {
+            "name": "Plain Jane",
+            "artist": "A$AP Ferg",
+            "album": "Still Striving",
+            "imageURL": "/img/3.png",
+            "id": "3"
+        },
+        {
+            "name": "Ric Flair Drip",
+            "artist": "Offset, Metro Boomin",
+            "album": "Without Warning",
+            "imageURL": "/img/4.png",
+            "id": "4"
+        },
+        {
+            "name": "Rockstar",
+            "artist": "Post Malone",
+            "album": "beerbongs & bentleys",
+            "imageURL": "/img/5.png",
+            "id": "5"
+        },
+        {
+            "name": "Without Me",
+            "artist": "Halsey",
+            "album": "Without Me",
+            "imageURL": "/img/6.png",
+            "id": "6"
+        },
+        {
+            "name": "Wow.",
+            "artist": "Post Malone",
+            "album": "Wow.",
+            "imageURL": "/img/7.png",
+            "id": "7"
+        },
+        {
+            "name": "Pure Water",
+            "artist": "Mustard, Migos",
+            "album": "Pure Water",
+            "imageURL": "/img/8.png",
+            "id": "8"
+        },
+        {
+            "name": "Mo Bamba",
+            "artist": "Sheck Wes",
+            "album": "MUDBOY",
+            "imageURL": "/img/9.png",
+            "id": "9"
+        },
+        {
+            "name": "Better Now",
+            "artist": "Post Malone",
+            "album": "beerbongs & bentleys",
+            "imageURL": "/img/10.png",
+            "id": "10"
+        },
+        {
+            "name": "Startender",
+            "artist": "A Boogie Wit da Hoodie, Offset, Tyga",
+            "album": "Hoodie SZN",
+            "imageURL": "/img/11.png",
+            "id": "11"
+        }
+    ]
 }

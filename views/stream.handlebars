@@ -31,7 +31,7 @@
         <div id="middle">
             <div id="friend-list">
 
-            {{#each session}}
+                {{#each session}}
                     <div class="friend" id="friend{{hostCode}}">
                         <div id="friendImgContainer">
                             <img class="picLoc{{hostCode}}" src="{{hostPic}}" id="hello" >
@@ -44,18 +44,27 @@
 
 
                     <script>
-                        //assignm song+host number
+                        //assign song+host number
                         sessionStorage.setItem('song{{hostCode}}', "{{songTitle}}");
                         sessionStorage.setItem('artist{{hostCode}}', "{{artist}}");
                         sessionStorage.setItem('album{{hostCode}}', "{{album}}");
                         sessionStorage.setItem('songImg{{hostCode}}', "{{songImg}}");
                         sessionStorage.setItem('host{{hostCode}}', "{{hostName}}");
                         sessionStorage.setItem('songID{{hostCode}}', "{{songID}}");
+                        sessionStorage.setItem('friends{{hostCode}}', "{{friends}}");
                         
                     </script>
                     {{/each}} 
 
-
+                    {{#each songs}}
+                    <script>
+                        if(sessionStorage.recountSongs==="true"){
+                            var total = sessionStorage.totalSongs;
+                            total = parseInt(total, 10) + 1;
+                            sessionStorage.totalSongs = total;
+                        }
+                    </script>
+                    {{/each}}
 
                 </div>
             </div>
@@ -70,6 +79,8 @@
         </center>
 
         <script>
+            sessionStorage.newStream = "true";
+
             document.getElementById("bottom-txt").addEventListener("click", function(event){
                 document.getElementById("bottom-txt").innerHTML = "Please Select a Session";
 

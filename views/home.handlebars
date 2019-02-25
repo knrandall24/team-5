@@ -41,7 +41,7 @@
                     <div id="btn-txt">
                         Stream
                     </div>
-                    <div >
+                    <div>
                         <p class="lead" id="fine-txt">An Existing Session</p>
                     </div>
             </button>
@@ -49,6 +49,8 @@
     </center>
 
     <script>
+        sessionStorage.totalSongs = "0";
+        sessionStorage.recountSongs ="true";
         function added() {
           document.getElementById("addFont").innerHTML = "Added";
           $("#addFont").css("background-color", "lightgreen");

@@ -18,7 +18,7 @@ function initializePage() {
     added = [];
     original = "green";
     pause = true;
-    sessionStorage.sessionID = "000000";
+    // sessionStorage.sessionID = "000000";
     // $('.project a').click(addProjectDetails);
     $('.friend').click(clickFriend);
     $('back-container').click(back);

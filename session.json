@@ -44,5 +44,153 @@
             "songID": "6",
             "friends": "1,7,8"
         }
+    ], "friend": [{
+            "name": "Jake From StateFarm",
+            "description": "Only friend with a Navy ship named after them",
+            "imageURL": "/img/filler_profile.png",
+            "id": 1,
+            "slected": "0"
+        },
+        {
+            "name": "Mark ZuckEZuck",
+            "description": "Only friend with a Navy ship named after them",
+            "imageURL": "/img/filler_profile.png",
+            "id": 2,
+            "slected": "0"
+        },
+        {
+            "name": "Clark Kent",
+            "description": "Clark Kent, aka Superman, is Earth's greatest hero.",
+            "imageURL": "/img/clark-kent.jpg",
+            "id": 3,
+            "slected": "0"
+        },
+        {
+            "name": "Bruce Wayne",
+            "description": "A wealthy American playboy, philanthropist, and owner of Wayne Enterprises.",
+            "imageURL": "/img/bruce-wayne.jpg",
+            "id": 4,
+            "slected": "0"
+        },
+        {
+            "name": "Tony Stark",
+            "description": "Genius. Billionaire. Playboy. Philanthropist. Tony Stark's confidence is only matched by his high-flying abilities as the hero called Iron Man.",
+            "imageURL": "/img/tony-stark.png",
+            "id": 5,
+            "slected": "0"
+        },
+        {
+            "name": "Pradeep Khosla",
+            "description": "No parking for you.",
+            "imageURL": "/img/pradeep-khosla.jpg",
+            "id": 6,
+            "slected": "0"
+        },
+        {
+            "name": "Peter Parker",
+            "description": "Bitten by a radioactive spider, Peter Parker's arachnid abilities give him powers he uses to help others, while his personal life offers plenty of obstacles.",
+            "imageURL": "/img/peter-parker.png",
+            "id": 7,
+            "slected": "0"
+        },
+        {
+            "name": "Floyd Lawton",
+            "description": "Floyd Lawton, known under the codename Deadshot, is the world's deadliest marksman.",
+            "imageURL": "/img/floyd-lawton.png",
+            "id": 8,
+            "slected": "0"
+        },
+        {
+            "name": "Harley Quinn",
+            "description": "Harleen Quinzel was once a psychologist at Arkham Asylum and was assigned to treat the Joker. ",
+            "imageURL": "/img/harley-quinn.png",
+            "id": 9,
+            "slected": "0"
+        },
+        {
+            "name": "T-800",
+            "description": "0001010101010111010100100011100010",
+            "imageURL": "/img/terminator.jpeg",
+            "id": 10,
+            "slected": "0"
+        }
+    ],
+    "songs": [{
+            "name": "a lot",
+            "artist": "21 Savage",
+            "album": "i am >i am",
+            "imageURL": "/img/1.png",
+            "id": "1"
+        },
+        {
+            "name": "STARGAZING",
+            "artist": "Travis Scott",
+            "album": "ASTROWORLD",
+            "imageURL": "/img/2.png",
+            "id": "2"
+        },
+        {
+            "name": "Plain Jane",
+            "artist": "A$AP Ferg",
+            "album": "Still Striving",
+            "imageURL": "/img/3.png",
+            "id": "3"
+        },
+        {
+            "name": "Ric Flair Drip",
+            "artist": "Offset, Metro Boomin",
+            "album": "Without Warning",
+            "imageURL": "/img/4.png",
+            "id": "4"
+        },
+        {
+            "name": "Rockstar",
+            "artist": "Post Malone",
+            "album": "beerbongs & bentleys",
+            "imageURL": "/img/5.png",
+            "id": "5"
+        },
+        {
+            "name": "Without Me",
+            "artist": "Halsey",
+            "album": "Without Me",
+            "imageURL": "/img/6.png",
+            "id": "6"
+        },
+        {
+            "name": "Wow.",
+            "artist": "Post Malone",
+            "album": "Wow.",
+            "imageURL": "/img/7.png",
+            "id": "7"
+        },
+        {
+            "name": "Pure Water",
+            "artist": "Mustard, Migos",
+            "album": "Pure Water",
+            "imageURL": "/img/8.png",
+            "id": "8"
+        },
+        {
+            "name": "Mo Bamba",
+            "artist": "Sheck Wes",
+            "album": "MUDBOY",
+            "imageURL": "/img/9.png",
+            "id": "9"
+        },
+        {
+            "name": "Better Now",
+            "artist": "Post Malone",
+            "album": "beerbongs & bentleys",
+            "imageURL": "/img/10.png",
+            "id": "10"
+        },
+        {
+            "name": "Startender",
+            "artist": "A Boogie Wit da Hoodie, Offset, Tyga",
+            "album": "Hoodie SZN",
+            "imageURL": "/img/11.png",
+            "id": "11"
+        }
     ]
 }

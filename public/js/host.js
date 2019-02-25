@@ -3,13 +3,13 @@
 
 $(document).ready(function() {
     initializePage();
+
 })
-
-
 // Variables declared here
 var original;
 var added;
 var pause;
+var muted;
 
 
 function initializePage() {
@@ -18,7 +18,8 @@ function initializePage() {
     added = [];
     original = "green";
     pause = true;
-    sessionStorage.sessionID = "000000";
+    muted=false;
+    // sessionStorage.sessionID = "000000";
     // $('.project a').click(addProjectDetails);
     $('.friend').click(clickFriend);
     $('#bottom-txt').click(testJSON);
@@ -27,9 +28,59 @@ function initializePage() {
     $('#player-btn-prev').click(prev);
     $('#player-btn-pause').click(togglePause);
     $('#player-btn-next').click(next);
+    $('#mute-button').click(mute);
 
+    // $('#colorBtn').click(randomizeColors);function initializePage() {
+    var sessionID = makeid();
+    sessionStorage.sessionID = sessionID;
+    console.log("sessionID in welcome page is:" + sessionID);
     // $('#colorBtn').click(randomizeColors);
 }
+
+//this function mutes the session
+function mute(){
+
+    var aud = document.getElementById("crt");
+    if(muted === true){
+        muted = false;
+        document.getElementById('mute-button').style.backgroundColor = "";
+        document.getElementById('mute-button').style.backgroundColor = "transparent";
+        document.getElementById('mute-button').style.opacity = "1";
+        document.getElementById('mute-button').style.color = "#555555";
+        document.getElementById('mute-button-txt').innerHTML = "🔇Mute";
+        document.getElementById('img2').style.opacity = "0";
+        document.getElementById('img').style.opacity = "1";
+
+        aud.muted = false;
+    } else {
+        muted = true;
+        document.getElementById('mute-button').style.backgroundColor = "rgba(128,128,128,.8)";
+        document.getElementById('mute-button').style.color = "white";
+        document.getElementById('mute-button-txt').innerHTML = "🔊Unmute";
+        document.getElementById('img2').style.opacity = ".8";
+        document.getElementById('img').style.opacity = ".5";
+        
+        aud.muted = true;
+    }
+}
+
+//this function generates random sessionID
+function makeid() {
+  var text = "";
+  var possibleAlpha = "ABCDEFGHJKLMNPQRSTUVWXYZ";
+  var possibleNum = "0123456789";
+  var possibleEnding = "ABCDEFGHJKLMNPQRSTUVWXYZ0123456789";
+  text += possibleAlpha.charAt(Math.floor(Math.random() * possibleAlpha.length));
+
+  for (var i = 0; i < 5; i++){
+    text += possibleNum.charAt(Math.floor(Math.random() * possibleNum.length));
+    }
+
+    text += possibleEnding.charAt(Math.floor(Math.random() * possibleEnding.length));
+
+    return text;
+}
+
 
 
 
@@ -58,7 +109,7 @@ function togglePause(e){
 }
 
 function next(e){
-    if(sessionStorage.songs < 11){
+    if(sessionStorage.songs < sessionStorage.totalSongs){
         var temp = sessionStorage.songs;
         temp++;
         sessionStorage.songs = temp;
@@ -153,15 +204,19 @@ function clickFriend(e){
 }
 
 function postList(e){
-
+    console.log("inside postlist within host.js");
     console.log(added.toString());
 
+    console.log("inside2 postlist within host.js");
     if (typeof(Storage) !== "undefined") {
         sessionStorage.friends = added;
     } else {
         console.log("Sorry, your browser does not support web storage...");
     }
-    window.location.href = 'add';
+    console.log("inside3 postlist within host.js");
+    window.location.href = 'hostSong';
+
+    // window.location.href = 'add';
 }
 
 function back(e){
@@ -189,5 +244,7 @@ function testJSON(e){
     }
 }
 }
+
+
 
 

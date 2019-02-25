@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
 <head>
-    <title>Hosting</title>
+    <title>Streaming</title>
     <!-- Default Header -->
     {{> default}}
     <!-- End Default Header -->
@@ -31,19 +31,31 @@
                 <h1 id="title">Streaming</h1>
             </div>
         </div>
-        <div id="middle2">
-            <div id="instructions" >
-                <p class="lead on-air" id="instructions-txt"></p>
-                <p class="lead" id="instructions-txt-id"></p>
+        <div id="middle2-stream">
+            <div id="instructions">
+                <div id="hostInfo">
+                    <p class="lead" id="sessionIdText">You session ID: </p>
+                    <p class="lead on-air" id="instructions-txt-stream"></p>
+                </div>
+                <div id="sessionInfo">
+                    <p class="lead" id="instructions-txt-id-stream"></p>
+                </div>
             </div>
 
-            <div id="top-buttons"></div>
+            <div id="top-buttons-stream"></div>
 
-            <div id="albumArt">
+            <div id="albumArt-stream">
                 <img src="/img/album.png" id="img">
+                <img src="/img/mute.png" id="img2">
                 <script>
                     if((sessionStorage.hostCode).length > 3){
-                        document.getElementById("img").src = sessionStorage.getItem("songImg"+sessionStorage.hostCode);
+                        //check if next song is triigered at end of first song
+                        if(sessionStorage.newStream === "true"){
+                            document.getElementById("img").src = sessionStorage.getItem("songImg"+sessionStorage.hostCode);
+                        }else {
+
+                            document.getElementById("img").src = "/img/" + sessionStorage.songs + ".png";
+                        }
                     } else {
 
                         document.getElementById("img").src = "/img/5.png";
@@ -53,60 +65,137 @@
 
         </div>
 
-        <div id="bottomPlayer">
+        <div id="bottomPlayer-stream">
             <div id="songInfo">
 
-                <h1 class="display-4" id="songTitle">
+                <h1 class="display-4 songTitle-stream" id="songTitle">
                 </h1>
-                <p class="lead" id="songDet">
-                </p>
-
+                <div id="songDet-container">
+                    <p class="lead songDet-stream" id="songDet">
+                    </p>
+                </div>
 
                 <script>
                     if((sessionStorage.hostCode).length > 3){
-                        console.log("host code inside is: " +sessionStorage.hostCode)
-                        var sessionID = sessionStorage.hostCode;
-                        var input = 'artist'+ sessionID;
-                        console.log("input1: " +  input);
-                        var artist = sessionStorage.getItem(input);
-                        input = 'album'+ sessionID;
-                        console.log("input2: " +  input);
-                        var album = sessionStorage.getItem(input);
+                        //check if next song is triigered at end of first song
+                        if(sessionStorage.newStream === "true"){
+                            console.log("host code inside is: " + sessionStorage.hostCode);
+                            var sessionID = sessionStorage.hostCode;
+                            var input = 'artist'+ sessionID;
+                            console.log("input1: " +  input);
+                            var artist = sessionStorage.getItem(input);
+                            input = 'album'+ sessionID;
+                            console.log("input2: " +  input);
+                            var album = sessionStorage.getItem(input);
 
-                        input = 'song' + sessionID;
+                            input = 'song' + sessionID;
 
-                        console.log("input3: " +  input);
-                        console.log("input is: " + 'songList' + sessionStorage.songs);
-                        var title = sessionStorage.getItem(input);
-                        console.log("title is: " + title);
+                            console.log("input3: " +  input);
+                            console.log("input is: " + 'songList' + sessionStorage.songs);
+                            var title = sessionStorage.getItem(input);
+                            console.log("title is: " + title);
 
-                        document.getElementById("songTitle").innerHTML=title;
+                            document.getElementById("songTitle").innerHTML=title;
 
-                        console.log("It works: "+ artist);
-                        document.getElementById("songDet").innerHTML = artist + " - " + album;
+                            console.log("It works: "+ artist);
+                            document.getElementById("songDet").innerHTML = artist + " - " + album;
+                        } else {
+                            var songID = sessionStorage.songs;
+                            var input = 'artist'+ songID;
+                            var artist = sessionStorage.getItem(input);
+                            input = 'album'+ songID;
+                            console.log("input2: " +  input);
+                            var album = sessionStorage.getItem(input);
+
+                            input = 'title' + songID;
+                            var title = sessionStorage.getItem(input);
+
+                            document.getElementById("songTitle").innerHTML=title;
+
+                            console.log("It works: "+ artist);
+                            document.getElementById("songDet").innerHTML = artist + " - " + album;
+                        }
                     } else {
                         document.getElementById("songTitle").innerHTML=sessionStorage.title5;
                         document.getElementById("songDet").innerHTML = sessionStorage.artist5 + " - " + sessionStorage.album5;
                     }
                 </script>
             </div>
-            <div id="audio2">
-                <audio controls id="crt" autoplay>
+            <div id="audio2" class="streamCRT">
+                <audio controls id="crt" > 
+                    <!-- autoplay -->
                     <source src="/songs/5.mp3" type="audio/mpeg" id="player">
                     </audio>
                     <script>
                         console.log('nullcheck for stream');
                         console.log(sessionStorage.hostCode);
                         if((sessionStorage.hostCode).length > 3){
-                            document.getElementById("player").src = "/songs/" + sessionStorage.getItem("songID"+sessionStorage.hostCode) + ".mp3";
+                            console.log("within the specified length");
+                        //check if next song is triigered at end of first song
+                            if(sessionStorage.newStream === "true"){
+                            console.log("within the newStream is true");
+                                document.getElementById("player").src = "/songs/" + sessionStorage.getItem("songID"+sessionStorage.hostCode) + ".mp3";
+                            } else {
+                            console.log("within the newStream is false");
+                                document.getElementById("player").src = "/songs/" + sessionStorage.songs + ".mp3";
+                            }
                         }
-                        
+
+                        //to start at random time
+                        if (sessionStorage.newStream === "true"){
+                            var min=5; 
+                            var max=35;  
+                            var random =Math.floor(Math.random() * (+max - +min)) + +min; 
+                            console.log("random: " + random);
+                            document.getElementById("crt").currentTime = Number(random);
+                        }
+
+                        document.getElementById("crt").play();
+
+                        //autoplay next song
+                        var aud = document.getElementById("crt");
+                        aud.onended = function() {
+                            var prev = sessionStorage.songs;
+                            sessionStorage.newStream = "false";
+
+                            var min=1; 
+                            var max=sessionStorage.totalSongs;
+                            max = parseInt(max, 10);
+                            var random =Math.floor(Math.random() * (+max - +min)) + +min; 
+                            console.log("randomSong: " + random);
+
+                            //make sure no repeats
+                            while(prev === random){
+                                var min=1; 
+                                var max=sessionStorage.totalSongs;
+                                max = parseInt(max, 10);
+                                var random =Math.floor(Math.random() * (+max - +min)) + +min; 
+                                console.log("randomSong: " + random);
+                            }
+
+                            sessionStorage.songs = random;
+                            console.log( "next to: " + sessionStorage.songs);
+                            // document.getElementById("player").src = "/songs/" + sessionStorage.songs + ".mp3";
+
+                            window.location.href = 'streaming'; 
+                        };
+
                     </script>
                 </div>
 
 
-                <div id="playerControls">
-                    <!-- <div id="playerButtons" class="btn-group-lg" role="group" aria-label="Basic example">
+                <div id="mute-container">
+                    <button type="button" id="mute-button" class="btn btn-outline-dark btn-lg">
+                        <h5 id="mute-button-txt">🔇Mute</h5>
+                    </button>
+                </div>
+
+
+        </div>
+
+
+                <!--<div id="playerControls">
+                     <div id="playerButtons" class="btn-group-lg" role="group" aria-label="Basic example">
                         <div id="prevContainer">
                             <button type="button" class="btn btn-secondary" id="player-btn-prev">l◄</button>
                         </div>
@@ -117,8 +206,8 @@
                         <div id="nextContainer">
                             <button type="button" class="btn btn-secondary" id="player-btn-next">►l</button>
                         </div>
-                    </div> -->
-                </div>
+                    </div> 
+                </div>-->
 
 <!--                 <script>
                     if(sessionStorage.songs >= 11){
@@ -128,10 +217,6 @@
                         document.getElementById('player-btn-prev').disabled = true;
                     }
                 </script> -->
-
-            </div>
-
-
 
 
 
@@ -177,6 +262,7 @@
         </center>
 
         <script>
+            sessionStorage.recountSongs="false";
             function added() {
               document.getElementById("addFont").innerHTML = "Added";
               $("#addFont").css("background-color", "lightgreen");
@@ -198,18 +284,18 @@
     }
 
 
-    document.getElementById("instructions-txt").innerHTML = "You session ID: " + sessionStorage.hostCode;
+    document.getElementById("instructions-txt-stream").innerHTML = sessionStorage.hostCode;
 
 
 
     if((sessionStorage.hostCode).length < 3){
-        document.getElementById("instructions-txt").innerHTML = "You session ID: 000000";
+        document.getElementById("instructions-txt-stream").innerHTML = "000000";
     } else {
-            var input = "host" + sessionStorage.hostCode;
-    document.getElementById("instructions-txt-id").innerHTML = sessionStorage.getItem(input) + "'s Session";
-}    document.getElementById("instructions-txt").style.fontWeight = "900";
+        var input = "host" + sessionStorage.hostCode;
+        document.getElementById("instructions-txt-id-stream").innerHTML = sessionStorage.getItem(input) + "'s Session";
+    }    document.getElementById("instructions-txt-stream").style.fontWeight = "900";
 
-    document.getElementById("instructions-txt").style.color = "green";
+    document.getElementById("instructions-txt-stream").style.color = "green";
 </script>
 
 </body>

@@ -90,8 +90,7 @@ function postList(e){
     } else {
         console.log("Sorry, your browser does not support web storage...");
     }
-    window.location.href = 'add';
-    window.location.href = 'hosting';
+    // window.location.href = 'hosting';
 }
 
 

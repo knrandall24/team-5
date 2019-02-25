@@ -102,7 +102,7 @@
                     </div>
                 </div>
                 <script>
-                    if(sessionStorage.songs >= 11){
+                    if(sessionStorage.songs >= sessionStorage.totalSongs){
                         document.getElementById('player-btn-next').disabled = true;
                     }
                     if(sessionStorage.songs <= 1){
@@ -126,19 +126,40 @@
                 <input type="text" name="songImg">
                 <input type="text" name="songID">
                 <input type="text" name="friends">
+                <input type="submit" id="clickButton" onsubmit="return false">
 
             </form>
             <script>
-                document.forms["myForm"]["hostName"].value = "New User";
-                document.forms["myForm"]["hostCode"].value = sessionStorage.sessionID;
-                document.forms["myForm"]["hostPic"].value = "/img/filler_profile.png";
-                document.forms["myForm"]["songTitle"].value = sessionStorage.songsTitle;
-                document.forms["myForm"]["artist"].value = sessionStorage.songsArtist;
-                document.forms["myForm"]["album"].value = sessionStorage.songsAlbum;
-                document.forms["myForm"]["songImg"].value = sessionStorage.songImg;
-                document.forms["myForm"]["songID"].value = sessionStorage.songs;
-                document.forms["myForm"]["friends"].value = sessionStorage.friends; 
-            </script>
+
+                    //this fills out the form 
+                    document.forms["myForm"]["hostName"].value = "New User";
+                    document.forms["myForm"]["hostCode"].value = sessionStorage.sessionID;
+                    document.forms["myForm"]["hostPic"].value = "/img/filler_profile.png";
+                    document.forms["myForm"]["songTitle"].value = sessionStorage.songsTitle;
+                    document.forms["myForm"]["artist"].value = sessionStorage.songsArtist;
+                    document.forms["myForm"]["album"].value = sessionStorage.songsAlbum;
+                    document.forms["myForm"]["songImg"].value = sessionStorage.songImg;
+                    document.forms["myForm"]["songID"].value = sessionStorage.songs;
+                    document.forms["myForm"]["friends"].value = sessionStorage.friends; 
+
+                    console.log("right before form submission in hosting.handlebars");
+
+                    var button = document.getElementById('clickButton');
+                    // e.preventDefault();
+                    var str = sessionStorage.hostingSendButtonDisable;
+                    if(str === "false"){
+                        console.log("this is where the button should submit");
+                        button.form.submit();
+                    }
+
+                    sessionStorage.hostingSendButtonDisable = "true";
+
+                    console.log("right after form submission in hosting.handlebars");
+
+                    console.log("heelllo there: endof form submission in hosting.handlebars");
+                    console.log("Query host name is: " + document.forms["myForm"]["songID"].value);
+                    // 
+                </script>
 <!-- 
             "name": "Clark",
             "Code": "A1377X",
