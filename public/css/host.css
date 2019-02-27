@@ -29,12 +29,28 @@ body {
     text-align: center;
     /*padding: 2%;*/
 }
+#titleBar-overlay{
+    position: absolute;
+    top:0%;
+    height: 13%;
+    width: 100%;
+    background-color: rgb(226, 230, 233, .5);
+    text-align: center;
+    /*padding: 2%;*/
+}
 
 #middle{
     position: absolute;
     top:13%;
     height: 78%;
     width: 100%;
+}
+#middle-overlay{
+    position: absolute;
+    top:10%;
+    height: 90%;
+    width: 100%;
+    /*background-color: red;*/
 }
 #middle2{
     position: absolute;
@@ -85,6 +101,14 @@ body {
     left:4%;
     height:50%;
     width: 10%;
+    /*background-color: red;*/
+}
+#back-container-overlay{
+    position: absolute;
+    top:14%;
+    left:0%;
+    height:75%;
+    width: 15%;
     /*background-color: red;*/
 }
 #title-container{
@@ -178,11 +202,23 @@ body {
 
 #top-buttons{
     position: absolute;
-    top:16%;
+    top:18%;
     width: 100%;
-    height: 12%;
+    height: 14%;
     /*background-color: red;*/
 }
+
+#listen-btn{
+position: absolute;
+top: 7%;
+left:4%;
+width: 35%;
+
+}
+#listen-txt{
+    font-size: 4vw;
+}
+
 #top-buttons-stream{
     position: absolute;
     top:20%;
@@ -194,9 +230,9 @@ body {
 
 #albumArt{
     position: absolute;
-    top: 20%;
+    top: 33%;
     width: 100%;
-    height: 69%;
+    height: 63%;
     /*background-color: green;*/
 }
 #albumArt-stream{
@@ -250,6 +286,19 @@ body {
     margin-left: auto;
     overflow: auto;
 }
+#friend-list-overlay{
+    position: absolute;
+    padding-top: 4%;
+    top: 5%;
+    width: 80%;
+    height: 94%;
+    left: 10%;
+    right: 10%;
+    margin-right: auto;
+    margin-left: auto;
+    overflow: auto;
+    /*background-color: red;*/
+}
 
 .friend{
     position: relative;
@@ -268,6 +317,25 @@ body {
     box-shadow: 0 1px 0 #462c95, 0 15px 20px rgba(0, 0, 0, .35);
 }
 
+.friend-overlay{
+    visibility: hidden;
+    position: relative;
+    height:13%;
+    width: 100%;
+    display: block;
+    margin-left: 0%;
+    align-content: left;
+    border: 1px solid black;
+    border-radius: 12px;
+    background-color: #fffff0;
+
+    /*Box shadow:*/
+    -webkit-box-shadow:    0 1px 0 #462c95, 0 15px 20px rgba(0, 0, 0, .35);
+    -moz-box-shadow: 0 1px 0 #462c95, 0 15px 20px rgba(0, 0, 0, .35);
+    box-shadow: 0 1px 0 #462c95, 0 15px 20px rgba(0, 0, 0, .35);
+}
+
+
 #friendImgContainer{
     position: absolute;
     top:0%;
@@ -276,6 +344,17 @@ body {
     height: 100%;
     border-top-left-radius: 12px;
     border-bottom-left-radius: 12px;
+    overflow: hidden;
+}
+#friendImgContainer-overlay{
+    position: absolute;
+    top:0%;
+    left: 0%;
+    width:23%;
+    height: 100%;
+    border-top-left-radius: 12px;
+    border-bottom-left-radius: 12px;
+    background-color: green;
     overflow: hidden;
 }
 
@@ -288,6 +367,16 @@ body {
     border-top-right-radius: 12px;
     border-bottom-right-radius: 12px;
 }
+#friendNameContainer-overlay{
+    position: absolute;
+    width: 77%;
+    height:100%;
+    left: 23%;
+    padding-top: 3%;
+    border-top-right-radius: 12px;
+    border-bottom-right-radius: 12px;
+}
+
 
 #hello{
     overflow: hidden;
@@ -517,11 +606,40 @@ white-space: nowrap;
 }
 
 
+#background-overlay{
+    visibility: hidden;
+    position: absolute;
+    top: 0%; left:0%; width: 100%; height: 100%;
+    background-color: grey;
+    opacity: .9;
+    z-index: 4;
+}
 
+#canvas{
+    visibility: hidden;
+    position: absolute;
+    top: 1%; left:0%; width: 91%; height: 97%;right: 0%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #7EBAE7;
+    z-index: 5;
+    border-radius: 10px;
+}
 
+/*below is abour the overlay*/
+#friendsOverlay{
+    visibility: hidden;
+    position: absolute;
+    top: 1.5%; left:0%; width: 88%; height: 95%;right: 0%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgba(186, 197, 201, .5);
+    z-index: 7;
+    border-radius: 10px;
 
-
-
+/*    top: 32%; left:0%; width: 100%; height: 68%;*/
+    /*background-color: red;*/
+}
 
 
 

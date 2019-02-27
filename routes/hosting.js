@@ -3,8 +3,8 @@
  * GET hosting page.
  */
 
-var song = require('../data.json');
+var friend = require('../data.json');
 
 exports.view = function(req, res){
-  res.render('hosting',song);
+  res.render('hosting',friend);
 };

@@ -1,0 +1,99 @@
+<!doctype html>
+<html>
+<head>
+    <title>Start Host Page</title>
+    <!-- Default Header -->
+    {{> default}}
+    <!-- End Default Header -->
+    <link href="/css/host.css" rel="stylesheet">    
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="/js/host.js"></script>
+<!--     <style type="text/css"> 
+    #friendName{
+        color: #000080; 
+    }
+</style> -->
+</head>
+<body>
+
+<center>
+    <p id="chillin"></p>
+    <div id="titleBar">
+        <a href="hosting">
+            <div id="back-container">
+                <h1 class="display-4"><</h1>
+            </div>
+        </a>
+        <div id="title-container">
+            <h1 id="title">Host a Session:</h1>
+        </div>
+    </div>
+    <div id="middle">
+        <div id="instructions" >
+            <p class="lead" id="instructions-txt">
+                1. Select your listeners:
+            </p>
+        </div>
+        <div id="friend-list">
+
+            {{#each friend}}
+            <script>
+                sessionStorage.setItem('friend{{id}}', JSON.stringify({
+                    "name": '{{name}}',
+                    "description": "{{description}}",
+                    "imageURL": '{{imageURL}}',
+                    "id": '{{id}}',
+                    "slected": "{{slected}}"
+                }));
+            </script>
+            <div class="friend" id="friend{{id}}">
+                <div id="friendImgContainer">
+                    <img src={{imageURL}} id="hello">
+                </div>
+                <div id="friendNameContainer">
+                    <p class="h5 friendName{{id}}" id="friendName">{{name}}</p>
+                </div>
+            </div>
+            <br>
+            {{/each}}
+        </div>
+    </div>
+
+    <div id="bottomBar">
+        <button type="button" class="block" id="bottom-txt">
+            Continue to Song Selection
+        </button>
+    </div>
+
+
+</center>
+
+<script>
+    function added() {
+      document.getElementById("addFont").innerHTML = "Added";
+      $("#addFont").css("background-color", "lightgreen");
+      $("#addList").css("left", "50%");
+  }
+  function invited(){
+    document.getElementById("inviteText").innerHTML = "Invited";
+    $("#inviteFriend").css("background-color", "lightgreen");
+}
+</script>
+
+
+<script>
+    sessionStorage.hostingSendButtonDisable = false;
+    if (typeof(Storage) !== "undefined") {
+        var storaged = sessionStorage.hello;
+        console.log(storaged);
+    } else {
+        console.log("Sorry, your browser does not support web storage...");
+    }
+</script>
+
+</body>
+</html>
+
+
+

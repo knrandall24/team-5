@@ -29,12 +29,39 @@ function initializePage() {
     $('#player-btn-pause').click(togglePause);
     $('#player-btn-next').click(next);
     $('#mute-button').click(mute);
+    $('#listen-btn').click(openOverlay);
+    $('#back-container-overlay').click(closeOverlay);
 
     // $('#colorBtn').click(randomizeColors);function initializePage() {
-    var sessionID = makeid();
-    sessionStorage.sessionID = sessionID;
-    console.log("sessionID in welcome page is:" + sessionID);
+        var sessionID = makeid();
+        sessionStorage.sessionID = sessionID;
+        console.log("sessionID in welcome page is:" + sessionID);
     // $('#colorBtn').click(randomizeColors);
+}
+
+//this function toggles the overlay
+function openOverlay(){
+    document.getElementById("friendsOverlay").style.visibility = "visible";
+    document.getElementById("background-overlay").style.visibility = "visible";
+    document.getElementById("canvas").style.visibility = "visible";
+}
+
+//this function toggles the overlay
+function closeOverlay(){
+    document.getElementById("friendsOverlay").style.visibility = "hidden";
+    document.getElementById("background-overlay").style.visibility = "hidden";
+    document.getElementById("canvas").style.visibility = "hidden";
+    console.log("toggled overlay");
+    var flist = sessionStorage.friends;
+    console.log(flist);
+    console.log(flist.length);
+    var i = 0;
+    for(; i < flist.length; i++){
+        if(flist[i] === ","){
+        } else {
+            sessionStorage.setItem("overlay" + flist[i], "True");
+        }
+    }
 }
 
 //this function mutes the session
@@ -74,11 +101,11 @@ function makeid() {
 
   for (var i = 0; i < 5; i++){
     text += possibleNum.charAt(Math.floor(Math.random() * possibleNum.length));
-    }
+}
 
-    text += possibleEnding.charAt(Math.floor(Math.random() * possibleEnding.length));
+text += possibleEnding.charAt(Math.floor(Math.random() * possibleEnding.length));
 
-    return text;
+return text;
 }
 
 
@@ -90,6 +117,7 @@ function prev(e){
     if(sessionStorage.songs > 1){
         sessionStorage.songs = sessionStorage.songs - 1;
         window.location.href = 'hosting';
+        document.getElementById('player-btn-prev').disabled = false;
     } else{
         document.getElementById('player-btn-prev').disabled = true;
     }
@@ -109,15 +137,23 @@ function togglePause(e){
 }
 
 function next(e){
-    if(sessionStorage.songs < sessionStorage.totalSongs){
+
+    var songs = sessionStorage.songs;
+    songs = parseInt(songs, 10);
+    var totalSongs = sessionStorage.totalSongs;
+    totalSongs = parseInt(totalSongs, 10);
+    if(songs < totalSongs){
         var temp = sessionStorage.songs;
         temp++;
         sessionStorage.songs = temp;
-        console.log( "next to: " + sessionStorage.songs);
         window.location.href = 'hosting';
+        document.getElementById('player-btn-next').disabled = false;
     } else{
-        document.getElementById('player-btn-next').disabled = true;
+        sessionStorage.songs = 1;
+        window.location.href = 'hosting'; 
+        // document.getElementById('player-btn-next').disabled = true;
     }
+
 }
 
 
@@ -200,7 +236,7 @@ function clickFriend(e){
     $('body').append(toAppend.toString()); 
     toAppend = "";
 
-    sessionStorage.friends = added;
+    sessionStorage.setItem("friends", JSON.stringify(added));
 }
 
 function postList(e){
@@ -209,7 +245,7 @@ function postList(e){
 
     console.log("inside2 postlist within host.js");
     if (typeof(Storage) !== "undefined") {
-        sessionStorage.friends = added;
+        sessionStorage.setItem("friends", JSON.stringify(added));
     } else {
         console.log("Sorry, your browser does not support web storage...");
     }

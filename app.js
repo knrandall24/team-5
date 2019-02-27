@@ -23,6 +23,7 @@ var welcome = require('./routes/welcome');
 var login = require('./routes/login');
 var home = require('./routes/home');
 var host = require('./routes/host');
+// var listeners = require('./routes/listeners');
 var hostSong = require('./routes/hostSong');
 var hosting = require('./routes/hosting');
 
@@ -81,6 +82,7 @@ app.get('/host', host.view);
 app.get('/hostSong', hostSong.view);
 app.get('/hosting', hosting.view);
 app.get('/queue', queue.view);
+// app.get('/listeners', listeners.view);
 
 
 //To add function:

@@ -15,95 +15,105 @@
     }
 </style> -->
 </head>
-<body>   
-    <center>
-        <p id="chillin"></p>
-        <script>
-            console.log("song is:" + sessionStorage.songs);
-        </script>
-        <div id="titleBar">
-            <a href="hostSong">
-                <div id="back-container">
-                    <h1 class="display-4"><</h1>
-                </div>
-            </a>
-            <div id="title-container">
-                <h1 id="title">Hosting</h1>
+<body>  
+   <center>
+    <p id="chillin"></p>
+    <script>
+        console.log("song is:" + sessionStorage.songs);
+    </script>
+
+    <div id="titleBar">
+        <a href="hostSong">
+            <div id="back-container">
+                <h1 class="display-4"><</h1>
             </div>
+        </a>
+        <div id="title-container">
+            <h1 id="title">Hosting</h1>
         </div>
-        <div id="middle2">
-            <div id="instructions" >
-                <p class="lead on-air" id="instructions-txt">● ON AIR</p>
-                <p class="lead" id="instructions-txt-id">
-                </p>
-            </div>
+    </div>
 
-            <div id="top-buttons"></div>
 
-            <div id="albumArt">
-                <img src="/img/album.png" id="img">
+
+
+    <div id="middle2">
+        <div id="instructions" >
+            <p class="lead on-air" id="instructions-txt">● ON AIR</p>
+            <p class="lead" id="instructions-txt-id">
+            </p>
+        </div>
+
+        <div id="top-buttons">
+            <button type="button" class="btn btn-outline-info" id="listen-btn">Your Listeners</button>
+        </div>
+
+        <div id="albumArt">
+            <img src="/img/album.png" id="img">
+            <script>
+                sessionStorage.setItem("songImg","/img/" + sessionStorage.songs + ".png");
+                document.getElementById("img").src = "/img/" + sessionStorage.songs + ".png";
+            </script>
+        </div>
+    </div>
+    <div id="bottomPlayer">
+        <div id="songInfo">
+
+            <h1 class="display-4" id="songTitle">
+            </h1>
+            <p class="lead" id="songDet">
+            </p>
+
+
+            <script>
+                var input = 'artist'+ sessionStorage.songs;
+                var artist = sessionStorage.getItem(input);
+                input = 'album'+ sessionStorage.songs;
+                var album = sessionStorage.getItem(input);
+
+                input = 'title' + sessionStorage.songs;
+
+                console.log("input is: " + 'songList' + sessionStorage.songs);
+                var title = sessionStorage.getItem(input);
+                console.log("title is: " + title);
+
+                document.getElementById("songTitle").innerHTML=title;
+
+                console.log("It works: "+ artist);
+                document.getElementById("songDet").innerHTML = artist + " - " + album;
+            </script>
+        </div>
+
+        <div id="audio">
+            <audio controls id="crt" autoplay>
+                <source src="/songs/rockstar.mp3" type="audio/mpeg" id="player">
+                </audio>
                 <script>
-                    sessionStorage.setItem("songImg","/img/" + sessionStorage.songs + ".png");
-                    document.getElementById("img").src = "/img/" + sessionStorage.songs + ".png";
+                    document.getElementById("player").src = "/songs/" + sessionStorage.songs + ".mp3";
                 </script>
             </div>
 
-        </div>
 
-        <div id="bottomPlayer">
-            <div id="songInfo">
+            <div id="playerControls">
+                <div id="playerButtons" class="btn-group-lg" role="group" aria-label="Basic example">
+                    <div id="prevContainer">
+                        <button type="button" class="btn btn-secondary" id="player-btn-prev">l◄</button>
+                    </div>
+                    <div id="pauseContainer">
+                        <button type="button" class="btn btn-secondary" id="player-btn-pause">II</button>
+                    </div>
 
-                <h1 class="display-4" id="songTitle">
-                </h1>
-                <p class="lead" id="songDet">
-                </p>
-
-
-                <script>
-                    var input = 'artist'+ sessionStorage.songs;
-                    var artist = sessionStorage.getItem(input);
-                    input = 'album'+ sessionStorage.songs;
-                    var album = sessionStorage.getItem(input);
-
-                    input = 'title' + sessionStorage.songs;
-
-                    console.log("input is: " + 'songList' + sessionStorage.songs);
-                    var title = sessionStorage.getItem(input);
-                    console.log("title is: " + title);
-
-                    document.getElementById("songTitle").innerHTML=title;
-
-                    console.log("It works: "+ artist);
-                    document.getElementById("songDet").innerHTML = artist + " - " + album;
-                </script>
-            </div>
-            <div id="audio">
-                <audio controls id="crt" autoplay>
-                    <source src="/songs/rockstar.mp3" type="audio/mpeg" id="player">
-                    </audio>
-                    <script>
-                        document.getElementById("player").src = "/songs/" + sessionStorage.songs + ".mp3";
-                    </script>
-                </div>
-
-
-                <div id="playerControls">
-                    <div id="playerButtons" class="btn-group-lg" role="group" aria-label="Basic example">
-                        <div id="prevContainer">
-                            <button type="button" class="btn btn-secondary" id="player-btn-prev">l◄</button>
-                        </div>
-                        <div id="pauseContainer">
-                            <button type="button" class="btn btn-secondary" id="player-btn-pause">II</button>
-                        </div>
-
-                        <div id="nextContainer">
-                            <button type="button" class="btn btn-secondary" id="player-btn-next">►l</button>
-                        </div>
+                    <div id="nextContainer">
+                        <button type="button" class="btn btn-secondary" id="player-btn-next">►l</button>
                     </div>
                 </div>
-                <script>
-                    if(sessionStorage.songs >= sessionStorage.totalSongs){
-                        document.getElementById('player-btn-next').disabled = true;
+            </div>
+            <script>
+                var songs = sessionStorage.songs;
+                songs = parseInt(songs, 10);
+                var totalSongs = sessionStorage.totalSongs;
+                totalSongs = parseInt(totalSongs, 10);
+                if(songs >= totalSongs){
+                        // document.getElementById('player-btn-next').disabled = true;
                     }
                     if(sessionStorage.songs <= 1){
                         document.getElementById('player-btn-prev').disabled = true;
@@ -160,17 +170,99 @@
                     console.log("Query host name is: " + document.forms["myForm"]["songID"].value);
                     // 
                 </script>
-<!-- 
-            "name": "Clark",
-            "Code": "A1377X",
-            "hostPic": "/img/clark-kent.jpg",
-            "songTitle": "Better Now",
-            "artist": "Post Malone",
-            "album": "beerbongs & bentleys",
-            "songImg": "/img/10.png",
-            "songID": "10",
-            "friends": "1,2,3,6" -->
 
+                <div id="canvas">
+                </div>
+
+                <div id="background-overlay">
+                </div>
+
+                <div id="friendsOverlay">
+                    <p id="chillin"></p>
+                    <div id="titleBar-overlay">
+                        <button id="back-container-overlay">
+                            <h1 class="display-4"><</h1>
+                        </button>
+                        <div id="title-container">
+                            <h1 id="title">Your Listeners:</h1>
+                        </div>
+                    </div>
+                    <div id="middle-overlay">
+
+                <!--  <div id="instructions">
+                        <p class="lead" id="instructions-txt">
+                            1. Select your listeners:
+                        </p>
+                    </div> -->
+
+                    <div id="friend-list-overlay">
+                        {{#each friend}}
+                        <div class="friend-overlay" id="friend{{id}}" tag="overlay{{id}}">
+                            <div id="friendImgContainer-overlay">
+                                <!-- <div id="friendImgContainer"> -->
+                                    <img src={{imageURL}} id="hello">
+                                </div>
+                                <div id="friendNameContainer-overlay">
+                                    <!-- <div id="friendNameContainer"> -->
+                                        <p class="h5 friendName{{id}}" id="friendName">{{name}}</p>
+                                    </div>
+                                </div>
+                                <br>
+                                {{/each}}
+                                <script>
+                                    var flist = sessionStorage.friends;
+                                    // console.log(flist);
+                                    // console.log(flist.length);
+                                    var i = 0;
+                                    var doubleDigits = false;
+                                    // console.log("before for loop");
+
+                                    var names = JSON.parse(sessionStorage.getItem("friends"));
+                                    // console.log("names: " +names);
+
+                                    var friends = [];
+                                    var tempNum = 0;
+
+
+                                    for(; i < flist.length; i++){
+                                        tempNum = flist[i];
+
+                                        if(flist[i] === ","){
+                                        } else {
+                                            if(flist[i] === "9"){
+                                                doubleDigits = true;
+                                            }
+                                            var newNum = flist[i];
+                                            if(doubleDigits === true){
+                                                i++;
+                                                newNum = (newNum * 10) + flist[i];
+                                            }
+                                            sessionStorage.setItem("overlay" + newNum, "True");
+                                            
+                                            var input = "overlay"+ newNum;
+                                            // console.log(input);
+                                            // console.log("flist[i]:    " +newNum);
+
+                                            var friendInfo = sessionStorage.getItem("friend" + newNum);
+                                            var j = 9;
+                                            var friendName = "";
+                                            // while(friendName[j] !== '"' && j < 100){
+                                            //     friendName += friendInfo[j];
+                                            //     j++;
+                                            // }
+                                            // console.log(friendName);
+                                            // document.getElementsByTagName(input).style.visibility = "visible";
+                                        }
+                                    }
+                                </script>
+                            </div>
+
+<!--                 <div id="bottomBar">
+                    <button type="button" class="block" id="bottom-txt">
+                        Continue to Song Selection
+                    </button>
+                </div> -->
+            </div>
 
 
 
@@ -187,20 +279,49 @@
             document.getElementById("inviteText").innerHTML = "Invited";
             $("#inviteFriend").css("background-color", "lightgreen");
         }
-    </script>
+            //autoplay next song
+            var aud = document.getElementById("crt");
+            aud.onended = function() {
+                var prev = sessionStorage.songs;
+                sessionStorage.newStream = "false";
 
+                var min=1; 
+                var max=sessionStorage.totalSongs;
+                max = parseInt(max, 10);
+                var random =Math.floor(Math.random() * (+max - +min)) + +min; 
+                console.log("randomSong: " + random);
 
-    <script>
-      if (typeof(Storage) !== "undefined") {
-        var storaged = sessionStorage.hello;
-        console.log(storaged);
-    } else {
-        console.log("Sorry, your browser does not support web storage...");
-    }
+        //make sure no repeats
+        while(prev === random){
+            var min=1; 
+            var max=sessionStorage.totalSongs;
+            max = parseInt(max, 10);
+            var random =Math.floor(Math.random() * (+max - +min)) + +min; 
+            console.log("randomSong: " + random);
+        }
 
+        sessionStorage.songs = random;
+        console.log( "next to: " + sessionStorage.songs);
+        // document.getElementById("player").src = "/songs/" + sessionStorage.songs + ".mp3";
 
-    document.getElementById("instructions-txt-id").innerHTML = "You session ID: " + sessionStorage.sessionID;
+        window.location.href = 'hosting'; 
+    };
+
 </script>
+
+
+<script>
+  if (typeof(Storage) !== "undefined") {
+    var storaged = sessionStorage.hello;
+    console.log(storaged);
+} else {
+    console.log("Sorry, your browser does not support web storage...");
+}
+
+
+document.getElementById("instructions-txt-id").innerHTML = "You session ID: " + sessionStorage.sessionID;
+</script>
+
 
 </body>
 </html>

@@ -58,6 +58,14 @@
                     </div>
                   </div>
                   <br>
+
+                    <script>
+                        if(sessionStorage.recountSongs==="true"){
+                            var total = sessionStorage.totalSongs;
+                            total = parseInt(total, 10) + 1;
+                            sessionStorage.totalSongs = total;
+                        }
+                    </script>
                   {{/each}} 
             </div>
         </div>
@@ -69,10 +77,12 @@
         </div>
 
 
-    </center>
-       
-    <script>
-          if (typeof(Storage) !== "undefined") {
+      </center>
+      
+      <script>
+        
+        sessionStorage.recountSongs="false";
+        if (typeof(Storage) !== "undefined") {
             var storaged = sessionStorage.hello;
             console.log(storaged);
         } else {
