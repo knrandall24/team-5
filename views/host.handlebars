@@ -5,15 +5,12 @@
     <!-- Default Header -->
     {{> default}}
     <!-- End Default Header -->
-    <link href="/css/host.css" rel="stylesheet">    
-    <script src="https://code.jquery.com/jquery.js"></script>
-    <script src="js/bootstrap.js"></script>
+
+    <!-- Host Header -->
+    {{>hostTemplate}}
+    <!-- End Host Header -->
+    
     <script src="/js/host.js"></script>
-<!--     <style type="text/css"> 
-    #friendName{
-        color: #000080; 
-    }
-</style> -->
 </head>
 <body>   
     <center>
@@ -63,6 +60,21 @@
                 </div>
                 <br>
                 {{/each}}
+
+
+
+<!--                 <div class="friend" id="inviteFriend">
+                    <div id="friendImgContainer">
+                        <img src="/img/filler_profile.png" id="hello">
+                    </div>
+                    <div id="friendNameContainer">
+                        <p class="h5 friendName" id="friendName">Invite Friends +</p>
+                    </div>
+                </div>
+                <br>
+ -->
+
+
                 <script type="text/javascript">
                     for(var i = 0; i <= parseInt(sessionStorage.totalFriends,10); i++){
                         sessionStorage.removeItem("addedFriend" + i);
