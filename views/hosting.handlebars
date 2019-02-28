@@ -189,82 +189,68 @@
                     </div>
                     <div id="middle-overlay">
 
-                <!--  <div id="instructions">
-                        <p class="lead" id="instructions-txt">
-                            1. Select your listeners:
-                        </p>
-                    </div> -->
-
-                    <div id="friend-list-overlay">
-                        {{#each friend}}
-                        <div class="friend-overlay" id="friend{{id}}" tag="overlay{{id}}">
-                            <div id="friendImgContainer-overlay">
-                                <!-- <div id="friendImgContainer"> -->
+                        <div id="friend-list-overlay">
+                            {{#each friend}}
+                            <div class="friend-overlay" id="friend{{id}}" tag="overlay{{id}}">
+                                <div id="friendImgContainer-overlay">
                                     <img src={{imageURL}} id="hello">
                                 </div>
                                 <div id="friendNameContainer-overlay">
-                                    <!-- <div id="friendNameContainer"> -->
-                                        <p class="h5 friendName{{id}}" id="friendName">{{name}}</p>
-                                    </div>
+                                    <p class="h5 friendName{{id}}" id="friendName">{{name}}</p>
                                 </div>
-                                <br>
-                                {{/each}}
-                                <script>
-                                    var flist = sessionStorage.friends;
-                                    // console.log(flist);
-                                    // console.log(flist.length);
-                                    var i = 0;
-                                    var doubleDigits = false;
-                                    // console.log("before for loop");
-
-                                    var names = JSON.parse(sessionStorage.getItem("friends"));
-                                    // console.log("names: " +names);
-
-                                    var friends = [];
-                                    var tempNum = 0;
-
-
-                                    for(; i < flist.length; i++){
-                                        tempNum = flist[i];
-
-                                        if(flist[i] === ","){
-                                        } else {
-                                            if(flist[i] === "9"){
-                                                doubleDigits = true;
-                                            }
-                                            var newNum = flist[i];
-                                            if(doubleDigits === true){
-                                                i++;
-                                                newNum = (newNum * 10) + flist[i];
-                                            }
-                                            sessionStorage.setItem("overlay" + newNum, "True");
-                                            
-                                            var input = "overlay"+ newNum;
-                                            // console.log(input);
-                                            // console.log("flist[i]:    " +newNum);
-
-                                            var friendInfo = sessionStorage.getItem("friend" + newNum);
-                                            var j = 9;
-                                            var friendName = "";
-                                            // while(friendName[j] !== '"' && j < 100){
-                                            //     friendName += friendInfo[j];
-                                            //     j++;
-                                            // }
-                                            // console.log(friendName);
-                                            // document.getElementsByTagName(input).style.visibility = "visible";
-                                        }
-                                    }
-                                </script>
                             </div>
+                            <br>
+                            {{/each}}
 
-<!--                 <div id="bottomBar">
-                    <button type="button" class="block" id="bottom-txt">
-                        Continue to Song Selection
-                    </button>
-                </div> -->
-            </div>
+                        </div>
+                    </div>
+                </div>
 
 
+<!-- Below is for your queue -->
+
+                <div id="canvas">
+                </div>
+                <div id="background-overlay">
+                </div>
+
+                <div id="songsOverlay">
+                    <p id="chillin"></p>
+                    <div id="titleBar-overlay">
+                        <button id="back-container-overlay">
+                            <h1 class="display-4"><</h1>
+                        </button>
+                        <div id="title-container">
+                            <h1 id="title">Your Queue:</h1>
+                        </div>
+                    </div>
+                    <div id="middle-overlay">
+
+                        <div id="queue-list-overlay">
+                            {{#each songs}}
+                            <div class="friend-overlay" id="friend{{id}}" tag="overlay{{id}}">
+                                <div id="friendImgContainer-overlay">
+                                    <img src={{imageURL}} id="hello">
+                                </div>
+                                <div id="friendNameContainer-overlay">
+                                    <p class="h5 friendName{{id}}" id="friendName">{{name}}</p>
+                                </div>
+                            </div>
+                            <br>
+                            {{/each}}
+
+                        </div>
+                    </div>
+                </div>
+[{
+            "name": "a lot",
+            "artist": "21 Savage",
+            "album": "i am >i am",
+            "imageURL": "/img/1.png",
+            "id": "1"
+        },
+
+<!-- Above if your your queue -->
 
 
         </center>
@@ -320,6 +306,10 @@
 
 
 document.getElementById("instructions-txt-id").innerHTML = "You session ID: " + sessionStorage.sessionID;
+
+
+
+
 </script>
 
 

@@ -39,7 +39,7 @@
     console.log(req.query.hostName);
 
     addLoc.session.push(newData);
-    res.render('hosting', songLoc);
+    res.render('hosting', addLoc);
     // window.location.href = 'hosting';
     // res.render('hostSong', songLoc);
 };

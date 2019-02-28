@@ -49,8 +49,11 @@
     </center>
 
     <script>
-        sessionStorage.totalSongs = "0";
+        sessionStorage.totalFriends = "0";
+        sessionStorage.totalSongs= "0";
         sessionStorage.recountSongs ="true";
+        sessionStorage.recountFriends ="true";
+        sessionStorage.maxFriends="0";
         function added() {
           document.getElementById("addFont").innerHTML = "Added";
           $("#addFont").css("background-color", "lightgreen");

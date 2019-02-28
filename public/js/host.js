@@ -10,10 +10,16 @@ var original;
 var added;
 var pause;
 var muted;
+var maxFriends;
 
 
 function initializePage() {
 
+    if(sessionStorage.recountFriends === "true"){
+        sessionStorage.maxFriends = "0";
+        maxFriends = sessionStorage.getItem("maxFriends");
+        maxFriends = parseInt(maxFriends, 10);
+    }
 
     added = [];
     original = "green";
@@ -30,6 +36,7 @@ function initializePage() {
     $('#player-btn-next').click(next);
     $('#mute-button').click(mute);
     $('#listen-btn').click(openOverlay);
+   
     $('#back-container-overlay').click(closeOverlay);
 
     // $('#colorBtn').click(randomizeColors);function initializePage() {
@@ -44,6 +51,40 @@ function openOverlay(){
     document.getElementById("friendsOverlay").style.visibility = "visible";
     document.getElementById("background-overlay").style.visibility = "visible";
     document.getElementById("canvas").style.visibility = "visible";
+
+    //get total number of friends used
+    var maxFriends = sessionStorage.getItem("maxFriends");
+    maxFriends = parseInt(maxFriends, 10);
+    var toRemove = [];
+    var toKeep = [];
+    //make a list of friends to keep
+    for(var i = 0; i < maxFriends; i++){
+        var addedFriend = sessionStorage.getItem("addedFriend" + i);
+        addedFriend = parseInt(addedFriend, 10);
+        toKeep.push(addedFriend);
+    }
+
+    //make a list of friends to remove
+    var totalFriends = sessionStorage.getItem("totalFriends");
+    totalFriends = parseInt(totalFriends, 10);
+
+    for(var i = 1; i <= totalFriends; i++){
+        if(toKeep.includes(i)){
+
+        } else {
+            toRemove.push(i);
+        }
+    }
+
+    for(var i = 0; i < toRemove.length; i++){
+        var input = "friend" + toRemove[i];
+        var element = document.getElementById(input.toString());
+        if (element != null) {
+            element.remove();
+        } else {
+            console.log(input + " is null");
+        }
+    }
 }
 
 //this function toggles the overlay
@@ -150,6 +191,7 @@ function next(e){
         document.getElementById('player-btn-next').disabled = false;
     } else{
         sessionStorage.songs = 1;
+        console.log("songs: " +sessionStorage.totalSongs);
         window.location.href = 'hosting'; 
         // document.getElementById('player-btn-next').disabled = true;
     }
@@ -213,6 +255,10 @@ function clickFriend(e){
         // console out put:
         console.log("User clicked on user " + friendID + ' clicked');
         added.push(id.toString());
+        if(sessionStorage.getItem("recountFriends") === "true"){
+            maxFriends+= 1;
+            sessionStorage.setItem("maxFriends", maxFriends);
+        }
     } else {
         // using JS to change background color:
         document.getElementById(friendID).style.backgroundColor = "#fffff0";
@@ -232,6 +278,10 @@ function clickFriend(e){
         added = tempArr;
         // console out put:
         console.log("User clicked on user " + friendID + ' unclicked');
+        if(sessionStorage.getItem("recountFriends") === "true"){
+            maxFriends-= 1;
+            sessionStorage.setItem("maxFriends", maxFriends);
+        }
     }
     $('body').append(toAppend.toString()); 
     toAppend = "";
@@ -250,6 +300,10 @@ function postList(e){
         console.log("Sorry, your browser does not support web storage...");
     }
     console.log("inside3 postlist within host.js");
+    for(var i = 0; i < maxFriends; i++){
+        sessionStorage.setItem("addedFriend" + i, added[i]);
+    }
+
     window.location.href = 'hostSong';
 
     // window.location.href = 'add';

@@ -35,6 +35,9 @@
                 </p>
             </div>
             <div id="friend-list">
+                <script>
+                    sessionStorage.totalFriends = "0";
+                </script>
 
                 {{#each friend}}
                 <script>
@@ -45,6 +48,10 @@
                             "id": '{{id}}',
                             "slected": "{{slected}}"
                         }));
+                    var totalFriends = sessionStorage.getItem("totalFriends");
+                    totalFriends= parseInt(totalFriends, 10);
+                    totalFriends++;
+                    sessionStorage.setItem("totalFriends", totalFriends);
                 </script>
                 <div class="friend" id="friend{{id}}">
                     <div id="friendImgContainer">
@@ -56,6 +63,11 @@
                 </div>
                 <br>
                 {{/each}}
+                <script type="text/javascript">
+                    for(var i = 0; i <= parseInt(sessionStorage.totalFriends,10); i++){
+                        sessionStorage.removeItem("addedFriend" + i);
+                    }
+                </script>
             </div>
         </div>
 
@@ -69,6 +81,7 @@
     </center>
 
     <script>
+
         function added() {
           document.getElementById("addFont").innerHTML = "Added";
           $("#addFont").css("background-color", "lightgreen");
@@ -82,6 +95,7 @@
 
        
     <script>
+        sessionStorage.recountFriends ="true";
         sessionStorage.hostingSendButtonDisable = false;
           if (typeof(Storage) !== "undefined") {
             var storaged = sessionStorage.hello;
