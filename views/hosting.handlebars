@@ -202,46 +202,43 @@
                                 </div>
                             </div>
                             <br>
-                            <script type="text/javascript">
-                                
-
-//get total number of friends used
-    var maxFriends = sessionStorage.getItem("maxFriends");
-    maxFriends = parseInt(maxFriends, 10);
-    var toRemove = [];
-    var toKeep = [];
-    //make a list of friends to keep
-    for(var i = 0; i < maxFriends; i++){
-        var addedFriend = sessionStorage.getItem("addedFriend" + i);
-        addedFriend = parseInt(addedFriend, 10);
-        toKeep.push(addedFriend);
-    }
-
-    //make a list of friends to remove
-    var totalFriends = sessionStorage.getItem("totalFriends");
-    totalFriends = parseInt(totalFriends, 10);
-
-    for(var i = 1; i <= totalFriends; i++){
-        if(toKeep.includes(i)){
-
-        } else {
-            toRemove.push(i);
-        }
-    }
-
-    for(var i = 0; i < toRemove.length; i++){
-        var input = "friend" + toRemove[i];
-        var element = document.getElementById(input.toString());
-        if (element != null) {
-            element.remove();
-        } else {
-            console.log(input + " is null");
-        }
-    }
-                                
-                            </script>
                             {{/each}}
 
+                            <script type="text/javascript">
+                                //get total number of friends used
+                                    var maxFriends = sessionStorage.getItem("maxFriends");
+                                    maxFriends = parseInt(maxFriends, 10);
+                                    var toRemove = [];
+                                    var toKeep = [];
+                                    //make a list of friends to keep
+                                    for(var i = 0; i < maxFriends; i++){
+                                        var addedFriend = sessionStorage.getItem("addedFriend" + i);
+                                        addedFriend = parseInt(addedFriend, 10);
+                                        toKeep.push(addedFriend);
+                                    }
+
+                                    //make a list of friends to remove
+                                    var totalFriends = sessionStorage.getItem("totalFriends");
+                                    totalFriends = parseInt(totalFriends, 10);
+
+                                    for(var i = 1; i <= totalFriends; i++){
+                                        if(toKeep.includes(i)){
+
+                                        } else {
+                                            toRemove.push(i);
+                                        }
+                                    }
+
+                                    for(var i = 0; i < toRemove.length; i++){
+                                        var input = "friend" + toRemove[i];
+                                        var element = document.getElementById(input.toString());
+                                        if (element != null) {
+                                            element.remove();
+                                        } else {
+                                            console.log(input + " is null");
+                                        }
+                                    }
+                            </script>
                         </div>
                     </div>
                 </div>
