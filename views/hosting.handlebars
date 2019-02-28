@@ -16,7 +16,7 @@
 </style> -->
 </head>
 <body>  
-   <center>
+ <center>
     <p id="chillin"></p>
     <script>
         console.log("song is:" + sessionStorage.songs);
@@ -45,6 +45,8 @@
 
         <div id="top-buttons">
             <button type="button" class="btn btn-outline-info" id="listen-btn">Your Listeners</button>
+
+            <button type="button" class="btn btn-outline-info" id="queue-btn">Queue</button>
         </div>
 
         <div id="albumArt">
@@ -200,6 +202,44 @@
                                 </div>
                             </div>
                             <br>
+                            <script type="text/javascript">
+                                
+
+//get total number of friends used
+    var maxFriends = sessionStorage.getItem("maxFriends");
+    maxFriends = parseInt(maxFriends, 10);
+    var toRemove = [];
+    var toKeep = [];
+    //make a list of friends to keep
+    for(var i = 0; i < maxFriends; i++){
+        var addedFriend = sessionStorage.getItem("addedFriend" + i);
+        addedFriend = parseInt(addedFriend, 10);
+        toKeep.push(addedFriend);
+    }
+
+    //make a list of friends to remove
+    var totalFriends = sessionStorage.getItem("totalFriends");
+    totalFriends = parseInt(totalFriends, 10);
+
+    for(var i = 1; i <= totalFriends; i++){
+        if(toKeep.includes(i)){
+
+        } else {
+            toRemove.push(i);
+        }
+    }
+
+    for(var i = 0; i < toRemove.length; i++){
+        var input = "friend" + toRemove[i];
+        var element = document.getElementById(input.toString());
+        if (element != null) {
+            element.remove();
+        } else {
+            console.log(input + " is null");
+        }
+    }
+                                
+                            </script>
                             {{/each}}
 
                         </div>
@@ -207,17 +247,11 @@
                 </div>
 
 
-<!-- Below is for your queue -->
-
-                <div id="canvas">
-                </div>
-                <div id="background-overlay">
-                </div>
-
-                <div id="songsOverlay">
+                <!-- Below is for your queue -->
+                <div id="queueOverlay">
                     <p id="chillin"></p>
                     <div id="titleBar-overlay">
-                        <button id="back-container-overlay">
+                        <button id="back-container-overlay-queue">
                             <h1 class="display-4"><</h1>
                         </button>
                         <div id="title-container">
@@ -228,34 +262,33 @@
 
                         <div id="queue-list-overlay">
                             {{#each songs}}
-                            <div class="friend-overlay" id="friend{{id}}" tag="overlay{{id}}">
+                            <div class="friend-overlay" id="song{{id}}">
                                 <div id="friendImgContainer-overlay">
                                     <img src={{imageURL}} id="hello">
                                 </div>
                                 <div id="friendNameContainer-overlay">
                                     <p class="h5 friendName{{id}}" id="friendName">{{name}}</p>
                                 </div>
-                            </div>
-                            <br>
-                            {{/each}}
 
-                        </div>
-                    </div>
-                </div>
-[{
-            "name": "a lot",
-            "artist": "21 Savage",
-            "album": "i am >i am",
-            "imageURL": "/img/1.png",
-            "id": "1"
-        },
-
-<!-- Above if your your queue -->
+                                <div id="songDetails">
+                                  <p class="artist"> {{artist}}</p>
+                                  <p class="album">{{album}}</p>
+                              </div>
+                          </div>
+                          <br>
+                          {{/each}}
 
 
-        </center>
+                      </div>
+                  </div>
+              </div>
 
-        <script>
+              <!-- Above if your your queue -->
+
+
+          </center>
+
+          <script>
             function added() {
               document.getElementById("addFont").innerHTML = "Added";
               $("#addFont").css("background-color", "lightgreen");

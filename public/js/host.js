@@ -36,7 +36,9 @@ function initializePage() {
     $('#player-btn-next').click(next);
     $('#mute-button').click(mute);
     $('#listen-btn').click(openOverlay);
+    $('#queue-btn').click(openQueueOverlay);
    
+    $('#back-container-overlay-queue').click(closeQueueOverlay);
     $('#back-container-overlay').click(closeOverlay);
 
     // $('#colorBtn').click(randomizeColors);function initializePage() {
@@ -52,39 +54,7 @@ function openOverlay(){
     document.getElementById("background-overlay").style.visibility = "visible";
     document.getElementById("canvas").style.visibility = "visible";
 
-    //get total number of friends used
-    var maxFriends = sessionStorage.getItem("maxFriends");
-    maxFriends = parseInt(maxFriends, 10);
-    var toRemove = [];
-    var toKeep = [];
-    //make a list of friends to keep
-    for(var i = 0; i < maxFriends; i++){
-        var addedFriend = sessionStorage.getItem("addedFriend" + i);
-        addedFriend = parseInt(addedFriend, 10);
-        toKeep.push(addedFriend);
-    }
-
-    //make a list of friends to remove
-    var totalFriends = sessionStorage.getItem("totalFriends");
-    totalFriends = parseInt(totalFriends, 10);
-
-    for(var i = 1; i <= totalFriends; i++){
-        if(toKeep.includes(i)){
-
-        } else {
-            toRemove.push(i);
-        }
-    }
-
-    for(var i = 0; i < toRemove.length; i++){
-        var input = "friend" + toRemove[i];
-        var element = document.getElementById(input.toString());
-        if (element != null) {
-            element.remove();
-        } else {
-            console.log(input + " is null");
-        }
-    }
+    
 }
 
 //this function toggles the overlay
@@ -92,18 +62,101 @@ function closeOverlay(){
     document.getElementById("friendsOverlay").style.visibility = "hidden";
     document.getElementById("background-overlay").style.visibility = "hidden";
     document.getElementById("canvas").style.visibility = "hidden";
-    console.log("toggled overlay");
-    var flist = sessionStorage.friends;
-    console.log(flist);
-    console.log(flist.length);
-    var i = 0;
-    for(; i < flist.length; i++){
-        if(flist[i] === ","){
+    // console.log("toggled overlay");
+    // var flist = sessionStorage.friends;
+    // console.log(flist);
+    // console.log(flist.length);
+    // var i = 0;
+    // for(; i < flist.length; i++){
+    //     if(flist[i] === ","){
+    //     } else {
+    //         sessionStorage.setItem("overlay" + flist[i], "True");
+    //     }
+    // }
+}
+
+
+
+
+
+
+//this function toggles the queue overlay
+function openQueueOverlay(){
+    document.getElementById("queueOverlay").style.visibility = "visible";
+    document.getElementById("background-overlay").style.visibility = "visible";
+    document.getElementById("canvas").style.visibility = "visible";
+
+    //get current song
+    var currSong = sessionStorage.getItem("songs");
+    var totalSongs = sessionStorage.getItem("totalSongs");
+    currSong = parseInt(currSong, 10);
+    // var toRemove = [];
+    // var toKeep = [];
+    // //make a list of friends to keep
+    for(var i = 1; i <= currSong; i++){
+        var input = "song" + i;
+        var element = document.getElementById(input.toString());
+        if (element != null) {
+            element.remove();
         } else {
-            sessionStorage.setItem("overlay" + flist[i], "True");
+            console.log(input + " is null");
         }
     }
+
+    // //make a list of friends to remove
+    // var totalFriends = sessionStorage.getItem("totalFriends");
+    // totalFriends = parseInt(totalFriends, 10);
+
+    // for(var i = 1; i <= totalFriends; i++){
+    //     if(toKeep.includes(i)){
+
+    //     } else {
+    //         toRemove.push(i);
+    //     }
+    // }
+
+    // for(var i = 0; i < toRemove.length; i++){
+    //     var input = "friend" + toRemove[i];
+    //     var element = document.getElementById(input.toString());
+    //     if (element != null) {
+    //         element.remove();
+    //     } else {
+    //         console.log(input + " is null");
+    //     }
+    // }
 }
+
+//this function toggles the queue overlay
+function closeQueueOverlay(){
+    document.getElementById("queueOverlay").style.visibility = "hidden";
+    document.getElementById("background-overlay").style.visibility = "hidden";
+    document.getElementById("canvas").style.visibility = "hidden";
+    console.log("toggled overlay");
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 //this function mutes the session
 function mute(){

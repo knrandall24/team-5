@@ -111,6 +111,14 @@ body {
     width: 15%;
     /*background-color: red;*/
 }
+#back-container-overlay-queue{
+    position: absolute;
+    top:14%;
+    left:0%;
+    height:75%;
+    width: 15%;
+    /*background-color: red;*/
+}
 #title-container{
     position: absolute;
     top:23%;
@@ -209,12 +217,19 @@ body {
 }
 
 #listen-btn{
-position: absolute;
-top: 7%;
-left:4%;
-width: 35%;
-
+    position: absolute;
+    top: 7%;
+    left:4%;
+    width: 35%;
 }
+#queue-btn{
+    position: absolute;
+    top: 7%;
+    right:8%;
+    width: 27%;
+}
+
+
 #listen-txt{
     font-size: 4vw;
 }
@@ -655,7 +670,7 @@ white-space: nowrap;
     /*background-color: red;*/
 }
 
-#songsOverlay{
+#queueOverlay{
     visibility: hidden;
     position: absolute;
     top: 1.5%; left:0%; width: 88%; height: 95%;right: 0%;
