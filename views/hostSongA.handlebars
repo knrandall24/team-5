@@ -64,13 +64,33 @@
                             var total = sessionStorage.totalSongs;
                             total = parseInt(total, 10) + 1;
                             sessionStorage.totalSongs = total;
-                        }
-                    </script>
-                  {{/each}} 
-            </div>
-        </div>
+                          }
+                        </script>
+                        {{/each}} 
 
-        <div id="bottomBar">
+                        <!-- Shuffle Button -->
+                        <div class="friend" id="suffle" onclick="window.location.href = 'hosting';">
+                          <div id="friendImgContainer">
+                            <img src={{imageURL}} id="hello">
+                          </div>
+                          <div id="friendNameContainer">
+                            <p class="h5 friendName{{id}}" id="friendName">{{name}}</p>
+                          </div>
+                          <div id="songDetails">
+                            <p class="artist"> {{artist}}</p>
+                            <p class="album">{{album}}</p>
+                          </div>
+                        </div>
+                        <br>
+
+                        <!-- End of shuffle button -->
+
+
+
+                      </div>
+                    </div>
+
+                    <div id="bottomBar">
             <button type="button" class="block" id="bottom-txt" >
                 Send Invite + Start Session
             </button>
