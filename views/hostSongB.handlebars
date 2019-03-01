@@ -36,20 +36,25 @@
             </div>
             <div id="friend-list">
 
-              <!-- The suffle Button -->
-                <div class="friend" id="friendShuffle" ">
-                 <!--    <div id="friendImgContainer">
-                        <img src={{imageURL}} id="hello">
-                    </div> -->
-                    <div id="friendNameContainer">
-                        <p class="h5 friendName{{id}}" id="friendName">Shuffle Play</p>
-                    </div>
-<!--                     <div id="songDetails">
-                      <p class="artist"> {{artist}}</p>
-                      <p class="album">{{album}}</p>
-                    </div> -->
-                  </div>
-                  <br>
+
+
+
+              <!-- The shuffle Button -->
+
+              <div class="shuffle" id="suffleA">
+                <div id="shuffleContainerA">
+                  <p class="h5" id="shuffleTxt">Shuffle Play</p>
+                </div>
+              </div>
+              <br>
+              <br>
+              <!-- End of The shuffle Button -->
+
+
+
+
+
+
 
               {{#each songs}}
               <!-- make array of song info -->
@@ -104,13 +109,21 @@
             console.log("Sorry, your browser does not support web storage...");
         }
 
-        
-      //   $(document).ready(function(){
-      //       $("#bottom-txt").click(function(event){
-      //      event.stopPropagation();
-      //       event.preventDefault();
-      //   });
-      // });
+
+        //Required sessionStorage variables FOR hostSongsA and hostSongsB:
+        sessionStorage.sessionID="A37594T";
+        sessionStorage.addedFriend0="3";
+        sessionStorage.addedFriend1="4";
+        sessionStorage.addedFriend2="5";
+        sessionStorage.addedFriend3="1";
+        sessionStorage.friends='["3","4","5","1"]';
+        sessionStorage.maxFriends="4";
+        sessionStorage.totalFriends="10";
+        sessionStorage.totalSongs="11";
+
+
+
+
       document.getElementById("bottom-txt").addEventListener("click", function(event){
          document.getElementById("bottom-txt").innerHTML = "Please Select a Song";
 
