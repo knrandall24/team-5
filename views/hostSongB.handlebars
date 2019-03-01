@@ -35,7 +35,7 @@
 
               <!-- The shuffle Button -->
 
-              <div class="shuffleB" id="suffleA">
+              <div class="shuffleB" id="shuffleB">
                 <div id="shuffleContainerB">
                   <p class="h5" id="shuffleTxtB">Shuffle Play</p>
                 </div>
@@ -70,7 +70,8 @@
                 sessionStorage.setItem("album{{id}}","{{album}}");
               </script>
 
-                <div class="friendB" id="friend{{id}}" onclick="window.location.href = 'hosting';">
+                <!-- <div class="friendB" id="friend{{id}}" onclick="window.location.href = 'hosting';"> -->
+                <div class="friendB" id="friend{{id}}">
                     <div id="friendImgContainer">
                         <img src={{imageURL}} id="hello">
                     </div>
@@ -131,13 +132,12 @@
 
 
 
-      document.getElementById("bottom-txt").addEventListener("click", function(event){
-         document.getElementById("bottom-txt").innerHTML = "Send Invite + Start Session";
-
-
-         var toAppend = '<style type="text/css"> #bottom-txt{text-decoration:none; display:inline-block;text-shadow: -1px -1px 0 rgba(0,0,0,0.3);font-weight:bold; color: #F0F1FF;background-color: #A0DA94; background-image: -webkit-gradient(linear, left top, left bottom, from(#A0DA94), to(#0BB310));background-image: -webkit-linear-gradient(top, #A0DA94, #0BB310);background-image: -moz-linear-gradient(top, #A0DA94, #0BB310);background-image: -ms-linear-gradient(top, #A0DA94, #0BB310);background-image: -o-linear-gradient(top, #A0DA94, #0BB310);background-image: linear-gradient(to bottom, #A0DA94, #0BB310);filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#A0DA94, endColorstr=#0BB310);}</style>';
-
-         $('#bottom-txt').append(toAppend.toString()); 
+        document.getElementById("bottom-txt").addEventListener("click", function(event){
+         if(document.getElementById("bottom-txt").innerHTML[0] === "S"){
+          window.location.href = 'hosting';         
+        } else {
+          console.log(document.getElementById("bottom-txt").innerHTML);
+        }
 
          event.stopPropagation();
          event.preventDefault();
