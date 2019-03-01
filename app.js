@@ -86,8 +86,8 @@ app.get('/streaming', streaming.view);
 
 app.get('/host', host.view);
 app.get('/hostSong', hostSong.view);
-app.get('/hostSong/PageA', hostSong_pageA.view);
-app.get('/hostSong/PageB', hostSong_pageB.view);
+app.get('/hostSong/Page_A', hostSong_pageA.view);
+app.get('/hostSong/Page_B', hostSong_pageB.view);
 app.get('/hosting', hosting.view);
 app.get('/queue', queue.view);
 // app.get('/listeners', listeners.view);
