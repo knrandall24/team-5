@@ -1,116 +1,108 @@
 <!doctype html>
 <html>
 <head>
-    <title>Host Song Page</title>
-    <!-- Default Header -->
-    {{> default}}
-    <!-- End Default Header -->
-    <!-- Host Header -->
-    {{>hostTemplate}}
-    <!-- End Host Header -->
-    <script src="/js/hostSong.js"></script>
+  <title>Host Song Page</title>
+  <!-- Default Header -->
+  {{> default}}
+  <!-- End Default Header -->
+  <!-- Host Header -->
+  {{>hostTemplate}}
+  <!-- End Host Header -->
+  <script src="/js/hostSong.js"></script>
 <!--     <style type="text/css"> 
     #friendName{
         color: #000080; 
     }
-</style> -->
+  </style> -->
 </head>
 <body>   
-    <center>
-        <p id="chillin"></p>
-        <div id="titleBar">
-            <a href="host">
-                <div id="back-container">
-                    <h1 class="display-4"><</h1>
-                </div>
-            </a>
-            <div id="title-container">
-                <h1 id="title">Host a Session:</h1>
-            </div>
+  <center>
+    <p id="chillin"></p>
+    <div id="titleBar">
+      <a href="host">
+        <div id="back-container">
+          <h1 class="display-4"><</h1>
         </div>
-        <div id="middle">
-            <div id="instructions" >
-                <p class="lead" id="instructions-txt">
-                    2. Pick your Start Song:
-                </p>
-            </div>
-            <div id="friend-list">
+      </a>
+      <div id="title-container">
+        <h1 id="title">Host a Session:</h1>
+      </div>
+    </div>
+    <div id="middle">
+      <div id="instructions" >
+        <p class="lead" id="instructions-txt">
+          2. Pick your Start Song:
+        </p>
+      </div>
+      <div id="friend-list">
 
 
-              {{#each songs}}
-              <!-- make array of song info -->
-              <script>
-                sessionStorage.setItem("title{{id}}","{{name}}");
-                sessionStorage.setItem("artist{{id}}","{{artist}}");
-                sessionStorage.setItem("album{{id}}","{{album}}");
-              </script>
+        {{#each songs}}
+        <!-- make array of song info -->
+        <script>
+          sessionStorage.setItem("title{{id}}","{{name}}");
+          sessionStorage.setItem("artist{{id}}","{{artist}}");
+          sessionStorage.setItem("album{{id}}","{{album}}");
+        </script>
 
-                <div class="friend" id="friend{{id}}" onclick="window.location.href = 'hosting';">
-                    <div id="friendImgContainer">
-                        <img src={{imageURL}} id="hello">
-                    </div>
-                    <div id="friendNameContainer">
-                        <p class="h5 friendName{{id}}" id="friendName">{{name}}</p>
-                    </div>
-                    <div id="songDetails">
-                      <p class="artist"> {{artist}}</p>
-                      <p class="album">{{album}}</p>
-                    </div>
-                  </div>
-                  <br>
-
-                    <script>
-                        if(sessionStorage.recountSongs==="true"){
-                            var total = sessionStorage.totalSongs;
-                            total = parseInt(total, 10) + 1;
-                            sessionStorage.totalSongs = total;
-                          }
-                        </script>
-                        {{/each}} 
-
-                        <!-- Shuffle Button -->
-                        <div class="friend" id="suffle" onclick="window.location.href = 'hosting';">
-                          <div id="friendImgContainer">
-                            <img src={{imageURL}} id="hello">
-                          </div>
-                          <div id="friendNameContainer">
-                            <p class="h5 friendName{{id}}" id="friendName">{{name}}</p>
-                          </div>
-                          <div id="songDetails">
-                            <p class="artist"> {{artist}}</p>
-                            <p class="album">{{album}}</p>
-                          </div>
-                        </div>
-                        <br>
-
-                        <!-- End of shuffle button -->
-
-
-
-                      </div>
-                    </div>
-
-                    <div id="bottomBar">
-            <button type="button" class="block" id="bottom-txt" >
-                Send Invite + Start Session
-            </button>
+        <div class="friend" id="friend{{id}}" onclick="window.location.href = 'hosting';">
+          <div id="friendImgContainer">
+            <img src={{imageURL}} id="hello">
+          </div>
+          <div id="friendNameContainer">
+            <p class="h5 friendName{{id}}" id="friendName">{{name}}</p>
+          </div>
+          <div id="songDetails">
+            <p class="artist"> {{artist}}</p>
+            <p class="album">{{album}}</p>
+          </div>
         </div>
+        <br>
+
+        <script>
+          if(sessionStorage.recountSongs==="true"){
+            var total = sessionStorage.totalSongs;
+            total = parseInt(total, 10) + 1;
+            sessionStorage.totalSongs = total;
+          }
+        </script>
+        {{/each}} 
+
+        <!-- Shuffle Button -->
+        <div class="shuffle" id="suffleA">
+          <div id="shuffleContainerA">
+            <p class="h5" id="shuffleTxt">Shuffle Play</p>
+          </div>
+        </div>
+        <br>
+
+        <!-- End of shuffle button -->
 
 
-      </center>
-      
-      <script>
-        
-        sessionStorage.recountFriends="false";
-        sessionStorage.recountSongs="false";
-        if (typeof(Storage) !== "undefined") {
-            var storaged = sessionStorage.hello;
-            console.log(storaged);
-        } else {
-            console.log("Sorry, your browser does not support web storage...");
-        }
 
-        
+      </div>
+    </div>
+    <div id="bottomBar">
+      <button type="button" class="block" id="bottom-txt" >
+        Send Invite + Start Session
+      </button>
+    </div>
+
+
+  </center>
+
+  <script>
+
+    sessionStorage.recountFriends="false";
+    sessionStorage.recountSongs="false";
+    if (typeof(Storage) !== "undefined") {
+      var storaged = sessionStorage.hello;
+      console.log(storaged);
+    } else {
+      console.log("Sorry, your browser does not support web storage...");
+    }
+
+
       //   $(document).ready(function(){
       //       $("#bottom-txt").click(function(event){
       //      event.stopPropagation();
@@ -118,17 +110,17 @@
       //   });
       // });
       document.getElementById("bottom-txt").addEventListener("click", function(event){
-         document.getElementById("bottom-txt").innerHTML = "Please Select a Song";
+       document.getElementById("bottom-txt").innerHTML = "Please Select a Song";
 
 
-         var toAppend = '<style type="text/css"> #bottom-txt{background-color: #DE7A7A; background-image: -webkit-gradient(linear, left top, left bottom, from(#DE7A7A), to(#DE2626));background-image: -webkit-linear-gradient(top, #DE7A7A, #DE2626);background-image: -moz-linear-gradient(top, #DE7A7A, #DE2626);background-image: -ms-linear-gradient(top, #DE7A7A, #DE2626);background-image: -o-linear-gradient(top, #DE7A7A, #DE2626);background-image: linear-gradient(to bottom, #DE7A7A, #DE2626);filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#DE7A7A, endColorstr=#DE2626); font-size: 6vw;}</style>';
+       var toAppend = '<style type="text/css"> #bottom-txt{background-color: #DE7A7A; background-image: -webkit-gradient(linear, left top, left bottom, from(#DE7A7A), to(#DE2626));background-image: -webkit-linear-gradient(top, #DE7A7A, #DE2626);background-image: -moz-linear-gradient(top, #DE7A7A, #DE2626);background-image: -ms-linear-gradient(top, #DE7A7A, #DE2626);background-image: -o-linear-gradient(top, #DE7A7A, #DE2626);background-image: linear-gradient(to bottom, #DE7A7A, #DE2626);filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#DE7A7A, endColorstr=#DE2626); font-size: 6vw;}</style>';
 
-         $('#bottom-txt').append(toAppend.toString()); 
+       $('#bottom-txt').append(toAppend.toString()); 
 
-         event.stopPropagation();
-         event.preventDefault();
+       event.stopPropagation();
+       event.preventDefault();
      });
- </script>
+   </script>
 
-</body>
-</html>
+ </body>
+ </html>

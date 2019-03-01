@@ -16,105 +16,107 @@
 </style> -->
 </head>
 <body>  
- <center>
+   <center>
     <p id="chillin"></p>
     <script>
         console.log("song is:" + sessionStorage.songs);
     </script>
 
     <div id="titleBar">
-        <a href="hostSong">
-            <div id="back-container">
-                <h1 class="display-4"><</h1>
+        <!-- <a href="hostSong"> -->
+            <a href="hostSongA">
+
+                <div id="back-container">
+                    <h1 class="display-4"><</h1>
+                </div>
+            </a>
+            <div id="title-container">
+                <h1 id="title">Hosting</h1>
             </div>
-        </a>
-        <div id="title-container">
-            <h1 id="title">Hosting</h1>
-        </div>
-    </div>
-
-
-
-
-    <div id="middle2">
-        <div id="instructions" >
-            <p class="lead on-air" id="instructions-txt">● ON AIR</p>
-            <p class="lead" id="instructions-txt-id">
-            </p>
         </div>
 
-        <div id="top-buttons">
-            <button type="button" class="btn btn-outline-info" id="listen-btn">Your Listeners</button>
-
-            <button type="button" class="btn btn-outline-info" id="queue-btn">Queue</button>
-        </div>
-
-        <div id="albumArt">
-            <img src="/img/album.png" id="img">
-            <script>
-                sessionStorage.setItem("songImg","/img/" + sessionStorage.songs + ".png");
-                document.getElementById("img").src = "/img/" + sessionStorage.songs + ".png";
-            </script>
-        </div>
-    </div>
-    <div id="bottomPlayer">
-        <div id="songInfo">
-
-            <h1 class="display-4" id="songTitle">
-            </h1>
-            <p class="lead" id="songDet">
-            </p>
 
 
-            <script>
-                var input = 'artist'+ sessionStorage.songs;
-                var artist = sessionStorage.getItem(input);
-                input = 'album'+ sessionStorage.songs;
-                var album = sessionStorage.getItem(input);
 
-                input = 'title' + sessionStorage.songs;
+        <div id="middle2">
+            <div id="instructions" >
+                <p class="lead on-air" id="instructions-txt">● ON AIR</p>
+                <p class="lead" id="instructions-txt-id">
+                </p>
+            </div>
 
-                console.log("input is: " + 'songList' + sessionStorage.songs);
-                var title = sessionStorage.getItem(input);
-                console.log("title is: " + title);
+            <div id="top-buttons">
+                <button type="button" class="btn btn-outline-info" id="listen-btn">Your Listeners</button>
 
-                document.getElementById("songTitle").innerHTML=title;
+                <button type="button" class="btn btn-outline-info" id="queue-btn">Queue</button>
+            </div>
 
-                console.log("It works: "+ artist);
-                document.getElementById("songDet").innerHTML = artist + " - " + album;
-            </script>
-        </div>
-
-        <div id="audio">
-            <audio controls id="crt" autoplay>
-                <source src="/songs/rockstar.mp3" type="audio/mpeg" id="player">
-                </audio>
+            <div id="albumArt">
+                <img src="/img/album.png" id="img">
                 <script>
-                    document.getElementById("player").src = "/songs/" + sessionStorage.songs + ".mp3";
+                    sessionStorage.setItem("songImg","/img/" + sessionStorage.songs + ".png");
+                    document.getElementById("img").src = "/img/" + sessionStorage.songs + ".png";
+                </script>
+            </div>
+        </div>
+        <div id="bottomPlayer">
+            <div id="songInfo">
+
+                <h1 class="display-4" id="songTitle">
+                </h1>
+                <p class="lead" id="songDet">
+                </p>
+
+
+                <script>
+                    var input = 'artist'+ sessionStorage.songs;
+                    var artist = sessionStorage.getItem(input);
+                    input = 'album'+ sessionStorage.songs;
+                    var album = sessionStorage.getItem(input);
+
+                    input = 'title' + sessionStorage.songs;
+
+                    // console.log("input is: " + 'songList' + sessionStorage.songs);
+                    var title = sessionStorage.getItem(input);
+                    // console.log("title is: " + title);
+
+                    document.getElementById("songTitle").innerHTML=title;
+
+                    // console.log("It works: "+ artist);
+                    document.getElementById("songDet").innerHTML = artist + " - " + album;
                 </script>
             </div>
 
+            <div id="audio">
+                <audio controls id="crt" autoplay>
+                    <source src="/songs/rockstar.mp3" type="audio/mpeg" id="player">
+                    </audio>
+                    <script>
+                        document.getElementById("player").src = "/songs/" + sessionStorage.songs + ".mp3";
+                    </script>
+                </div>
 
-            <div id="playerControls">
-                <div id="playerButtons" class="btn-group-lg" role="group" aria-label="Basic example">
-                    <div id="prevContainer">
-                        <button type="button" class="btn btn-secondary" id="player-btn-prev">l◄</button>
-                    </div>
-                    <div id="pauseContainer">
-                        <button type="button" class="btn btn-secondary" id="player-btn-pause">II</button>
-                    </div>
 
-                    <div id="nextContainer">
-                        <button type="button" class="btn btn-secondary" id="player-btn-next">►l</button>
+                <div id="playerControls">
+                    <div id="playerButtons" class="btn-group-lg" role="group" aria-label="Basic example">
+                        <div id="prevContainer">
+                            <button type="button" class="btn btn-secondary" id="player-btn-prev">l◄</button>
+                        </div>
+                        <div id="pauseContainer">
+                            <button type="button" class="btn btn-secondary" id="player-btn-pause">II</button>
+                        </div>
+
+                        <div id="nextContainer">
+                            <button type="button" class="btn btn-secondary" id="player-btn-next">►l</button>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <script>
-                var songs = sessionStorage.songs;
-                songs = parseInt(songs, 10);
-                var totalSongs = sessionStorage.totalSongs;
-                totalSongs = parseInt(totalSongs, 10);
-                if(songs >= totalSongs){
+                <script>
+                    var songs = sessionStorage.songs;
+                    songs = parseInt(songs, 10);
+                    var totalSongs = sessionStorage.totalSongs;
+                    totalSongs = parseInt(totalSongs, 10);
+                    if(songs >= totalSongs){
                         // document.getElementById('player-btn-next').disabled = true;
                     }
                     if(sessionStorage.songs <= 1){
@@ -154,22 +156,22 @@
                     document.forms["myForm"]["songID"].value = sessionStorage.songs;
                     document.forms["myForm"]["friends"].value = sessionStorage.friends; 
 
-                    console.log("right before form submission in hosting.handlebars");
+                    // console.log("right before form submission in hosting.handlebars");
 
                     var button = document.getElementById('clickButton');
                     // e.preventDefault();
                     var str = sessionStorage.hostingSendButtonDisable;
                     if(str === "false"){
-                        console.log("this is where the button should submit");
+                        // console.log("this is where the button should submit");
                         button.form.submit();
                     }
 
                     sessionStorage.hostingSendButtonDisable = "true";
 
-                    console.log("right after form submission in hosting.handlebars");
+                    // console.log("right after form submission in hosting.handlebars");
 
-                    console.log("heelllo there: endof form submission in hosting.handlebars");
-                    console.log("Query host name is: " + document.forms["myForm"]["songID"].value);
+                    // console.log("heelllo there: endof form submission in hosting.handlebars");
+                    // console.log("Query host name is: " + document.forms["myForm"]["songID"].value);
                     // 
                 </script>
 
@@ -206,10 +208,10 @@
 
                             <script type="text/javascript">
                                 //get total number of friends used
-                                    var maxFriends = sessionStorage.getItem("maxFriends");
-                                    maxFriends = parseInt(maxFriends, 10);
-                                    var toRemove = [];
-                                    var toKeep = [];
+                                var maxFriends = sessionStorage.getItem("maxFriends");
+                                maxFriends = parseInt(maxFriends, 10);
+                                var toRemove = [];
+                                var toKeep = [];
                                     //make a list of friends to keep
                                     for(var i = 0; i < maxFriends; i++){
                                         var addedFriend = sessionStorage.getItem("addedFriend" + i);
@@ -238,44 +240,44 @@
                                             console.log(input + " is null");
                                         }
                                     }
-                            </script>
+                                </script>
+                            </div>
                         </div>
                     </div>
-                </div>
 
 
-                <!-- Below is for your queue -->
-                <div id="queueOverlay">
-                    <p id="chillin"></p>
-                    <div id="titleBar-overlay">
-                        <button id="back-container-overlay-queue">
-                            <h1 class="display-4"><</h1>
-                        </button>
-                        <div id="title-container">
-                            <h1 id="title">Your Queue:</h1>
+                    <!-- Below is for your queue -->
+                    <div id="queueOverlay">
+                        <p id="chillin"></p>
+                        <div id="titleBar-overlay">
+                            <button id="back-container-overlay-queue">
+                                <h1 class="display-4"><</h1>
+                            </button>
+                            <div id="title-container">
+                                <h1 id="title">Your Queue:</h1>
+                            </div>
                         </div>
-                    </div>
-                    <div id="middle-overlay">
+                        <div id="middle-overlay">
 
-                        <div id="queue-list-overlay">
-                            {{#each songs}}
-                            <div class="friend-overlay" id="song{{id}}">
-                                <div id="friendImgContainer-overlay">
-                                    <img src={{imageURL}} id="hello">
-                                </div>
-                                <div id="friendNameContainer-overlay">
-                                    <p class="h5 friendName{{id}}" id="friendName">{{name}}</p>
-                                </div>
+                            <div id="queue-list-overlay">
+                                {{#each songs}}
+                                <div class="friend-overlay" id="song{{id}}">
+                                    <div id="friendImgContainer-overlay">
+                                        <img src={{imageURL}} id="hello">
+                                    </div>
+                                    <div id="friendNameContainer-overlay">
+                                        <p class="h5 friendName{{id}}" id="friendName">{{name}}</p>
+                                    </div>
 
-                                <div id="songDetails">
-                                  <p class="artist"> {{artist}}</p>
-                                  <p class="album">{{album}}</p>
+                                    <div id="songDetails">
+                                      <p class="artist"> {{artist}}</p>
+                                      <p class="album">{{album}}</p>
+                                  </div>
                               </div>
-                          </div>
-                          <br>
-                          {{/each}}
-                        {{#each songs}}
-                            <div class="friend-overlay" id="song{{id}}">
+                              <br>
+                              {{/each}}
+                              {{#each songs}}
+                              <div class="friend-overlay" id="song{{id}}">
                                 <div id="friendImgContainer-overlay">
                                     <img src={{imageURL}} id="hello">
                                 </div>
@@ -291,41 +293,41 @@
                           <br>
                           {{/each}}                        
                           {{#each songs}}
-                            <div class="friend-overlay" id="song{{id}}">
-                                <div id="friendImgContainer-overlay">
-                                    <img src={{imageURL}} id="hello">
-                                </div>
-                                <div id="friendNameContainer-overlay">
-                                    <p class="h5 friendName{{id}}" id="friendName">{{name}}</p>
-                                </div>
+                          <div class="friend-overlay" id="song{{id}}">
+                            <div id="friendImgContainer-overlay">
+                                <img src={{imageURL}} id="hello">
+                            </div>
+                            <div id="friendNameContainer-overlay">
+                                <p class="h5 friendName{{id}}" id="friendName">{{name}}</p>
+                            </div>
 
-                                <div id="songDetails">
-                                  <p class="artist"> {{artist}}</p>
-                                  <p class="album">{{album}}</p>
-                              </div>
+                            <div id="songDetails">
+                              <p class="artist"> {{artist}}</p>
+                              <p class="album">{{album}}</p>
                           </div>
-                          <br>
-                          {{/each}}
-
                       </div>
+                      <br>
+                      {{/each}}
+
                   </div>
               </div>
+          </div>
 
-              <!-- Above if your your queue -->
+          <!-- Above if your your queue -->
 
 
-          </center>
+      </center>
 
-          <script>
-            function added() {
-              document.getElementById("addFont").innerHTML = "Added";
-              $("#addFont").css("background-color", "lightgreen");
-              $("#addList").css("left", "50%");
-          }
-          function invited(){
-            document.getElementById("inviteText").innerHTML = "Invited";
-            $("#inviteFriend").css("background-color", "lightgreen");
-        }
+      <script>
+        function added() {
+          document.getElementById("addFont").innerHTML = "Added";
+          $("#addFont").css("background-color", "lightgreen");
+          $("#addList").css("left", "50%");
+      }
+      function invited(){
+        document.getElementById("inviteText").innerHTML = "Invited";
+        $("#inviteFriend").css("background-color", "lightgreen");
+    }
             //autoplay next song
             var aud = document.getElementById("crt");
             aud.onended = function() {
