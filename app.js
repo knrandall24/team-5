@@ -24,6 +24,12 @@ var login = require('./routes/login');
 var home = require('./routes/home');
 var host = require('./routes/host');
 // var listeners = require('./routes/listeners');
+
+// A & B Testing
+var hostSong_pageA = require('./routes/hostSong_pageA');
+var hostSong_pageB = require('./routes/hostSong_pageB');
+
+
 var hostSong = require('./routes/hostSong');
 var hosting = require('./routes/hosting');
 
@@ -80,6 +86,8 @@ app.get('/streaming', streaming.view);
 
 app.get('/host', host.view);
 app.get('/hostSong', hostSong.view);
+app.get('/hostSong/PageA', hostSong_pageA.view);
+app.get('/hostSong/PageB', hostSong_pageB.view);
 app.get('/hosting', hosting.view);
 app.get('/queue', queue.view);
 // app.get('/listeners', listeners.view);

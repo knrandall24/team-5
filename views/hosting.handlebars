@@ -274,7 +274,38 @@
                           </div>
                           <br>
                           {{/each}}
+                        {{#each songs}}
+                            <div class="friend-overlay" id="song{{id}}">
+                                <div id="friendImgContainer-overlay">
+                                    <img src={{imageURL}} id="hello">
+                                </div>
+                                <div id="friendNameContainer-overlay">
+                                    <p class="h5 friendName{{id}}" id="friendName">{{name}}</p>
+                                </div>
 
+                                <div id="songDetails">
+                                  <p class="artist"> {{artist}}</p>
+                                  <p class="album">{{album}}</p>
+                              </div>
+                          </div>
+                          <br>
+                          {{/each}}                        
+                          {{#each songs}}
+                            <div class="friend-overlay" id="song{{id}}">
+                                <div id="friendImgContainer-overlay">
+                                    <img src={{imageURL}} id="hello">
+                                </div>
+                                <div id="friendNameContainer-overlay">
+                                    <p class="h5 friendName{{id}}" id="friendName">{{name}}</p>
+                                </div>
+
+                                <div id="songDetails">
+                                  <p class="artist"> {{artist}}</p>
+                                  <p class="album">{{album}}</p>
+                              </div>
+                          </div>
+                          <br>
+                          {{/each}}
 
                       </div>
                   </div>
