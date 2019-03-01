@@ -1,11 +1,10 @@
 
 /*
- * GET hostSong B page.
+ * GET hostSong A page.
  */
-
 
 var song = require('../songs.json');
 
 exports.view = function(req, res){
-  res.render('hostSong_pageB',song);
+  res.render('hostSongA',song);
 };
