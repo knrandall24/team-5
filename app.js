@@ -26,8 +26,8 @@ var host = require('./routes/host');
 // var listeners = require('./routes/listeners');
 
 // A & B Testing
-var hostSong_pageA = require('./routes/hostSong_pageA');
-var hostSong_pageB = require('./routes/hostSong_pageB');
+var hostSong_pageA = require('./routes/hostSongPageA');
+var hostSong_pageB = require('./routes/hostSongPageB');
 
 
 var hostSong = require('./routes/hostSong');
