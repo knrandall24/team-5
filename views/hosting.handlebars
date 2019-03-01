@@ -24,14 +24,27 @@
 
     <div id="titleBar">
         <!-- <a href="hostSong"> -->
-            <a href="hostSong">
+            <!-- <a href="hostSong"> -->
 
                 <div id="back-container">
                     <h1 class="display-4"><</h1>
                 </div>
                 <script>
+                    document.getElementById("back-container").addEventListener("click", goHostSong);
+                    function goHostSong(){
+                        console.log("going to hostingSong with the new event listenerscript in HTML");
+                        console.log("AB is: " + sessionStorage.getItem("AB"));
+                        if(sessionStorage.getItem("AB") === "A"){
+                            console.log("A in AB is: " + sessionStorage.getItem("AB"));
+                            window.location.href = 'hostSongA'; 
+                        } else if(sessionStorage.getItem("AB") === "B"){
+                            window.location.href = 'hostSongB'; 
+                        } else {
+                            window.location.href = 'hostSong'; 
+                        }
+                    }
                 </script>
-            </a>
+            <!-- </a> -->
             <div id="title-container">
                 <h1 id="title">Hosting</h1>
             </div>

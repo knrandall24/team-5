@@ -8,7 +8,11 @@
   <!-- Host Header -->
   {{>hostTemplate}}
   <!-- End Host Header -->
-  <script src="/js/hostSong.js"></script>
+
+  <!-- HostSongs Header -->
+  {{>hostSongsTemplate}}
+  <!-- End HostSongs Header -->
+  
 <!--     <style type="text/css"> 
     #friendName{
         color: #000080; 
@@ -98,15 +102,16 @@
 
 
     //Required sessionStorage variables FOR hostSongsA and hostSongsB:
-    sessionStorage.sessionID="A37594T";
-    sessionStorage.addedFriend0="3";
-    sessionStorage.addedFriend1="4";
-    sessionStorage.addedFriend2="5";
-    sessionStorage.addedFriend3="1";
-    sessionStorage.friends='["3","4","5","1"]';
-    sessionStorage.maxFriends="4";
-    sessionStorage.totalFriends="10";
-    sessionStorage.totalSongs="11";
+    if(sessionStorage.sessionID === undefined) {sessionStorage.sessionID="A37594T";}
+    if(sessionStorage.addedFriend0 === undefined) {sessionStorage.addedFriend0="3";}
+    if(sessionStorage.addedFriend1 === undefined) {sessionStorage.addedFriend1="4";}
+    if(sessionStorage.addedFriend2 === undefined) {sessionStorage.addedFriend2="5";}
+    if(sessionStorage.addedFriend3 === undefined) {sessionStorage.addedFriend3="1";}
+    if(sessionStorage.friends === undefined) {sessionStorage.friends='["3","4","5","1"]';}
+    if(sessionStorage.maxFriends === undefined) {sessionStorage.maxFriends="4";}
+    if(sessionStorage.totalFriends === undefined) {sessionStorage.totalFriends="10";}
+    if(sessionStorage.totalSongs === undefined) {sessionStorage.totalSongs="11";}
+    sessionStorage.AB = "A";
 
 
 

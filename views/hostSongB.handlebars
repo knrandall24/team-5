@@ -8,7 +8,10 @@
     <!-- Host Header -->
     {{>hostTemplate}}
     <!-- End Host Header -->
-    <script src="/js/hostSong.js"></script>
+
+    <!-- HostSongs Header -->
+    {{>hostSongsTemplate}}
+    <!-- End HostSongs Header -->
 <!--     <style type="text/css"> 
     #friendName{
         color: #000080; 
@@ -29,21 +32,12 @@
             </div>
         </div>
         <div id="middle">
-            <div id="instructions" >
-                <p class="lead" id="instructions-txt">
-                    2. Pick your Start Song:
-                </p>
-            </div>
-            <div id="friend-list">
-
-
-
 
               <!-- The shuffle Button -->
 
-              <div class="shuffle" id="suffleA">
-                <div id="shuffleContainerA">
-                  <p class="h5" id="shuffleTxt">Shuffle Play</p>
+              <div class="shuffleB" id="suffleA">
+                <div id="shuffleContainerB">
+                  <p class="h5" id="shuffleTxtB">Shuffle Play</p>
                 </div>
               </div>
               <br>
@@ -53,8 +47,20 @@
 
 
 
+              <!-- section for the or -->
+              <div id="orTxtB">
+                <br>
+                <p id="orTxtB-txt" class="text-muted">--- OR ---</p>
+              </div>
+              <!-- End of section for the or -->
 
 
+            <div id="instructionsB" >
+                <p class="lead" id="instructions-txt">
+                    2. Pick your Start Song:
+                </p>
+            </div>
+            <div id="friend-listB">
 
               {{#each songs}}
               <!-- make array of song info -->
@@ -64,7 +70,7 @@
                 sessionStorage.setItem("album{{id}}","{{album}}");
               </script>
 
-                <div class="friend" id="friend{{id}}" onclick="window.location.href = 'hosting';">
+                <div class="friendB" id="friend{{id}}" onclick="window.location.href = 'hosting';">
                     <div id="friendImgContainer">
                         <img src={{imageURL}} id="hello">
                     </div>
@@ -90,8 +96,8 @@
         </div>
 
         <div id="bottomBar">
-            <button type="button" class="block" id="bottom-txt" >
-                Send Invite + Start Session
+            <button type="button" class="blockB" id="bottom-txt">
+                Please Select a Song
             </button>
         </div>
 
@@ -111,24 +117,25 @@
 
 
         //Required sessionStorage variables FOR hostSongsA and hostSongsB:
-        sessionStorage.sessionID="A37594T";
-        sessionStorage.addedFriend0="3";
-        sessionStorage.addedFriend1="4";
-        sessionStorage.addedFriend2="5";
-        sessionStorage.addedFriend3="1";
-        sessionStorage.friends='["3","4","5","1"]';
-        sessionStorage.maxFriends="4";
-        sessionStorage.totalFriends="10";
-        sessionStorage.totalSongs="11";
+        if(sessionStorage.sessionID === undefined) {sessionStorage.sessionID="A37594T";}
+        if(sessionStorage.addedFriend0 === undefined) {sessionStorage.addedFriend0="3";}
+        if(sessionStorage.addedFriend1 === undefined) {sessionStorage.addedFriend1="4";}
+        if(sessionStorage.addedFriend2 === undefined) {sessionStorage.addedFriend2="5";}
+        if(sessionStorage.addedFriend3 === undefined) {sessionStorage.addedFriend3="1";}
+        if(sessionStorage.friends === undefined) {sessionStorage.friends='["3","4","5","1"]';}
+        if(sessionStorage.maxFriends === undefined) {sessionStorage.maxFriends="4";}
+        if(sessionStorage.totalFriends === undefined) {sessionStorage.totalFriends="10";}
+        if(sessionStorage.totalSongs === undefined) {sessionStorage.totalSongs="11";}
+        sessionStorage.AB="B";
 
 
 
 
       document.getElementById("bottom-txt").addEventListener("click", function(event){
-         document.getElementById("bottom-txt").innerHTML = "Please Select a Song";
+         document.getElementById("bottom-txt").innerHTML = "Send Invite + Start Session";
 
 
-         var toAppend = '<style type="text/css"> #bottom-txt{background-color: #DE7A7A; background-image: -webkit-gradient(linear, left top, left bottom, from(#DE7A7A), to(#DE2626));background-image: -webkit-linear-gradient(top, #DE7A7A, #DE2626);background-image: -moz-linear-gradient(top, #DE7A7A, #DE2626);background-image: -ms-linear-gradient(top, #DE7A7A, #DE2626);background-image: -o-linear-gradient(top, #DE7A7A, #DE2626);background-image: linear-gradient(to bottom, #DE7A7A, #DE2626);filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#DE7A7A, endColorstr=#DE2626); font-size: 6vw;}</style>';
+         var toAppend = '<style type="text/css"> #bottom-txt{text-decoration:none; display:inline-block;text-shadow: -1px -1px 0 rgba(0,0,0,0.3);font-weight:bold; color: #F0F1FF;background-color: #A0DA94; background-image: -webkit-gradient(linear, left top, left bottom, from(#A0DA94), to(#0BB310));background-image: -webkit-linear-gradient(top, #A0DA94, #0BB310);background-image: -moz-linear-gradient(top, #A0DA94, #0BB310);background-image: -ms-linear-gradient(top, #A0DA94, #0BB310);background-image: -o-linear-gradient(top, #A0DA94, #0BB310);background-image: linear-gradient(to bottom, #A0DA94, #0BB310);filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#A0DA94, endColorstr=#0BB310);}</style>';
 
          $('#bottom-txt').append(toAppend.toString()); 
 
