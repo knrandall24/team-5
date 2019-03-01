@@ -37,14 +37,14 @@ function initializePage() {
     $('#mute-button').click(mute);
     $('#listen-btn').click(openOverlay);
     $('#queue-btn').click(openQueueOverlay);
+    $('#host-btn').click(createSessionID);
    
     $('#back-container-overlay-queue').click(closeQueueOverlay);
     $('#back-container-overlay').click(closeOverlay);
 
+
     // $('#colorBtn').click(randomizeColors);function initializePage() {
-        var sessionID = makeid();
-        sessionStorage.sessionID = sessionID;
-        console.log("sessionID in welcome page is:" + sessionID);
+
     // $('#colorBtn').click(randomizeColors);
 }
 
@@ -185,6 +185,12 @@ function mute(){
     }
 }
 
+function createSessionID(){
+    var sessionID = makeid();
+    sessionStorage.sessionID = sessionID;
+    console.log("sessionID in welcome page is:" + sessionID);
+}
+
 //this function generates random sessionID
 function makeid() {
   var text = "";
@@ -244,17 +250,12 @@ function next(e){
         document.getElementById('player-btn-next').disabled = false;
     } else{
         sessionStorage.songs = 1;
-        console.log("songs: " +sessionStorage.totalSongs);
+        console.log("Next song to: " +sessionStorage.totalSongs);
         window.location.href = 'hosting'; 
         // document.getElementById('player-btn-next').disabled = true;
     }
 
 }
-
-
-
-
-
 
 
 
@@ -357,7 +358,8 @@ function postList(e){
         sessionStorage.setItem("addedFriend" + i, added[i]);
     }
 
-    window.location.href = 'hostSong';
+    // window.location.href = 'hostSong';
+    window.location.href = 'hostSongA';
 
     // window.location.href = 'add';
 }
