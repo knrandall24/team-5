@@ -8,6 +8,9 @@
     <!-- stream Header -->
     {{>streamTemplate}}
     <!-- End stream Header -->
+    <!-- Google Header -->
+    {{>goolge}}
+    <!-- End Goolge Header -->
 
 </head>
 <body>       
@@ -27,18 +30,18 @@
             <div id="friend-list">
 
                 {{#each session}}
-                    <div class="friend" id="friend{{hostCode}}">
-                        <div id="friendImgContainer">
-                            <img class="picLoc{{hostCode}}" src="{{hostPic}}" id="hello" >
-                        </div>
-                        <div id="friendNameContainer">
-                            <p class="h5 friendName{{hostCode}}" id="friendName">{{hostName}} ({{hostCode}})</p>
-                        </div>
+                <div class="friend" id="friend{{hostCode}}">
+                    <div id="friendImgContainer">
+                        <img class="picLoc{{hostCode}}" src="{{hostPic}}" id="hello" >
                     </div>
-                    <br>
+                    <div id="friendNameContainer">
+                        <p class="h5 friendName{{hostCode}}" id="friendName">{{hostName}} ({{hostCode}})</p>
+                    </div>
+                </div>
+                <br>
 
 
-                    <script>
+                <script>
                         //assign song+host number
                         sessionStorage.setItem('song{{hostCode}}', "{{songTitle}}");
                         sessionStorage.setItem('artist{{hostCode}}', "{{artist}}");
@@ -80,13 +83,13 @@
                 document.getElementById("bottom-txt").innerHTML = "Please Select a Session";
 
 
-               var toAppend = '<style type="text/css"> #bottom-txt{background-color: #DE7A7A; background-image: -webkit-gradient(linear, left top, left bottom, from(#DE7A7A), to(#DE2626));background-image: -webkit-linear-gradient(top, #DE7A7A, #DE2626);background-image: -moz-linear-gradient(top, #DE7A7A, #DE2626);background-image: -ms-linear-gradient(top, #DE7A7A, #DE2626);background-image: -o-linear-gradient(top, #DE7A7A, #DE2626);background-image: linear-gradient(to bottom, #DE7A7A, #DE2626);filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#DE7A7A, endColorstr=#DE2626); font-size: 6vw;}</style>';
+                var toAppend = '<style type="text/css"> #bottom-txt{background-color: #DE7A7A; background-image: -webkit-gradient(linear, left top, left bottom, from(#DE7A7A), to(#DE2626));background-image: -webkit-linear-gradient(top, #DE7A7A, #DE2626);background-image: -moz-linear-gradient(top, #DE7A7A, #DE2626);background-image: -ms-linear-gradient(top, #DE7A7A, #DE2626);background-image: -o-linear-gradient(top, #DE7A7A, #DE2626);background-image: linear-gradient(to bottom, #DE7A7A, #DE2626);filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#DE7A7A, endColorstr=#DE2626); font-size: 6vw;}</style>';
 
-               $('#bottom-txt').append(toAppend.toString()); 
+                $('#bottom-txt').append(toAppend.toString()); 
 
-               event.stopPropagation();
-               event.preventDefault();
-           });
+                event.stopPropagation();
+                event.preventDefault();
+            });
             function added() {
               document.getElementById("addFont").innerHTML = "Added";
               $("#addFont").css("background-color", "lightgreen");

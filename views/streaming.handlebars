@@ -8,6 +8,9 @@
     <!-- Host Header -->
     {{>hostTemplate}}
     <!-- End Host Header -->
+    <!-- Google Header -->
+    {{>goolge}}
+    <!-- End Goolge Header -->
     <script src="/js/host.js"></script>
 <!--     <style type="text/css"> 
     #friendName{
@@ -132,14 +135,14 @@
                         if((sessionStorage.hostCode).length > 3){
                             console.log("within the specified length");
                         //check if next song is triigered at end of first song
-                            if(sessionStorage.newStream === "true"){
+                        if(sessionStorage.newStream === "true"){
                             console.log("within the newStream is true");
-                                document.getElementById("player").src = "/songs/" + sessionStorage.getItem("songID"+sessionStorage.hostCode) + ".mp3";
-                            } else {
+                            document.getElementById("player").src = "/songs/" + sessionStorage.getItem("songID"+sessionStorage.hostCode) + ".mp3";
+                        } else {
                             console.log("within the newStream is false");
-                                document.getElementById("player").src = "/songs/" + sessionStorage.songs + ".mp3";
-                            }
+                            document.getElementById("player").src = "/songs/" + sessionStorage.songs + ".mp3";
                         }
+                    }
 
                         //to start at random time
                         if (sessionStorage.newStream === "true"){
@@ -191,7 +194,7 @@
                 </div>
 
 
-        </div>
+            </div>
 
 
                 <!--<div id="playerControls">
