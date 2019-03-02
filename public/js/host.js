@@ -168,7 +168,7 @@ function mute(){
         document.getElementById('mute-button').style.backgroundColor = "transparent";
         document.getElementById('mute-button').style.opacity = "1";
         document.getElementById('mute-button').style.color = "#555555";
-        document.getElementById('mute-button-txt').innerHTML = "🔇Mute";
+        document.getElementById('mute-button-txt').innerHTML = "🔊Mute";
         document.getElementById('img2').style.opacity = "0";
         document.getElementById('img').style.opacity = "1";
 
@@ -177,7 +177,7 @@ function mute(){
         muted = true;
         document.getElementById('mute-button').style.backgroundColor = "rgba(128,128,128,.8)";
         document.getElementById('mute-button').style.color = "white";
-        document.getElementById('mute-button-txt').innerHTML = "🔊Unmute";
+        document.getElementById('mute-button-txt').innerHTML = "🔇Unmute";
         document.getElementById('img2').style.opacity = ".8";
         document.getElementById('img').style.opacity = ".5";
         

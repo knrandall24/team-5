@@ -197,4 +197,5 @@ body{
     margin-right:auto;
     top:45%;
     font-size: 4.5vw;
+    -webkit-animation: bounce 1s 1;
 }

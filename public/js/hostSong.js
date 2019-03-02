@@ -147,11 +147,6 @@ function clickSongB(e){
     var toAppend = "";
 
 
-
-
-
-
-
     // divChild = document.getElementById("divParent").children[0];
 
     if((document.getElementById(friendID).style.backgroundColor).localeCompare(original) != 0){
@@ -160,6 +155,8 @@ function clickSongB(e){
 
         // using JS to change background color:
         document.getElementById(friendID).style.backgroundColor = original;
+
+        // document.getElementById("friendName").style.color ="white";  //TODO
 
         // using jquerey to append to CSS
         toAppend = '<style type="text/css"> .' + friendNameID + '{color: white;}</style>';
@@ -217,10 +214,12 @@ function buttonColorReset(){
         if(document.getElementById(input)){
             document.getElementById(input).style.backgroundColor = "#fffff0";
         }
+
         //reset the background color of each friend
-        var toAppend = '<style type="text/css"> #friend' + i + '{color: white;}</style>';
+        var toAppend = '<style type="text/css"> .friendName' + i + '{color: #000080;}</style>';
         $('body').append(toAppend.toString()); 
     }
+
 
     //reset the color of each text
     toAppend = '<style type="text/css"> .friendB{color: white;}</style>';
@@ -228,8 +227,8 @@ function buttonColorReset(){
 
 
     //reset the color of each text
-    toAppend = '<style type="text/css"> #friendName{color: #000030;}</style>';
-    $('body').append(toAppend.toString()); 
+    // toAppend = '<style type="text/css"> #friendName{color: #000030;}</style>';
+    // $('body').append(toAppend.toString()); 
 
     toAppend = '<style type="text/css"> #shuffleB { -webkit-box-shadow: 0 1px 0 #462c95, 0 15px 20px rgba(0, 0, 0, .35); -moz-box-shadow: 0 1px 0 #462c95, 0 15px 20px rgba(0, 0, 0, .35); box-shadow: 0 1px 0 #462c95, 0 15px 20px rgba(0, 0, 0, .35); display:inline-block;text-shadow: -1px -1px 0 rgba(0,0,0,0.3);font-weight:bold; color: #3EA900; background-color: #E7FFE3; background-image: -webkit-gradient(linear, left top, left bottom, from(#E7FFE3), to(#D0F5D3)); background-image: -webkit-linear-gradient(top, #E7FFE3, #D0F5D3); background-image: -moz-linear-gradient(top, #E7FFE3, #D0F5D3); background-image: -ms-linear-gradient(top, #E7FFE3, #D0F5D3); background-image: -o-linear-gradient(top, #E7FFE3, #D0F5D3); background-image: linear-gradient(to bottom, #E7FFE3, #D0F5D3);filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#E7FFE3, endColorstr=#D0F5D3);}</style>';
     $('#shuffleB').append(toAppend.toString()); 
