@@ -1,108 +1,107 @@
 <!doctype html>
 <html>
 <head>
-    <title>Host Song Page</title>
-    <!-- Default Header -->
-    {{> default}}
-    <!-- End Default Header -->
-    <!-- Host Header -->
-    {{>hostTemplate}}
-    <!-- End Host Header -->
+  <!-- Google AB testing Header -->
+  {{>googleAB}}
+  <!-- End Goolge AB testing Header -->
+  <title>Host Song Page</title>
+  <!-- Default Header -->
+  {{> default}}
+  <!-- End Default Header -->
+  <!-- Host Header -->
+  {{>hostTemplate}}
+  <!-- End Host Header -->
 
-    <!-- HostSongs Header -->
-    {{>hostSongsTemplate}}
-    <!-- End HostSongs Header -->
+  <!-- HostSongs Header -->
+  {{>hostSongsTemplate}}
+  <!-- End HostSongs Header -->
+
   <!-- Google Header -->
   {{>google}}
   <!-- End Goolge Header -->
-<!--     <style type="text/css"> 
-    #friendName{
-        color: #000080; 
-    }
-</style> -->
 </head>
 <body>   
-    <center>
-        <p id="chillin"></p>
-        <div id="titleBar">
-            <!-- <a href="host"> -->
-                <div id="back-container" onclick='window.location.href = "host";'>
-                    <h1 class="display-4"><</h1>
-                </div>
-            <!-- </a> -->
-            <div id="title-container">
-                <h1 id="title">Host a Session:</h1>
-            </div>
+  <center>
+    <p id="chillin"></p>
+    <div id="titleBar">
+      <!-- <a href="host"> -->
+        <div id="back-container" onclick='window.location.href = "host";'>
+          <h1 class="display-4"><</h1>
         </div>
-        <div id="middleAB">
+        <!-- </a> -->
+        <div id="title-container">
+          <h1 id="title">Host a Session:</h1>
+        </div>
+      </div>
+      <div id="middleAB">
 
-              <!-- The shuffle Button -->
+        <!-- The shuffle Button -->
 
-              <div class="shuffleB" id="shuffleB">
-                <div id="shuffleContainerB">
-                  <p class="h5" id="shuffleTxtB">Shuffle Play</p>
-                </div>
+        <div class="shuffleB" id="shuffleB">
+          <div id="shuffleContainerB">
+            <p class="h5" id="shuffleTxtB">Shuffle Play</p>
+          </div>
+        </div>
+        <br>
+        <br>
+        <!-- End of The shuffle Button -->
+
+
+
+
+        <!-- section for the or -->
+        <div id="orTxtB">
+          <br>
+          <p id="orTxtB-txt" class="text-muted">--- OR ---</p>
+        </div>
+        <!-- End of section for the or -->
+
+
+        <div id="instructionsB" >
+          <p class="lead" id="instructions-txt">
+            2. Pick your Start Song:
+          </p>
+        </div>
+        <div id="friend-listB">
+
+          {{#each songs}}
+          <!-- make array of song info -->
+          <script>
+            sessionStorage.setItem("title{{id}}","{{name}}");
+            sessionStorage.setItem("artist{{id}}","{{artist}}");
+            sessionStorage.setItem("album{{id}}","{{album}}");
+          </script>
+
+          <!-- <div class="friendB" id="friend{{id}}" onclick="window.location.href = 'hosting';"> -->
+            <div class="friendB" id="friend{{id}}">
+              <div id="friendImgContainer">
+                <img src={{imageURL}} id="hello">
               </div>
-              <br>
-              <br>
-              <!-- End of The shuffle Button -->
-
-
-
-
-              <!-- section for the or -->
-              <div id="orTxtB">
-                <br>
-                <p id="orTxtB-txt" class="text-muted">--- OR ---</p>
+              <div id="friendNameContainer">
+                <p class="h5 friendName{{id}}" id="friendName">{{name}}</p>
               </div>
-              <!-- End of section for the or -->
-
-
-            <div id="instructionsB" >
-                <p class="lead" id="instructions-txt">
-                    2. Pick your Start Song:
-                </p>
+              <div id="songDetails">
+                <p class="artist"> {{artist}}</p>
+                <p class="album">{{album}}</p>
+              </div>
             </div>
-            <div id="friend-listB">
+            <br>
 
-              {{#each songs}}
-              <!-- make array of song info -->
-              <script>
-                sessionStorage.setItem("title{{id}}","{{name}}");
-                sessionStorage.setItem("artist{{id}}","{{artist}}");
-                sessionStorage.setItem("album{{id}}","{{album}}");
-              </script>
-
-                <!-- <div class="friendB" id="friend{{id}}" onclick="window.location.href = 'hosting';"> -->
-                <div class="friendB" id="friend{{id}}">
-                    <div id="friendImgContainer">
-                        <img src={{imageURL}} id="hello">
-                    </div>
-                    <div id="friendNameContainer">
-                        <p class="h5 friendName{{id}}" id="friendName">{{name}}</p>
-                    </div>
-                    <div id="songDetails">
-                      <p class="artist"> {{artist}}</p>
-                      <p class="album">{{album}}</p>
-                    </div>
-                  </div>
-                  <br>
-
-                    <script>
-                        if(sessionStorage.recountSongs==="true"){
-                            var total = sessionStorage.totalSongs;
-                            total = parseInt(total, 10) + 1;
-                            sessionStorage.totalSongs = total;
-                        }
-                    </script>
-                  {{/each}} 
-            </div>
+            <script>
+              if(sessionStorage.recountSongs==="true"){
+                var total = sessionStorage.totalSongs;
+                total = parseInt(total, 10) + 1;
+                sessionStorage.totalSongs = total;
+              }
+            </script>
+            {{/each}} 
+          </div>
         </div>
 
         <div id="bottomBar">
-            <button type="button" class="blockB" id="bottom-txt">
-                Please Select a Song
-            </button>
+          <button type="button" class="blockB" id="bottom-txt">
+            Please Select a Song
+          </button>
         </div>
 
 
@@ -113,10 +112,10 @@
         sessionStorage.recountFriends="false";
         sessionStorage.recountSongs="false";
         if (typeof(Storage) !== "undefined") {
-            var storaged = sessionStorage.hello;
-            console.log(storaged);
+          var storaged = sessionStorage.hello;
+          console.log(storaged);
         } else {
-            console.log("Sorry, your browser does not support web storage...");
+          console.log("Sorry, your browser does not support web storage...");
         }
 
 
@@ -142,10 +141,10 @@
           console.log(document.getElementById("bottom-txt").innerHTML);
         }
 
-         event.stopPropagation();
-         event.preventDefault();
-     });
- </script>
+        event.stopPropagation();
+        event.preventDefault();
+      });
+    </script>
 
-</body>
-</html>
+  </body>
+  </html>
