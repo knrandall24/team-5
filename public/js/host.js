@@ -359,7 +359,7 @@ function postList(e){
     }
 
     // window.location.href = 'hostSong';
-    window.location.href = 'hostSongA';
+    window.location.href = 'hostSongB';    //ABTesting change this
 
     // window.location.href = 'add';
 }

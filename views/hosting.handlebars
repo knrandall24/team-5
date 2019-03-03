@@ -32,16 +32,7 @@
                 <script>
                     document.getElementById("back-container").addEventListener("click", goHostSong);
                     function goHostSong(){
-                        console.log("going to hostingSong with the new event listenerscript in HTML");
-                        console.log("AB is: " + sessionStorage.getItem("AB"));
-                        if(sessionStorage.getItem("AB") === "A"){
-                            console.log("A in AB is: " + sessionStorage.getItem("AB"));
-                            window.location.href = 'hostSongA'; 
-                        } else if(sessionStorage.getItem("AB") === "B"){
-                            window.location.href = 'hostSongB'; 
-                        } else {
-                            window.location.href = 'hostSong'; 
-                        }
+                        window.location.href = 'hostSongB'; //ABTesting change
                     }
                 </script>
             <!-- </a> -->
