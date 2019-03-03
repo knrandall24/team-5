@@ -24,9 +24,9 @@ function initializePage() {
     $('.friend').click(postList);
 
     //shuffle button stuff
-    $('#suffleA').click(shuffleA);
+    // $('#suffleA').click(shuffleA);
 
-    $('#shuffleB').click(shuffleB);
+    // $('#shuffleB').click(shuffleB);
     // $('#colorBtn').click(randomizeColors);
 
     //ABTesting
@@ -34,12 +34,14 @@ function initializePage() {
         ga('create', 'UA-135428898-1', 'auto');
         //gtag("send", "event", 'like', 'click');
         ga("send", "event", 'shuffle', 'click');
+        shuffleA();
     });
 
     $("#shuffleB").click(function(e) {
         ga('create', 'UA-135428898-1', 'auto');
         //gtag("send", "event", 'like', 'click');
         ga("send", "event", 'shuffle', 'click');
+        shuffleB();
     });
 }
 
