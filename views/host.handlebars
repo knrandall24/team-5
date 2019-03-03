@@ -9,9 +9,9 @@
     <!-- Host Header -->
     {{>hostTemplate}}
     <!-- End Host Header -->
-  <!-- Google Header -->
-  {{>google}}
-  <!-- End Goolge Header -->
+    <!-- Google Header -->
+    {{>google}}
+    <!-- End Goolge Header -->
     
     <script src="/js/host.js"></script>
 </head>
@@ -42,12 +42,12 @@
                 {{#each friend}}
                 <script>
                     sessionStorage.setItem('friend{{id}}', JSON.stringify({
-                            "name": '{{name}}',
-                            "description": "{{description}}",
-                            "imageURL": '{{imageURL}}',
-                            "id": '{{id}}',
-                            "slected": "{{slected}}"
-                        }));
+                        "name": '{{name}}',
+                        "description": "{{description}}",
+                        "imageURL": '{{imageURL}}',
+                        "id": '{{id}}',
+                        "slected": "{{slected}}"
+                    }));
                     var totalFriends = sessionStorage.getItem("totalFriends");
                     totalFriends= parseInt(totalFriends, 10);
                     totalFriends++;
@@ -75,50 +75,50 @@
                     </div>
                 </div>
                 <br>
- -->
+            -->
 
 
-                <script type="text/javascript">
-                    for(var i = 0; i <= parseInt(sessionStorage.totalFriends,10); i++){
-                        sessionStorage.removeItem("addedFriend" + i);
-                    }
-                </script>
-            </div>
+            <script type="text/javascript">
+                for(var i = 0; i <= parseInt(sessionStorage.totalFriends,10); i++){
+                    sessionStorage.removeItem("addedFriend" + i);
+                }
+            </script>
         </div>
+    </div>
 
-        <div id="bottomBar">
-            <button type="button" class="block" id="bottom-txt">
-                Continue to Song Selection
-            </button>
-        </div>
+    <div id="bottomBar">
+        <button type="button" class="block" id="bottom-txt">
+            Continue to Song Selection
+        </button>
+    </div>
 
 
-    </center>
+</center>
 
-    <script>
+<script>
 
-        function added() {
-          document.getElementById("addFont").innerHTML = "Added";
-          $("#addFont").css("background-color", "lightgreen");
-          $("#addList").css("left", "50%");
-      }
-      function invited(){
-        document.getElementById("inviteText").innerHTML = "Invited";
-        $("#inviteFriend").css("background-color", "lightgreen");
+    function added() {
+      document.getElementById("addFont").innerHTML = "Added";
+      $("#addFont").css("background-color", "lightgreen");
+      $("#addList").css("left", "50%");
+  }
+  function invited(){
+    document.getElementById("inviteText").innerHTML = "Invited";
+    $("#inviteFriend").css("background-color", "lightgreen");
+}
+</script>
+
+
+<script>
+    sessionStorage.recountFriends ="true";
+    sessionStorage.hostingSendButtonDisable = false;
+    if (typeof(Storage) !== "undefined") {
+        var storaged = sessionStorage.hello;
+        console.log(storaged);
+    } else {
+        console.log("Sorry, your browser does not support web storage...");
     }
-    </script>
-
-       
-    <script>
-        sessionStorage.recountFriends ="true";
-        sessionStorage.hostingSendButtonDisable = false;
-          if (typeof(Storage) !== "undefined") {
-            var storaged = sessionStorage.hello;
-            console.log(storaged);
-          } else {
-            console.log("Sorry, your browser does not support web storage...");
-          }
-    </script>
+</script>
 
 </body>
 </html>
