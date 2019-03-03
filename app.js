@@ -88,6 +88,7 @@ app.get('/streaming', streaming.view);
 app.get('/host', host.view);
 // app.get('/hostSong', hostSong.view);
 app.get('/hostSongAB', hostSongAB.view);
+app.get('/viewAlt', hostSongAB.viewAlt);
 
 // app.get('/hostSongA', hostSongA.view);          //IN use for AB Testing
 // app.get('/hostSongB', hostSongB.view);
