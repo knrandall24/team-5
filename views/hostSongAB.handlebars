@@ -20,7 +20,21 @@
   {{>google}}
   <!-- End Goolge Header -->
 </head>
-
+<body>   
+  <center>
+    <p id="chillin"></p>
+    <div id="titleBar">
+<!--       <a href="host">
+        <div id="back-container">
+           -->
+        <div id="back-container" onclick='window.location.href = "host";'>
+          <h1 class="display-4"><</h1>
+        </div>
+      <!-- </a> -->
+      <div id="title-container">
+        <h1 id="title">Host a Session:</h1>
+      </div>
+    </div>
 
 
 
@@ -48,6 +62,9 @@
 
 
 <!-- begin version B -->
+<script>
+  sessionStorage.AB="B";
+</script>
 
 
 
@@ -61,20 +78,6 @@
 
 
 
-
-<body>   
-    <center>
-        <p id="chillin"></p>
-        <div id="titleBar">
-            <!-- <a href="host"> -->
-                <div id="back-container" onclick='window.location.href = "host";'>
-                    <h1 class="display-4"><</h1>
-                </div>
-            <!-- </a> -->
-            <div id="title-container">
-                <h1 id="title">Host a Session:</h1>
-            </div>
-        </div>
         <div id="middleAB">
 
               <!-- The shuffle Button -->
@@ -171,7 +174,7 @@
         if(sessionStorage.maxFriends === undefined) {sessionStorage.maxFriends="4";}
         if(sessionStorage.totalFriends === undefined) {sessionStorage.totalFriends="10";}
         if(sessionStorage.totalSongs === undefined) {sessionStorage.totalSongs="11";}
-        sessionStorage.AB="B";
+        
 
 
 
@@ -276,21 +279,7 @@
 
 <!-- begin version A -->
 
-<body>   
-  <center>
-    <p id="chillin"></p>
-    <div id="titleBar">
-<!--       <a href="host">
-        <div id="back-container">
-           -->
-        <div id="back-container" onclick='window.location.href = "host";'>
-          <h1 class="display-4"><</h1>
-        </div>
-      <!-- </a> -->
-      <div id="title-container">
-        <h1 id="title">Host a Session:</h1>
-      </div>
-    </div>
+
     <div id="middleAB">
       <div id="instructions" >
         <p class="lead" id="instructions-txt">
