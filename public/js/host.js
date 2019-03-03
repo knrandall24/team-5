@@ -41,6 +41,20 @@ function initializePage() {
    
     $('#back-container-overlay-queue').click(closeQueueOverlay);
     $('#back-container-overlay').click(closeOverlay);
+    
+    $("#shuffleA").click(function(e) {
+        ga('create', 'UA-134920882-1', 'auto');
+        //gtag("send", "event", 'like', 'click');
+        ga("send", "event", 'shuffleA', 'click');
+    });
+
+    $("#shuffleB").click(function(e) {
+        ga('create', 'UA-134920882-1', 'auto');
+        //gtag("send", "event", 'like', 'click');
+        ga("send", "event", 'shuffleB', 'click');
+    });
+
+
 
 
     // $('#colorBtn').click(randomizeColors);function initializePage() {
@@ -359,7 +373,7 @@ function postList(e){
     }
 
     // window.location.href = 'hostSong';
-    window.location.href = 'hostSongA';
+    window.location.href = 'hostSongAB';
 
     // window.location.href = 'add';
 }

@@ -1,0 +1,456 @@
+<!doctype html>
+<html>
+<head>
+  <title>Host Song Page</title>
+  <!-- Default Header -->
+  {{> default}}
+  <!-- End Default Header -->
+  <!-- Host Header -->
+  {{>hostTemplate}}
+  <!-- End Host Header -->
+
+  <!-- HostSongs Header -->
+  {{>hostSongsTemplate}}
+  <!-- End HostSongs Header -->
+
+  <!-- Google Header -->
+  {{>google}}
+  <!-- End Goolge Header -->
+</head>
+
+
+
+
+
+
+
+
+
+
+
+{{#if viewAlt}}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- begin version B -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<body>   
+    <center>
+        <p id="chillin"></p>
+        <div id="titleBar">
+            <!-- <a href="host"> -->
+                <div id="back-container" onclick='window.location.href = "host";'>
+                    <h1 class="display-4"><</h1>
+                </div>
+            <!-- </a> -->
+            <div id="title-container">
+                <h1 id="title">Host a Session:</h1>
+            </div>
+        </div>
+        <div id="middle">
+
+              <!-- The shuffle Button -->
+
+              <div class="shuffleB" id="shuffleB">
+                <div id="shuffleContainerB">
+                  <p class="h5" id="shuffleTxtB">Shuffle Play</p>
+                </div>
+              </div>
+              <br>
+              <br>
+              <!-- End of The shuffle Button -->
+
+
+
+
+              <!-- section for the or -->
+              <div id="orTxtB">
+                <br>
+                <p id="orTxtB-txt" class="text-muted">--- OR ---</p>
+              </div>
+              <!-- End of section for the or -->
+
+
+            <div id="instructionsB" >
+                <p class="lead" id="instructions-txt">
+                    2. Pick your Start Song:
+                </p>
+            </div>
+            <div id="friend-listB">
+
+              {{#each songs}}
+              <!-- make array of song info -->
+              <script>
+                sessionStorage.setItem("title{{id}}","{{name}}");
+                sessionStorage.setItem("artist{{id}}","{{artist}}");
+                sessionStorage.setItem("album{{id}}","{{album}}");
+              </script>
+
+                <!-- <div class="friendB" id="friend{{id}}" onclick="window.location.href = 'hosting';"> -->
+                <div class="friendB" id="friend{{id}}">
+                    <div id="friendImgContainer">
+                        <img src={{imageURL}} id="hello">
+                    </div>
+                    <div id="friendNameContainer">
+                        <p class="h5 friendName{{id}}" id="friendName">{{name}}</p>
+                    </div>
+                    <div id="songDetails">
+                      <p class="artist"> {{artist}}</p>
+                      <p class="album">{{album}}</p>
+                    </div>
+                  </div>
+                  <br>
+
+                    <script>
+                        if(sessionStorage.recountSongs==="true"){
+                            var total = sessionStorage.totalSongs;
+                            total = parseInt(total, 10) + 1;
+                            sessionStorage.totalSongs = total;
+                        }
+                    </script>
+                  {{/each}} 
+            </div>
+        </div>
+
+        <div id="bottomBar">
+            <button type="button" class="blockB" id="bottom-txt">
+                Please Select a Song
+            </button>
+        </div>
+
+
+      </center>
+      
+      <script>
+        
+        sessionStorage.recountFriends="false";
+        sessionStorage.recountSongs="false";
+        if (typeof(Storage) !== "undefined") {
+            var storaged = sessionStorage.hello;
+            console.log(storaged);
+        } else {
+            console.log("Sorry, your browser does not support web storage...");
+        }
+
+
+        //Required sessionStorage variables FOR hostSongsA and hostSongsB:
+        if(sessionStorage.sessionID === undefined) {sessionStorage.sessionID="A37594T";}
+        if(sessionStorage.addedFriend0 === undefined) {sessionStorage.addedFriend0="3";}
+        if(sessionStorage.addedFriend1 === undefined) {sessionStorage.addedFriend1="4";}
+        if(sessionStorage.addedFriend2 === undefined) {sessionStorage.addedFriend2="5";}
+        if(sessionStorage.addedFriend3 === undefined) {sessionStorage.addedFriend3="1";}
+        if(sessionStorage.friends === undefined) {sessionStorage.friends='["3","4","5","1"]';}
+        if(sessionStorage.maxFriends === undefined) {sessionStorage.maxFriends="4";}
+        if(sessionStorage.totalFriends === undefined) {sessionStorage.totalFriends="10";}
+        if(sessionStorage.totalSongs === undefined) {sessionStorage.totalSongs="11";}
+        sessionStorage.AB="B";
+
+
+
+
+        document.getElementById("bottom-txt").addEventListener("click", function(event){
+         if(document.getElementById("bottom-txt").innerHTML[0] === "S"){
+          window.location.href = 'hosting';         
+        } else {
+          console.log(document.getElementById("bottom-txt").innerHTML);
+        }
+
+         event.stopPropagation();
+         event.preventDefault();
+     });
+ </script>
+
+</body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- end of version B -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{{ else}}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- begin version A -->
+
+<body>   
+  <center>
+    <p id="chillin"></p>
+    <div id="titleBar">
+<!--       <a href="host">
+        <div id="back-container">
+           -->
+        <div id="back-container" onclick='window.location.href = "host";'>
+          <h1 class="display-4"><</h1>
+        </div>
+      <!-- </a> -->
+      <div id="title-container">
+        <h1 id="title">Host a Session:</h1>
+      </div>
+    </div>
+    <div id="middle">
+      <div id="instructions" >
+        <p class="lead" id="instructions-txt">
+          2. Pick your Start Song:
+        </p>
+      </div>
+      <div id="friend-list">
+
+
+        {{#each songs}}
+        <!-- make array of song info -->
+        <script>
+          sessionStorage.setItem("title{{id}}","{{name}}");
+          sessionStorage.setItem("artist{{id}}","{{artist}}");
+          sessionStorage.setItem("album{{id}}","{{album}}");
+        </script>
+
+        <div class="friend" id="friend{{id}}" onclick="window.location.href = 'hosting';">
+          <div id="friendImgContainer">
+            <img src={{imageURL}} id="hello">
+          </div>
+          <div id="friendNameContainer">
+            <p class="h5 friendName{{id}}" id="friendName">{{name}}</p>
+          </div>
+          <div id="songDetails">
+            <p class="artist"> {{artist}}</p>
+            <p class="album">{{album}}</p>
+          </div>
+        </div>
+        <br>
+
+        <script>
+          if(sessionStorage.recountSongs==="true"){
+            var total = sessionStorage.totalSongs;
+            total = parseInt(total, 10) + 1;
+            sessionStorage.totalSongs = total;
+          }
+        </script>
+        {{/each}} 
+
+        <!-- Shuffle Button -->
+        <div class="shuffle" id="shuffleA">
+          <div id="shuffleContainerA">
+            <p class="h5" id="shuffleTxt">Shuffle Play</p>
+          </div>
+        </div>
+        <br>
+
+        <!-- End of shuffle button -->
+
+
+
+      </div>
+    </div>
+    <div id="bottomBar">
+      <button type="button" class="block" id="bottom-txt" >
+        Send Invite + Start Session
+      </button>
+    </div>
+
+
+  </center>
+
+  <script>
+
+    sessionStorage.recountFriends="false";
+    sessionStorage.recountSongs="false";
+
+
+    //Required sessionStorage variables FOR hostSongsA and hostSongsB:
+    if(sessionStorage.sessionID === undefined) {sessionStorage.sessionID="A37594T";}
+    if(sessionStorage.addedFriend0 === undefined) {sessionStorage.addedFriend0="3";}
+    if(sessionStorage.addedFriend1 === undefined) {sessionStorage.addedFriend1="4";}
+    if(sessionStorage.addedFriend2 === undefined) {sessionStorage.addedFriend2="5";}
+    if(sessionStorage.addedFriend3 === undefined) {sessionStorage.addedFriend3="1";}
+    if(sessionStorage.friends === undefined) {sessionStorage.friends='["3","4","5","1"]';}
+    if(sessionStorage.maxFriends === undefined) {sessionStorage.maxFriends="4";}
+    if(sessionStorage.totalFriends === undefined) {sessionStorage.totalFriends="10";}
+    if(sessionStorage.totalSongs === undefined) {sessionStorage.totalSongs="11";}
+    sessionStorage.AB = "A";
+
+
+
+
+
+    if (typeof(Storage) !== "undefined") {
+      var storaged = sessionStorage.hello;
+      console.log(storaged);
+    } else {
+      console.log("Sorry, your browser does not support web storage...");
+    }
+
+
+      //   $(document).ready(function(){
+      //       $("#bottom-txt").click(function(event){
+      //      event.stopPropagation();
+      //       event.preventDefault();
+      //   });
+      // });
+      document.getElementById("bottom-txt").addEventListener("click", function(event){
+       document.getElementById("bottom-txt").innerHTML = "Please Select a Song";
+
+
+       var toAppend = '<style type="text/css"> #bottom-txt{background-color: #DE7A7A; background-image: -webkit-gradient(linear, left top, left bottom, from(#DE7A7A), to(#DE2626));background-image: -webkit-linear-gradient(top, #DE7A7A, #DE2626);background-image: -moz-linear-gradient(top, #DE7A7A, #DE2626);background-image: -ms-linear-gradient(top, #DE7A7A, #DE2626);background-image: -o-linear-gradient(top, #DE7A7A, #DE2626);background-image: linear-gradient(to bottom, #DE7A7A, #DE2626);filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#DE7A7A, endColorstr=#DE2626); font-size: 6vw;}</style>';
+
+       $('#bottom-txt').append(toAppend.toString()); 
+
+       event.stopPropagation();
+       event.preventDefault();
+     });
+   </script>
+
+ </body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- end of version A -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{{/if}}
+
+ </html>

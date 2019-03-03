@@ -24,7 +24,7 @@ function initializePage() {
     $('.friend').click(postList);
 
     //shuffle button stuff
-    $('#suffleA').click(shuffleA);
+    $('#shuffleA').click(shuffleA);
 
     $('#shuffleB').click(shuffleB);
     // $('#colorBtn').click(randomizeColors);
