@@ -1,6 +1,12 @@
 <!doctype html>
 <html>
 <head>
+      <!-- Google AB testing Header -->
+  {{>googleAB}}
+  <!-- End Goolge AB testing Header -->
+  <!-- Google Header -->
+  {{>google}}
+  <!-- End Goolge Header -->
     <title>Hosting</title>
     <!-- Default Header -->
     {{> default}}
@@ -8,9 +14,6 @@
     <!-- Host Header -->
     {{>hostTemplate}}
     <!-- End Host Header -->
-  <!-- Google Header -->
-  {{>google}}
-  <!-- End Goolge Header -->
     <script src="/js/host.js"></script>
 <!--     <style type="text/css"> 
     #friendName{
