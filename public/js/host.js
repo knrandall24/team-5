@@ -45,13 +45,13 @@ function initializePage() {
     $("#shuffleA").click(function(e) {
         ga('create', 'UA-134920882-1', 'auto');
         //gtag("send", "event", 'like', 'click');
-        ga("send", "event", 'shuffleA', 'click');
+        ga("send", "event", 'shuffle', 'click');
     });
 
     $("#shuffleB").click(function(e) {
         ga('create', 'UA-134920882-1', 'auto');
         //gtag("send", "event", 'like', 'click');
-        ga("send", "event", 'shuffleB', 'click');
+        ga("send", "event", 'shuffle', 'click');
     });
 
 
