@@ -28,6 +28,22 @@ function initializePage() {
 
     $('#shuffleB').click(shuffleB);
     // $('#colorBtn').click(randomizeColors);
+
+
+    //ABTesting
+    $("#shuffleA").click(function(e) {
+        ga('create', 'UA-134920882-1', 'auto');
+        //gtag("send", "event", 'like', 'click');
+        ga("send", "event", 'shuffle', 'click');
+    });
+
+    $("#shuffleB").click(function(e) {
+        ga('create', 'UA-134920882-1', 'auto');
+        //gtag("send", "event", 'like', 'click');
+        ga("send", "event", 'shuffle', 'click');
+    });
+
+
 }
 
 
