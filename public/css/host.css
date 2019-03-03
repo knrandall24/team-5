@@ -45,6 +45,16 @@ body {
     height: 78%;
     width: 100%;
 }
+
+#middleAB{
+
+    position: absolute;
+    top:13%;
+    height: 78%;
+    width: 100%;
+    overflow:auto;
+}
+
 #middle-overlay{
     position: absolute;
     top:10%;
@@ -312,6 +322,18 @@ body {
     overflow: auto;
 }
 
+#friend-listA{
+    position: absolute;
+    padding-top: 4%;
+    top: 10%;
+    width: 80%;
+    height: 90%;
+    left: 10%;
+    right: 10%;
+    margin-right: auto;
+    margin-left: auto;
+}
+
 #friend-listB{
     position: absolute;
     padding-top: 4%;
@@ -322,7 +344,7 @@ body {
     right: 10%;
     margin-right: auto;
     margin-left: auto;
-    overflow: auto;
+    /*overflow: auto;*/
 }
 
 
