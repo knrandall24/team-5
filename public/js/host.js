@@ -167,6 +167,7 @@ function mute(){
 
     var aud = document.getElementById("crt");
     if(muted === true){
+        document.getElementById('crt').play();
         muted = false;
         document.getElementById('mute-button').style.backgroundColor = "";
         document.getElementById('mute-button').style.backgroundColor = "transparent";
