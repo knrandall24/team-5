@@ -21,6 +21,9 @@ function initializePage() {
         maxFriends = parseInt(maxFriends, 10);
     }
 
+    if(document.getElementById('crt') !== null){
+        document.getElementById('crt').play();
+    }
     added = [];
     original = "green";
     pause = true;
@@ -41,6 +44,7 @@ function initializePage() {
    
     $('#back-container-overlay-queue').click(closeQueueOverlay);
     $('#back-container-overlay').click(closeOverlay);
+
 
 
     // $('#colorBtn').click(randomizeColors);function initializePage() {
