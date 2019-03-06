@@ -211,4 +211,7 @@ body{
     width: 100%;
     animation: fadeDown2 .75s 1;
 }
-
+#help-title{
+  font-variant: small-caps;
+  font-size: 8vw;
+}
