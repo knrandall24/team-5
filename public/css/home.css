@@ -200,11 +200,35 @@ body{
     text-align: center;
     margin: auto;
 }
+
 #DJAM{
     position: absolute;
-    width: 100%;
-    top: 25%;
+    width: 70%;
+    height: 115px;
+    top: 30%;
+    right: 0%;
+    left: 0%;
+    margin-left: auto;
+    margin-right: auto;
+    /*background-color: red;*/
 }
+#DJAM-img{
+    position: absolute;
+    left:0%;
+    top: 0%;
+    right:0%;
+    margin-left: auto;
+    margin-right: auto;
+    /*width:100%; */
+    height:100%; 
+    object-fit:cover; 
+    text-align: center;
+}
+#innerImg{
+    height:135%;
+    /*height:100%; */
+}
+
 #Title-to{
     position: absolute;
     width: 100%;

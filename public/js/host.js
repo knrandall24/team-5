@@ -234,9 +234,19 @@ function togglePause(e){
     if(document.getElementById('crt').paused){ 
         document.getElementById('crt').play();
         document.getElementById('player-btn-pause').innerHTML = "II";
+
+        if(document.getElementById('instructions-txt') !== ""){
+            document.getElementById('instructions-txt').innerHTML = "● ON AIR";
+            document.getElementById('instructions-txt').style.color = "red";
+        }
     } else {
         document.getElementById('crt').pause();
         document.getElementById('player-btn-pause').innerHTML = "►";
+
+        if(document.getElementById('instructions-txt') !== ""){
+            document.getElementById('instructions-txt').innerHTML = "■ OFF AIR";
+            document.getElementById('instructions-txt').style.color = "black";
+        }
     }
     console.log("Testing pause button:" + sessionStorage.songs);
 }
