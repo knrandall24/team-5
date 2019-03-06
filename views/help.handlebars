@@ -1,0 +1,69 @@
+<!doctype html>
+<html>
+<head>
+    <title>Login Page</title>
+    <!-- Default Header -->
+    {{> default}}
+    <!-- End Default Header -->
+
+    <!-- login Header -->
+    {{> loginTemplate}}
+    <script src="/js/facebook.js"></script>
+</head>
+
+<body>
+    <body2 class="body2">
+        <center>
+            <div id="backView">
+                <div id="welcome">
+                    <h1 class="display-3" id="welcomeTitle">Welcome!</h1>
+                    <h1 class="display-3" id="welcomeTitle">To</h1>
+                    <div id="DJAM">
+                        <div id="DJAM-img">
+                            <img src="/img/Djam.png" id="innerImg">
+                        </div>
+                    </div>
+                </div>        
+                <div id="middle">
+                    <div id="firstLine">
+                        <h5 id="middleWords">Make listening to music</h5>
+                    </div>
+                    <div id="secondLine">
+                        <h5 id="middleWords">A more sociable experience!</h5>
+                    </div>
+                </div>        
+                <div id="in-login-container">
+                    <button class="button button2" disabled>Login</button>
+                </div>
+            </div>
+
+
+            <!-- Actual Login Stuff -->
+            <div id="overlay">                
+                <div>
+                    <a href="back">
+                        <div id="back">
+                            <img id="back_img" src="/img/exit.png">
+                        </div>
+                    </a>
+                </div>
+                <div id="icon">
+                    <center>
+                        <h1 id="myIcon">Help: </h1>
+                    </center>
+                </div>
+                
+            </center>
+            <script>
+              if (typeof(Storage) !== "undefined") {
+                sessionStorage.hello = 5;
+                console.log(sessionStorage.friends);
+            } else {
+                console.log("Sorry, your browser does not support web storage...");
+            }
+        </script>
+
+
+  </body2>
+</body>
+</html>

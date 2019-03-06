@@ -194,3 +194,21 @@ body{
     height:150%;
     /*height:100%; */
 }
+
+
+
+
+/*This is the help button/page*/
+#helpButtonContainer{
+    position: absolute;
+    left: 5%;
+    bottom: 5%;
+    width: 7%;
+    animation: 2s ease-out 0s 1 fadeIn;
+}
+
+#helpImg{
+    width: 100%;
+    animation: fadeDown2 .75s 1;
+}
+
