@@ -92,8 +92,8 @@ app.get('/host', host.view);
 app.get('/hostSongA', hostSongAB.view);
 app.get('/hostSongB', hostSongAB.viewAlt);
 
-// app.get('/hostSongA', hostSongA.view);          //IN use for AB Testing
-// app.get('/hostSongB', hostSongB.view);
+ app.get('/hostSongvA', hostSongA.view);          //IN use for AB Testing
+ app.get('/hostSongvB', hostSongB.view);
 
 app.get('/hosting', hosting.view);
 app.get('/queue', queue.view);
