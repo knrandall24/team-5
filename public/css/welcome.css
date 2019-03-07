@@ -215,3 +215,8 @@ body{
   font-variant: small-caps;
   font-size: 8vw;
 }
+
+ol{
+    
+    text-align: left;
+}
