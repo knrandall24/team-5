@@ -230,53 +230,72 @@
                     <div id="middle-overlay">
 
                         <div id="friend-list-overlay">
-                            {{#each friend}}
-                            <div class="friend-overlay" id="friend{{id}}" tag="overlay{{id}}">
-                                <div id="friendImgContainer-overlay">
-                                    <img src={{imageURL}} id="hello">
-                                </div>
-                                <div id="friendNameContainer-overlay">
-                                    <p class="h5 friendName{{id}}" id="friendName">{{name}}</p>
-                                </div>
-                            </div>
-                            <br>
-                            {{/each}}
+                            {{#each placeHolder}}
+                                <div class="placeHolderFriend" id="placeHolderFriend{{id}}">
+                                    <div id="placeholderFriendImgContainer">
+                                        <img src="/img/album.png" id="hello">
+                                    </div>
+                                    <div id="placeholderFriendNameContainer">
+                                        <p class="h5 placeholderFriendName{{id}}" id="placeHolderFriendName">{{name}}{{id}}</p>
+                                    </div>
 
-                            <script type="text/javascript">
-                                //get total number of friends used
-                                var maxFriends = sessionStorage.getItem("maxFriends");
-                                maxFriends = parseInt(maxFriends, 10);
-                                var toRemove = [];
-                                var toKeep = [];
-                                    //make a list of friends to keep
-                                    for(var i = 0; i < maxFriends; i++){
-                                        var addedFriend = sessionStorage.getItem("addedFriend" + i);
-                                        addedFriend = parseInt(addedFriend, 10);
-                                        toKeep.push(addedFriend);
-                                    }
+                                    <div id="placeHolderFriendDetails">
+                                      <p class="artist"> {{name}}</p>
+                                      <p class="album">{{name}}</p>
+                                  </div>
+                              </div>
+                              <br>
+                              {{/each}}
 
-                                    //make a list of friends to remove
-                                    var totalFriends = sessionStorage.getItem("totalFriends");
-                                    totalFriends = parseInt(totalFriends, 10);
+                              <script>
+                                var totalFriends = sessionStorage.maxFriends;
+                                totalFriends = parseInt(totalFriends, 10);
 
-                                    for(var i = 1; i <= totalFriends; i++){
-                                        if(toKeep.includes(i)){
+                                // start off the song counter
+                                var findex = 0;
 
-                                        } else {
-                                            toRemove.push(i);
+                                if(totalFriends < 1){
+                                    totalFriends = 0;
+                                }
+
+                                var pindex = 1;                           //the place holder index
+                                while(pindex <= totalFriends){            //loop through the place holder index
+                                    
+                                    //get the current Friend's ID
+                                    var currFriend = sessionStorage.getItem("addedFriend" + (pindex-1));
+                                    currFriend = parseInt(currFriend, 10);
+
+                                    //loop through each friend
+                                    {{#each friend}}
+                                        var findex = {{id}};
+                                        findex = parseInt(findex, 10);
+
+                                        if(findex === currFriend){
+
+                                        //this if statment checks if the placeholder's image and title exists
+                                        if(document.getElementById('placeHolderFriend' + pindex).children[0].children[0] !== "" && document.getElementById('placeHolderFriend' + pindex).children[1].children[0] !== ""){
+                                              document.getElementById('placeHolderFriend' + pindex).children[0].children[0].src = "{{imageURL}}";      //this changes the image of the div
+                                              document.getElementById('placeHolderFriend' + pindex).children[1].children[0].innerHTML = "{{name}}";     //this changes the title of the song
+                                          }
                                         }
-                                    }
+                                    {{/each}}
 
-                                    for(var i = 0; i < toRemove.length; i++){
-                                        var input = "friend" + toRemove[i];
-                                        var element = document.getElementById(input.toString());
-                                        if (element != null) {
-                                            element.remove();
-                                        } else {
-                                            console.log(input + " is null");
-                                        }
+                                    pindex++;       //increase the placeHolder index
+                                }
+
+
+                                //remove the rest of the placeholders
+                                for(; pindex <=30; pindex++){
+                                    //check if div exists
+                                    if(document.getElementById('placeHolderFriend' + pindex)!== ""){
+                                        var toRemove = "#placeHolderFriend" + pindex;
+                                        $(toRemove).remove();
                                     }
-                                </script>
+                                }
+
+
+
+                            </script>
                             </div>
                         </div>
                     </div>
@@ -317,20 +336,6 @@
                             </div>
                         </div>
                         <div id="middle-overlay">
-
-
-
-
-
-
-
-
-
-
-
-
-
-
                             <div id="queue-list-overlay">
 
                                 {{#each placeHolder}}

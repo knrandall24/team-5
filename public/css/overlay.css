@@ -53,4 +53,67 @@
 
 
 
+
+/*For friend's overlay*/
+
+.placeHolderFriend{
+    /*visibility: hidden;*/
+    position: relative;
+    height:10%;
+    width: 100%;
+    display: block;
+    margin-left: 0%;
+    align-content: left;
+    border: 1px solid black;
+    border-radius: 12px;
+    background-color: #fffff0;
+
+    /*Box shadow:*/
+    -webkit-box-shadow:    0 1px 0 #462c95, 0 15px 20px rgba(0, 0, 0, .35);
+    -moz-box-shadow: 0 1px 0 #462c95, 0 15px 20px rgba(0, 0, 0, .35);
+    box-shadow: 0 1px 0 #462c95, 0 15px 20px rgba(0, 0, 0, .35);
+}
+
+
+
+#placeholderFriendImgContainer{
+    position: absolute;
+    top:0%;
+    left: 0%;
+    width:23%;
+    height: 100%;
+    border-top-left-radius: 12px;
+    border-bottom-left-radius: 12px;
+    background-color: green;
+    overflow: hidden;
+}
+
+#placeholderFriendNameContainer{
+    position: absolute;
+    width: 77%;
+    height:100%;
+    left: 23%;
+    padding-top: 3%;
+    border-top-right-radius: 12px;
+    border-bottom-right-radius: 12px;
+}
+
+#placeHolderFriendName{
+    font-family: 'Helvetica Neue';
+    /*color: #000080; */ 
+}
+
+#placeHolderFriendDetails {
+  visibility: hidden;
+}
+
+
+
+
+
+/*placeHolder*/
+
+
+
+
 /*placeHolder*/
