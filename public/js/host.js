@@ -374,7 +374,7 @@ function postList(e){
     }
 
     // window.location.href = 'hostSong';
-    window.location.href = 'hostSongB';
+    window.location.href = 'hostSong';
 
     // window.location.href = 'add';
 }
