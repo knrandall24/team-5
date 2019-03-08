@@ -24,6 +24,7 @@ var login = require('./routes/login');
 var home = require('./routes/home');
 var host = require('./routes/host');
 var help = require('./routes/help');
+var helpHome = require('./routes/helpHome');
 // var listeners = require('./routes/listeners');
 
 // A & B Testing
@@ -86,6 +87,7 @@ app.get('/home', home.view);
 app.get('/stream', stream.view);
 app.get('/streaming', streaming.view);
 app.get('/help', help.view);
+app.get('/helpHome', helpHome.view);
 
 app.get('/host', host.view);
 // app.get('/hostSong', hostSong.view);

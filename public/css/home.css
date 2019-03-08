@@ -245,3 +245,30 @@ body{
     font-size: 4.5vw;
     /*-webkit-animation: bounce 1s 1;*/
 }
+
+
+/*This is the help button/page*/
+#helpButtonContainer{
+    position: absolute;
+    left: 5%;
+    bottom: 5%;
+    width: 7%;
+    animation: 2s ease-out 0s 1 fadeIn;
+}
+
+#helpImg{
+    width: 100%;
+    animation: fadeDown2 .75s 1;
+}
+#help-title{
+  font-variant: small-caps;
+  font-size: 8vw;
+}
+
+ol{
+    
+    text-align: left;
+}
+
+
+
