@@ -90,7 +90,7 @@ app.get('/help', help.view);
 app.get('/helpHome', helpHome.view);
 
 app.get('/host', host.view);
-// app.get('/hostSong', hostSong.view);
+app.get('/hostSong', hostSongB.view);
 app.get('/hostSongA', hostSongAB.view);
 app.get('/hostSongB', hostSongAB.viewAlt);
 
