@@ -30,18 +30,21 @@ function initializePage() {
     // $('#colorBtn').click(randomizeColors);
 
     //ABTesting
+
     $("#shuffleA").click(function(e) {
-        ga('create', 'UA-135428898-1', 'auto');
-        //gtag("send", "event", 'like', 'click');
-        ga("send", "event", 'shuffle', 'click');
-        shuffleA();
+        if($('#shuffleA').length){
+            // ga('create', 'UA-135428898-1', 'auto');
+            // ga("send", "event", 'shuffle', 'click');
+            shuffleA();
+        }
     });
 
     $("#shuffleB").click(function(e) {
-        ga('create', 'UA-135428898-1', 'auto');
-        //gtag("send", "event", 'like', 'click');
-        ga("send", "event", 'shuffle', 'click');
-        shuffleB();
+        if($('#shuffleB').length){
+            // ga('create', 'UA-135428898-1', 'auto');
+            // ga("send", "event", 'shuffle', 'click');
+            shuffleB();
+        }
     });
 }
 

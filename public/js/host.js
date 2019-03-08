@@ -89,23 +89,28 @@ function openQueueOverlay(){
     document.getElementById("queueOverlay").style.visibility = "visible";
     document.getElementById("background-overlay").style.visibility = "visible";
     document.getElementById("canvas").style.visibility = "visible";
+    document.getElementById("queue-list-overlay").style.visibility = "visible";
 
     //get current song
-    var currSong = sessionStorage.getItem("songs");
-    var totalSongs = sessionStorage.getItem("totalSongs");
-    currSong = parseInt(currSong, 10);
+    // var currSong = sessionStorage.getItem("songs");
+    // var totalSongs = sessionStorage.getItem("totalSongs");
+    // currSong = parseInt(currSong, 10);
     // var toRemove = [];
     // var toKeep = [];
     // //make a list of friends to keep
-    for(var i = 1; i <= currSong; i++){
-        var input = "song" + i;
-        var element = document.getElementById(input.toString());
-        if (element != null) {
-            element.remove();
-        } else {
-            console.log(input + " is null");
-        }
-    }
+
+
+
+
+    // for(var i = 1; i <= currSong; i++){
+    //     var input = "song" + i;
+    //     var element = document.getElementById(input.toString());
+    //     if (element != null) {
+    //         element.remove();
+    //     } else {
+    //         console.log(input + " is null");
+    //     }
+    // }
 
     // //make a list of friends to remove
     // var totalFriends = sessionStorage.getItem("totalFriends");
@@ -135,6 +140,7 @@ function closeQueueOverlay(){
     document.getElementById("queueOverlay").style.visibility = "hidden";
     document.getElementById("background-overlay").style.visibility = "hidden";
     document.getElementById("canvas").style.visibility = "hidden";
+    document.getElementById("queue-list-overlay").style.visibility = "hidden";
     console.log("toggled overlay");
 }
 

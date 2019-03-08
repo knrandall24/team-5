@@ -8,7 +8,8 @@
     <!-- Host Header -->
     {{>hostTemplate}}
     <!-- End Host Header -->
-    <script src="/js/host.js"></script>
+    <script src="/js/host.js"></script>    
+    <link href="/css/overlay.css" rel="stylesheet"> 
 <!--     <style type="text/css"> 
     #friendName{
         color: #000080; 
@@ -16,7 +17,34 @@
 </style> -->
 </head>
 <body>  
-   <center>
+    <script>
+        sessionStorage.tempItem = 0;
+    </script>
+
+    {{#each songs}}
+    <!-- make array of song info -->
+    <script>
+        sessionStorage.setItem("title{{id}}","{{name}}");
+        sessionStorage.setItem("artist{{id}}","{{artist}}");
+        sessionStorage.setItem("album{{id}}","{{album}}");
+
+        //count incase if totalSongs doesn't exist
+        var tempNum = sessionStorage.tempItem;
+        tempNum = parseInt(tempNum, 10);
+        tempNum++;
+        sessionStorage.tempItem = tempNum;
+    </script>
+    {{/each}} 
+
+    <!-- Store total songs incase not set -->
+    <script>
+        if(localStorage.getItem("totalSongs") === null){
+            console.log("missing");
+            sessionStorage.totalSongs = sessionStorage.tempItem;
+        }
+    </script>
+
+    <center>
     <p id="chillin"></p>
     <script>
         console.log("song is:" + sessionStorage.songs);
@@ -33,17 +61,7 @@
                     document.getElementById("back-container").addEventListener("click", goHostSong);
                     function goHostSong(){
                         
-                        window.location.href = 'hostSongA'; 
-                        // console.log("going to hostingSong with the new event listenerscript in HTML");
-                        // console.log("AB is: " + sessionStorage.getItem("AB"));
-                        // if(sessionStorage.getItem("AB") === "A"){
-                        //     console.log("A in AB is: " + sessionStorage.getItem("AB"));
-                        //     window.location.href = 'hostSongA'; 
-                        // } else if(sessionStorage.getItem("AB") === "B"){
-                        //     window.location.href = 'hostSongB'; 
-                        // } else {
-                        //     window.location.href = 'hostSong'; 
-                        // }
+                        window.location.href = 'hostSongB'; 
                     }
                 </script>
             <!-- </a> -->
@@ -264,6 +282,29 @@
                     </div>
 
 
+
+
+
+
+
+
+
+
+
+                            
+
+
+
+
+
+
+
+
+
+
+
+
+
                     <!-- Below is for your queue -->
                     <div id="queueOverlay">
                         <p id="chillin"></p>
@@ -277,59 +318,76 @@
                         </div>
                         <div id="middle-overlay">
 
+
+
+
+
+
+
+
+
+
+
+
+
+
                             <div id="queue-list-overlay">
-                                {{#each songs}}
-                                <div class="friend-overlay" id="song{{id}}">
-                                    <div id="friendImgContainer-overlay">
-                                        <img src={{imageURL}} id="hello">
+
+                                {{#each placeHolder}}
+                                <div class="placeHolder" id="placeHolder{{id}}">
+                                    <div id="placeholderImgContainer">
+                                        <img src="/img/album.png" id="hello">
                                     </div>
-                                    <div id="friendNameContainer-overlay">
-                                        <p class="h5 friendName{{id}}" id="friendName">{{name}}</p>
+                                    <div id="placeholderNameContainer">
+                                        <p class="h5 placeholderName{{id}}" id="placeHolderName">{{name}}{{id}}</p>
                                     </div>
 
-                                    <div id="songDetails">
-                                      <p class="artist"> {{artist}}</p>
-                                      <p class="album">{{album}}</p>
+                                    <div id="placeHolderDetails">
+                                      <p class="artist"> {{name}}</p>
+                                      <p class="album">{{name}}</p>
                                   </div>
                               </div>
                               <br>
                               {{/each}}
-                              {{#each songs}}
-                              <div class="friend-overlay" id="song{{id}}">
-                                <div id="friendImgContainer-overlay">
-                                    <img src={{imageURL}} id="hello">
-                                </div>
-                                <div id="friendNameContainer-overlay">
-                                    <p class="h5 friendName{{id}}" id="friendName">{{name}}</p>
-                                </div>
 
-                                <div id="songDetails">
-                                  <p class="artist"> {{artist}}</p>
-                                  <p class="album">{{album}}</p>
-                              </div>
-                          </div>
-                          <br>
-                          {{/each}}                        
-                          {{#each songs}}
-                          <div class="friend-overlay" id="song{{id}}">
-                            <div id="friendImgContainer-overlay">
-                                <img src={{imageURL}} id="hello">
-                            </div>
-                            <div id="friendNameContainer-overlay">
-                                <p class="h5 friendName{{id}}" id="friendName">{{name}}</p>
-                            </div>
+                              <script>
 
-                            <div id="songDetails">
-                              <p class="artist"> {{artist}}</p>
-                              <p class="album">{{album}}</p>
-                          </div>
-                      </div>
-                      <br>
-                      {{/each}}
+                                var currSong = sessionStorage.songs;
+                                currSong = parseInt(currSong, 10);
+                                var totalSongs = sessionStorage.totalSongs;
+                                totalSongs = parseInt(totalSongs, 10);
 
-                  </div>
-              </div>
-          </div>
+                                // start off the song counter
+                                var sindex = 1;
+                                if(Number.isInteger(currSong)){
+                                    sindex = currSong + 1;
+                                }
+                                if(totalSongs < 5){
+                                    totalSongs = 5;
+                                }
+
+                                var pindex = 1;                 //the place holder index
+                                while(pindex <= 30){            //loop through the pindex
+
+                                    //this if statment checks if the placeholder's image and title exists
+                                    if(document.getElementById('placeHolder' + pindex).children[0].children[0] !== "" && document.getElementById('placeHolder' + pindex).children[1].children[0] !== ""){
+                                          document.getElementById('placeHolder' + pindex).children[0].children[0].src = "/img/"+sindex+".png";      //this changes the image of the div
+                                          document.getElementById('placeHolder' + pindex).children[1].children[0].innerHTML = sessionStorage.getItem("title" + sindex);     //this changes the title of the song
+                                      }
+
+                                    if(sindex === totalSongs){         //reset the songs
+                                        sindex = 1;
+                                    }
+
+                                    pindex++;       //increase the placeHolder index
+                                    sindex++;       //increase the song index
+                                }
+
+
+                            </script>
+                        </div>
+                    </div>
+                </div>
 
           <!-- Above if your your queue -->
 
