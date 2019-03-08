@@ -371,20 +371,21 @@
                                     totalSongs = 5;
                                 }
 
-                                var pindex = 1;                 //the place holder index
-                                while(pindex <= 30){            //loop through the pindex
-
+                                var psindex = 1;                 //the place holder index
+                                while(psindex <= 30){            //loop through the psindex
+                                    console.log('totalsongs' + totalSongs);
+                                    // console.log('sindex' + sindex);
                                     //this if statment checks if the placeholder's image and title exists
-                                    if(document.getElementById('placeHolder' + pindex).children[0].children[0] !== "" && document.getElementById('placeHolder' + pindex).children[1].children[0] !== ""){
-                                          document.getElementById('placeHolder' + pindex).children[0].children[0].src = "/img/"+sindex+".png";      //this changes the image of the div
-                                          document.getElementById('placeHolder' + pindex).children[1].children[0].innerHTML = sessionStorage.getItem("title" + sindex);     //this changes the title of the song
+                                    if(document.getElementById('placeHolder' + psindex).children[0].children[0] !== "" && document.getElementById('placeHolder' + psindex).children[1].children[0] !== ""){
+                                          document.getElementById('placeHolder' + psindex).children[0].children[0].src = "/img/"+sindex+".png";      //this changes the image of the div
+                                          document.getElementById('placeHolder' + psindex).children[1].children[0].innerHTML = sessionStorage.getItem("title" + sindex);     //this changes the title of the song
                                       }
 
-                                    if(sindex === totalSongs){         //reset the songs
+                                    if(sindex === 11){         //reset the songs
                                         sindex = 1;
                                     }
 
-                                    pindex++;       //increase the placeHolder index
+                                    psindex++;       //increase the placeHolder index
                                     sindex++;       //increase the song index
                                 }
 
