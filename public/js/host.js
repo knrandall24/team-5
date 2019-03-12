@@ -66,17 +66,6 @@ function closeOverlay(){
     document.getElementById("friendsOverlay").style.visibility = "hidden";
     document.getElementById("background-overlay").style.visibility = "hidden";
     document.getElementById("canvas").style.visibility = "hidden";
-    // console.log("toggled overlay");
-    // var flist = sessionStorage.friends;
-    // console.log(flist);
-    // console.log(flist.length);
-    // var i = 0;
-    // for(; i < flist.length; i++){
-    //     if(flist[i] === ","){
-    //     } else {
-    //         sessionStorage.setItem("overlay" + flist[i], "True");
-    //     }
-    // }
 }
 
 
@@ -90,49 +79,6 @@ function openQueueOverlay(){
     document.getElementById("background-overlay").style.visibility = "visible";
     document.getElementById("canvas").style.visibility = "visible";
     document.getElementById("queue-list-overlay").style.visibility = "visible";
-
-    //get current song
-    // var currSong = sessionStorage.getItem("songs");
-    // var totalSongs = sessionStorage.getItem("totalSongs");
-    // currSong = parseInt(currSong, 10);
-    // var toRemove = [];
-    // var toKeep = [];
-    // //make a list of friends to keep
-
-
-
-
-    // for(var i = 1; i <= currSong; i++){
-    //     var input = "song" + i;
-    //     var element = document.getElementById(input.toString());
-    //     if (element != null) {
-    //         element.remove();
-    //     } else {
-    //         console.log(input + " is null");
-    //     }
-    // }
-
-    // //make a list of friends to remove
-    // var totalFriends = sessionStorage.getItem("totalFriends");
-    // totalFriends = parseInt(totalFriends, 10);
-
-    // for(var i = 1; i <= totalFriends; i++){
-    //     if(toKeep.includes(i)){
-
-    //     } else {
-    //         toRemove.push(i);
-    //     }
-    // }
-
-    // for(var i = 0; i < toRemove.length; i++){
-    //     var input = "friend" + toRemove[i];
-    //     var element = document.getElementById(input.toString());
-    //     if (element != null) {
-    //         element.remove();
-    //     } else {
-    //         console.log(input + " is null");
-    //     }
-    // }
 }
 
 //this function toggles the queue overlay
@@ -225,12 +171,39 @@ return text;
 
 // This is for music controls:
 function prev(e){
+    if(sessionStorage.shuffle !== "" && sessionStorage.shuffle === "true"){
+        //if in shuffle
+        var index = parseInt(sessionStorage.currentShuffleSong, 10);
+        index--;
+        sessionStorage.currentShuffleSong = index;
+        window.location.href = 'hosting';
+    }
     if(sessionStorage.songs > 1){
-        sessionStorage.songs = sessionStorage.songs - 1;
+        // sessionStorage.songs = sessionStorage.songs - 1;
+        //check the queue
+        var queue = JSON.parse(sessionStorage.queue);
+        console.log(" the queue before: " + queue);
+        if(sessionStorage.shuffle === "false"){
+            for(var i = 29; i > 0; i--){
+                queue[i] = queue[i-1];
+            }
+            var newSong = queue[0] - 1;
+            if(newSong < 1){
+                newSong = 1;
+            }
+            queue[0] = newSong
+
+        console.log(" the queue after: " + queue);
+        sessionStorage.setItem("queue", JSON.stringify(queue));
+        sessionStorage.prev = "true";
+        sessionStorage.songs = queue[0];
+        } 
         window.location.href = 'hosting';
         document.getElementById('player-btn-prev').disabled = false;
     } else{
-        document.getElementById('player-btn-prev').disabled = true;
+        if(sessionStorage.shuffle !== "" && sessionStorage.shuffle === "false"){
+            document.getElementById('player-btn-prev').disabled = true;
+        }
     }
 }
 
@@ -258,7 +231,13 @@ function togglePause(e){
 }
 
 function next(e){
-
+    //if in shuffle
+    if(sessionStorage.shuffle ==="true"){
+        var index = parseInt(sessionStorage.currentShuffleSong, 10);
+        index++;
+        sessionStorage.currentShuffleSong = index;
+        window.location.href = 'hosting';           //redirect
+    }
     var songs = sessionStorage.songs;
     songs = parseInt(songs, 10);
     var totalSongs = sessionStorage.totalSongs;

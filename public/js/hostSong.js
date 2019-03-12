@@ -37,6 +37,7 @@ function initializePage() {
             // ga("send", "event", 'shuffle', 'click');
             shuffleA();
         }
+        sessionStorage.shuffle = "true";
     });
 
     $("#shuffleB").click(function(e) {
@@ -45,6 +46,7 @@ function initializePage() {
             // ga("send", "event", 'shuffle', 'click');
             shuffleB();
         }
+        sessionStorage.shuffle = "true";
     });
 }
 
@@ -131,6 +133,7 @@ function clickSong(e){
 
     console.log("added song: " + sessionStorage.songs);
     start = true;
+    sessionStorage.shuffle = "false";
 }
 
 function postList(e){
@@ -162,6 +165,7 @@ function clickSongB(e){
     var container = document.getElementById(friendID).children[1];
     var friendNameID = (container.firstElementChild.className).substr('.h5'.length);
 
+
     var toAppend = "";
 
 
@@ -190,7 +194,31 @@ function clickSongB(e){
 
     $('body').append(toAppend.toString()); 
     toAppend = "";
-    sessionStorage.songs = added;
+
+
+    var totalSongs = 0;
+    if(sessionStorage.getItem("totalSongs") !== null){
+        totalSongs = sessionStorage.totalSongs;     //get total number of songs
+    }
+    totalSongs = parseInt(totalSongs, 10);          // get the int value of total songs
+
+    //set up the regular queue
+    var queue = [];
+    var sindex = added-1;
+    if(sindex < 1){
+        sindex = totalSongs;
+    }
+    for(var i = 0; i < 30; i++){
+        queue[i] = sindex;
+        sindex++;
+        if(sindex > totalSongs){                   //make sure songs in the queue doesn't go above total songs
+            sindex = 1;
+        }
+    }
+    sessionStorage.setItem("queue", JSON.stringify(queue));
+
+    sessionStorage.songs = queue[0];
+
     sessionStorage.songsTitle = document.getElementById(friendID).children[1].children[0].innerHTML;
     sessionStorage.songsArtist = document.getElementById(friendID).children[2].children[0].innerHTML;
     sessionStorage.songsAlbum = document.getElementById(friendID).children[2].children[1].innerHTML;
@@ -200,6 +228,8 @@ function clickSongB(e){
 
     console.log("added song: " + sessionStorage.songs);
     start = true;
+    console.log("clickedSongB in hostSong.js");
+    sessionStorage.shuffle = "false";
 }
 
 
@@ -217,6 +247,8 @@ function postListB(e){
         console.log("Sorry, your browser does not support web storage...");
     }
     // window.location.href = 'hosting';
+
+    sessionStorage.shuffle = "false";
 }
 
 //function to reset all colors of everything
