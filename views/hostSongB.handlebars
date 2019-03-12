@@ -93,14 +93,6 @@
                     </div>
                   </div>
                   <br>
-
-                    <script>
-                        if(sessionStorage.recountSongs==="true"){
-                            var total = sessionStorage.totalSongs;
-                            total = parseInt(total, 10) + 1;
-                            sessionStorage.totalSongs = total;
-                        }
-                    </script>
                   {{/each}} 
             </div>
         </div>
@@ -135,7 +127,7 @@
         if(sessionStorage.friends === undefined) {sessionStorage.friends='["3","4","5","1"]';}
         if(sessionStorage.maxFriends === undefined) {sessionStorage.maxFriends="4";}
         if(sessionStorage.totalFriends === undefined) {sessionStorage.totalFriends="10";}
-        if(sessionStorage.totalSongs === undefined) {sessionStorage.totalSongs="11";}
+        if(sessionStorage.totalSongs === undefined) {sessionStorage.totalSongs="25";}
         sessionStorage.AB="B";
 
 

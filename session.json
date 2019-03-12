@@ -191,6 +191,90 @@
             "album": "Hoodie SZN",
             "imageURL": "/img/11.png",
             "id": "11"
+        },{
+            "name": "Trap Paris",
+            "artist": "Machine Gun Kelly ft. Quavo, Ty Dolla $ign",
+            "album": "Bloom",
+            "imageURL": "/img/12.png",
+            "id": "12"
+        },{
+            "name": "Going Bad",
+            "artist": "Meek Mill, Drake",
+            "album": "Championships",
+            "imageURL": "/img/13.png",
+            "id": "13"
+        },{
+            "name": "Suu Whoop",
+            "artist": "YG",
+            "album": "Stay Dangerous",
+            "imageURL": "/img/14.png",
+            "id": "14"
+        },{
+            "name": "Wake Up In The Sky",
+            "artist": "Gucci Mane, Bruno Mars & Kodak Black",
+            "album": "Wake Up In The Sky",
+            "imageURL": "/img/15.png",
+            "id": "15"
+        },{
+            "name": "Close to Me",
+            "artist": "Ellie Goulding, Diplo, Swae Lee",
+            "album": "Close to Me",
+            "imageURL": "/img/16.png",
+            "id": "16"
+        },{
+            "name": "Taste",
+            "artist": "Tyga",
+            "album": "Taste",
+            "imageURL": "/img/17.png",
+            "id": "17"
+        },{
+            "name": "No Limit REMIX",
+            "artist": "G-Eazy & A$AP Rocky, Cardi B, French Montana, Juicy J, Belly",
+            "album": "No Limit REMIX",
+            "imageURL": "/img/18.png",
+            "id": "18"
+        },{
+            "name": "Powerglide",
+            "artist": "Rae Sremmurd, Swae Lee, Slim Jxmmi ft. Juicy J",
+            "album": "SR3MM",
+            "imageURL": "/img/19.png",
+            "id": "19"
+        },{
+            "name": "Humble",
+            "artist": "Kendrick Lamar",
+            "album": "DAMN.",
+            "imageURL": "/img/20.png",
+            "id": "20"
+        },{
+            "name": "Pray For Me",
+            "artist": "The Weeknd, Kendrick Lamar",
+            "album": "Black Panther: The Album",
+            "imageURL": "/img/21.png",
+            "id": "21"
+        },{
+            "name": "Both Of Us",
+            "artist": "Yellow Claw ft. STORi",
+            "album": "New Blood",
+            "imageURL": "/img/22.png",
+            "id": "22"
+        },{
+            "name": "Walk It Talk It",
+            "artist": "Migos ft. Drake",
+            "album": "Culture II",
+            "imageURL": "/img/23.png",
+            "id": "23"
+        },{
+            "name": "Natural",
+            "artist": "Imagine Dragons",
+            "album": "Origins",
+            "imageURL": "/img/24.png",
+            "id": "24"
+        },{
+            "name": "Waiting For Love",
+            "artist": "Avicii",
+            "album": "Stories",
+            "imageURL": "/img/25.png",
+            "id": "25"
         }
     ], "placeHolder": [{
             "id": "1",

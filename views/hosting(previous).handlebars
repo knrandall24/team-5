@@ -10,66 +10,45 @@
     <!-- End Host Header -->
     <script src="/js/host.js"></script>    
     <link href="/css/overlay.css" rel="stylesheet"> 
+<!--     <style type="text/css"> 
+    #friendName{
+        color: #000080; 
+    }
+</style> -->
 </head>
-
 <body>  
     <script>
-        var totalSongs = 0;
-        if(sessionStorage.getItem("totalSongs") !== null){
-            totalSongs = sessionStorage.totalSongs;     //get total number of songs
+        sessionStorage.tempItem = 0;
+    </script>
+
+    {{#each songs}}
+    <!-- make array of song info -->
+    <script>
+        sessionStorage.setItem("title{{id}}","{{name}}");
+        sessionStorage.setItem("artist{{id}}","{{artist}}");
+        sessionStorage.setItem("album{{id}}","{{album}}");
+
+        //count incase if totalSongs doesn't exist
+        var tempNum = sessionStorage.tempItem;
+        tempNum = parseInt(tempNum, 10);
+        tempNum++;
+        sessionStorage.tempItem = tempNum;
+    </script>
+    {{/each}} 
+
+    <!-- Store total songs incase not set -->
+    <script>
+        if(sessionStorage.getItem("totalSongs") === null && sessionStorage.getItem("tempItem") !== null){
+            console.log("missing");
+            sessionStorage.totalSongs = sessionStorage.tempItem;
         }
-        totalSongs = parseInt(totalSongs, 10);          // get the int value of total songs
-        if(sessionStorage.prev !== null && sessionStorage.prev === "false"){
-
-            //this will get the currentSong
-            var currentSong = [];
-            if(sessionStorage.shuffle !== null && sessionStorage.shuffle === "false"){
-                var currentSong = JSON.parse(sessionStorage.getItem("queue"));
-                //loop through all songs and move everything foward
-                for(var i = 0; i < 29; i++){
-                    currentSong[i] = currentSong[i+1];
-                }
-                var newTopSong = parseInt(currentSong[29], 10) + 1;
-                if(newTopSong > totalSongs){
-                    newTopSong = 1;
-                }
-                currentSong[29] = newTopSong;
-                sessionStorage.setItem("queue", JSON.stringify(currentSong));
-
-                // sessionStorage.setItem("queue", JSON.stringify(currentSong));
-                console.log("queue in hosting handlebars: " + sessionStorage.queue);
-                sessionStorage.songs = currentSong[0];
-            } else {
-                var currentSong = JSON.parse(sessionStorage.getItem("shufflequeue"));
-                var songIndex = sessionStorage.getItem("currentShuffleSong");
-                songIndex = parseInt(songIndex, 10);
-
-
-                //if songIndex is greater tha max number of songs:
-                if(songIndex >= 30){
-                    songIndex = 0;
-                    sessionStorage.currentShuffleSong = songIndex;
-                }
-
-                //if songIndex is below zero
-                if(songIndex < 0){
-                    songIndex = 29;
-                    sessionStorage.currentShuffleSong = songIndex;
-                }
-
-                sessionStorage.songs = currentSong[songIndex];
-            }
-
-            // console.log("shuffle is: " + sessionStorage.shuffle);
-            // console.log("current song: " + JSON.parse(sessionStorage.getItem("songJSON" + currentSong[0]))[0]);
-        }
-        sessionStorage.prev = "false";
-
-
     </script>
 
     <center>
         <p id="chillin"></p>
+        <script>
+            console.log("song is:" + sessionStorage.songs);
+        </script>
 
         <div id="titleBar">
             <!-- <a href="hostSong"> -->
@@ -177,9 +156,7 @@
                         // document.getElementById('player-btn-next').disabled = true;
                     }
                     if(sessionStorage.songs <= 1){
-                        if(sessionStorage.shuffle !== "" && sessionStorage.shuffle === "false"){
-                            document.getElementById('player-btn-prev').disabled = true;
-                        }
+                        document.getElementById('player-btn-prev').disabled = true;
                     }
                 </script>
             </div>
@@ -318,123 +295,208 @@
 
 
 
-                        </script>
-                    </div>
-                </div>
-            </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-            <!-- Below is for your queue -->
-            <div id="queueOverlay">
-                <p id="chillin"></p>
-                <div id="titleBar-overlay">
-                    <button id="back-container-overlay-queue">
-                        <h1 class="display-4"><</h1>
-                    </button>
-                    <div id="title-container">
-                        <h1 id="title">Your Queue:</h1>
-                    </div>
-                </div>
-                <div id="middle-overlay">
-                    <div id="queue-list-overlay">
-
-                        {{#each placeHolder}}
-                        <div class="placeHolder" id="placeHolder{{id}}">
-                            <div id="placeholderImgContainer">
-                                <img src="/img/album.png" id="hello">
-                            </div>
-                            <div id="placeholderNameContainer">
-                                <p class="h5 placeholderName{{id}}" id="placeHolderName">{{name}}{{id}}</p>
-                            </div>
-
-                            <div id="placeHolderDetails">
-                              <p class="artist"> {{name}}</p>
-                              <p class="album">{{name}}</p>
-                          </div>
-                      </div>
-                      <br>
-                      {{/each}}
-
-                      <script>
-
-                        var totalSongs = 0;
-                        if(sessionStorage.getItem("totalSongs") !== null){
-                            totalSongs = sessionStorage.totalSongs;     //get total number of songs
-                        }
-                        totalSongs = parseInt(totalSongs, 10);          // get the int value of total songs
-
-
-                        var storedNames = JSON.parse(sessionStorage.getItem("queue"));         
-                        var i = 1;
-                        if(sessionStorage.getItem("shuffle") === "true"){
-                            storedNames = JSON.parse(sessionStorage.getItem("shufflequeue"));
-                            i = parseInt(sessionStorage.getItem("currentShuffleSong"), 10) + 1; 
-                            if(i >= 30){
-                                i = 0;
-                            }
-                        }          
-                        var psindex = 1;                 //the place holder index
-                        while(psindex <= 30){            //loop through the psindex
-                            //this if statment checks if the placeholder's image and title exists
-                            if(document.getElementById('placeHolder' + psindex).children[0].children[0] !== "" && document.getElementById('placeHolder' + psindex).children[1].children[0] !== ""){
-                                  document.getElementById('placeHolder' + psindex).children[0].children[0].src = "/img/"+storedNames[i]+".png";      //this changes the image of the div
-                                  document.getElementById('placeHolder' + psindex).children[1].children[0].innerHTML = sessionStorage.getItem("title" + storedNames[i]);     //this changes the title of the song
-
-                            // console.log("getting element i: " + i);   
-                            // console.log("getting song: " + storedNames[i]);  
-                            // console.log("totalSongs: " + totalSongs);
-                              }
-                            psindex++;       //increase the placeHolder index
-                            i++;            //increase the song index
-
-                            if(sessionStorage.getItem("shuffle") === "true"){
-                                if(i >= 30){
-                                    i = 0;
-                                }
-                            } else {
-                                if(i > totalSongs){
-                                    i = 0;
-                                }
-                            }
-
-                        }
-
-
-
-                        </script>
-                            </div>
+                            </script>
                         </div>
                     </div>
+                </div>
 
-                    <!-- Above if your your queue -->
 
 
-                </center>
 
-                <script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <!-- Below is for your queue -->
+                <div id="queueOverlay">
+                    <p id="chillin"></p>
+                    <div id="titleBar-overlay">
+                        <button id="back-container-overlay-queue">
+                            <h1 class="display-4"><</h1>
+                        </button>
+                        <div id="title-container">
+                            <h1 id="title">Your Queue:</h1>
+                        </div>
+                    </div>
+                    <div id="middle-overlay">
+                        <div id="queue-list-overlay">
+
+                            {{#each placeHolder}}
+                            <div class="placeHolder" id="placeHolder{{id}}">
+                                <div id="placeholderImgContainer">
+                                    <img src="/img/album.png" id="hello">
+                                </div>
+                                <div id="placeholderNameContainer">
+                                    <p class="h5 placeholderName{{id}}" id="placeHolderName">{{name}}{{id}}</p>
+                                </div>
+
+                                <div id="placeHolderDetails">
+                                  <p class="artist"> {{name}}</p>
+                                  <p class="album">{{name}}</p>
+                              </div>
+                          </div>
+                          <br>
+                          {{/each}}
+
+                          <script>
+                            var names = [];
+                            names[0] = "name0";
+                            names[1] = "name1";
+                            names[2] = "name2";
+                            names[3] = "name3";
+                            names[4] = "name4";
+                            names[5] = "name5";
+                            names[6] = "name6";
+                            names[7] = "name7";
+                            sessionStorage.setItem("testingName", JSON.stringify(names));
+
+
+                            var storedNames = JSON.parse(sessionStorage.getItem("testingName"));
+                            console.log("storedNames" + storedNames[0]);
+
+
+
+
+                            var currSong = sessionStorage.songs;
+                            currSong = parseInt(currSong, 10);
+                            var totalSongs = sessionStorage.totalSongs;
+                            totalSongs = parseInt(totalSongs, 10);
+
+                                // start off the song counter
+                                var sindex = 1;
+                                if(Number.isInteger(currSong)){
+                                    sindex = currSong + 1;
+                                }
+                                if(totalSongs < 5){
+                                    totalSongs = 5;
+                                }
+
+                                // if(){
+                                    if(sessionStorage.firstShuffle !== "true" || sessionStorage.getItem("firstShuffle") !== null){
+
+                                    var psindex = 1;                 //the place holder index
+                                    while(psindex <= 30){            //loop through the psindex
+                                        //this if statment checks if the placeholder's image and title exists
+                                        if(document.getElementById('placeHolder' + psindex).children[0].children[0] !== "" && document.getElementById('placeHolder' + psindex).children[1].children[0] !== ""){
+                                              document.getElementById('placeHolder' + psindex).children[0].children[0].src = "/img/"+sindex+".png";      //this changes the image of the div
+                                              document.getElementById('placeHolder' + psindex).children[1].children[0].innerHTML = sessionStorage.getItem("title" + sindex);     //this changes the title of the song
+                                          }
+
+                                        if(sindex >= totalSongs){         //reset the songs
+                                            sindex = 1;
+                                        }
+
+                                        psindex++;       //increase the placeHolder index
+                                        sindex++;       //increase the song index
+                                    }
+
+                                }
+                                //}
+
+
+                                // //if shuffle was clicked
+                                // if(sessionStorage.getItem("shuffle") !== null){
+                                //     if(sessionStorage.shuffle === "true"){
+                                //         sessionStorage.firstShuffle = "true";
+                                //         var preRandom = [0,0,0,0,0];
+                                //         var passed = false;
+
+
+                                //         var psindex = 1;                 //the place holder index
+                                //         while(psindex <= 30){            //loop through the psindex
+                                //             console.log("in shuffle at: " + psindex);
+
+                                //             //get random number
+                                //             var min=1; 
+                                //             var max=totalSongs;  
+                                //             var random = Math.random() * (+max - +min) + +min; 
+                                //             random = parseInt(random, 10);   //turn random from double to int
+                                //             passed = false;
+                                //             while(passed === false){  //no duplicates
+                                //                 passed = true;
+                                //                 for(var i = 0; i < 5; i++){
+                                //                     if(random === preRandom[i]){
+                                //                         var random = Math.random() * (+max - +min) + +min; 
+                                //                         random = parseInt(random, 10);   //turn random from double to int
+                                //                         passed = false;
+                                //                     }
+                                //                 }
+                                //             }
+                                //             //reset the preRandom array
+                                //             for(var i = 4; i >= 1; i--){
+                                //                 preRandom[i] = preRandom[i-1];
+                                //             }
+                                //             preRandom[0] = random;
+
+                                //             //this if statment checks if the placeholder's image and title exists
+                                //             if(document.getElementById('placeHolder' + psindex).children[0].children[0] !== "" && document.getElementById('placeHolder' + psindex).children[1].children[0] !== ""){
+                                //                   document.getElementById('placeHolder' + psindex).children[0].children[0].src = "/img/"+random+".png";      //this changes the image of the div
+                                //                   document.getElementById('placeHolder' + psindex).children[1].children[0].innerHTML = sessionStorage.getItem("title" + random);     //this changes the title of the song
+                                //               }
+
+                                //             psindex++;       //increase the placeHolder index
+                                //         }
+                                //         sessionStorage.shuffle = "false";     //stops the algorithm from shuffling again
+                                //     } 
+                                    //replace the last song with a shuffled one
+                                    // if((sessionStorage.getItem("firstShuffle") !== null) && sessionStorage.firstShuffle === "true"){
+                                        // //get random number
+                                        // var min=1; 
+                                        // var max=totalSongs;  
+                                        // var random = Math.random() * (+max - +min) + +min; 
+                                        // random = parseInt(random, 10)   //turn random from double to int
+
+
+                                        // //this if statment checks if the placeholder's image and title exists
+                                        // if(document.getElementById('placeHolder' + 30).children[0].children[0] !== "" && document.getElementById('placeHolder' + 30).children[1].children[0] !== ""){
+                                        //       document.getElementById('placeHolder' + 30).children[0].children[0].src = "/img/"+random+".png";      //this changes the image of the div
+                                        //       document.getElementById('placeHolder' + 30).children[1].children[0].innerHTML = sessionStorage.getItem("title" + random);     //this changes the title of the song
+                                        // }
+                                      //   for(var i = 1; i < 30; i++){
+                                      //       var nextSong = sessionStorage.getItem("shuffled" + i);
+                                      //       sessionStorage.setItem(("shuffled" + (i-1)), nextSong);
+                                      //   }
+
+                                      //   //replace the icons
+                                      //   for(var i = 1; i < 30; i++){
+                                      //       //this if statment checks if the placeholder's image and title exists
+                                      //       if(document.getElementById('placeHolder' + i).children[0].children[0] !== "" && document.getElementById('placeHolder' + i).children[1].children[0] !== ""){
+                                      //         document.getElementById('placeHolder' + i).children[0].children[0].src = "/img/"+sessionStorage.getItem("shuffled" + i)+".png";      //this changes the image of the div
+                                      //         document.getElementById('placeHolder' + i).children[1].children[0].innerHTML = sessionStorage.getItem("shuffled" + i);     //this changes the title of the song
+                                      //     }
+                                      // }
+                                      //   sessionStorage.setItem("shuffled30", random);
+                                    // }
+                                // }
+
+                                  </script>
+                              </div>
+                          </div>
+                      </div>
+
+                      <!-- Above if your your queue -->
+
+
+                  </center>
+
+                  <script>
                     function added() {
                       document.getElementById("addFont").innerHTML = "Added";
                       $("#addFont").css("background-color", "lightgreen");
@@ -454,7 +516,7 @@
                 var max=sessionStorage.totalSongs;
                 max = parseInt(max, 10);
                 var random =Math.floor(Math.random() * (+max - +min)) + +min; 
-                // console.log("randomSong: " + random);
+                console.log("randomSong: " + random);
 
         //make sure no repeats
         while(prev === random){
@@ -462,11 +524,11 @@
             var max=sessionStorage.totalSongs;
             max = parseInt(max, 10);
             var random =Math.floor(Math.random() * (+max - +min)) + +min; 
-            // console.log("randomSong: " + random);
+            console.log("randomSong: " + random);
         }
 
         sessionStorage.songs = random;
-        // console.log( "next to: " + sessionStorage.songs);
+        console.log( "next to: " + sessionStorage.songs);
         // document.getElementById("player").src = "/songs/" + sessionStorage.songs + ".mp3";
 
         window.location.href = 'hosting'; 

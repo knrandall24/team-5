@@ -38,13 +38,7 @@
 
                 {{#each friend}}
                 <script>
-                    sessionStorage.setItem('friend{{id}}', JSON.stringify({
-                            "name": '{{name}}',
-                            "description": "{{description}}",
-                            "imageURL": '{{imageURL}}',
-                            "id": '{{id}}',
-                            "slected": "{{slected}}"
-                        }));
+                    sessionStorage.setItem('friend{{id}}', JSON.stringify(['{{name}}',"{{description}}",'{{imageURL}}','{{id}}',"{{slected}}"]));
                     var totalFriends = sessionStorage.getItem("totalFriends");
                     totalFriends= parseInt(totalFriends, 10);
                     totalFriends++;
@@ -105,14 +99,103 @@
     }
     </script>
 
-       
+
+    <!-- This js script block will create the songJSON in session storage -->
     <script>
+        sessionStorage.tempItem = 0;  
+        var tempNum = sessionStorage.tempItem;
+        {{#each songs}}      
+        //count incase if totalSongs doesn't exist
+        tempNum = parseInt(tempNum, 10);
+        tempNum++;
+        sessionStorage.tempItem = tempNum;
+
+        sessionStorage.setItem('songJSON{{id}}', JSON.stringify(['{{name}}',"{{artist}}","{{album}}",'{{imageURL}}','{{id}}']));
+
+        {{/each}}
+    </script>
+    <script>
+        if(sessionStorage.getItem("totalSongs") === null || sessionStorage.getItem("tempItem") !== null){
+            console.log("setting total number of songs: " + sessionStorage.tempItem);
+            sessionStorage.totalSongs = sessionStorage.tempItem;
+            sessionStorage.tempItem = 0;
+        }
+    </script>
+
+
+
+
+    <!-- This js block will auto generate the queue and shuffle queue in session storage  -->
+    <script>
+        var totalSongs = 0;
+        if(sessionStorage.getItem("totalSongs") !== null){
+            totalSongs = sessionStorage.totalSongs;     //get total number of songs
+        }
+        totalSongs = parseInt(totalSongs, 10);          // get the int value of total songs
+
+        //set up the regular queue
+        var queue = [];
+        var sindex = 1;
+        for(var i = 0; i < 30; i++){
+            queue[i] = sindex;
+            sindex++;
+            if(sindex > totalSongs){                   //make sure songs in the queue doesn't go above total songs
+                sindex = 1;
+            }
+        }
+        sessionStorage.setItem("queue", JSON.stringify(queue));
+
+        var shufflequeue = [];
+
+        //get random number
+        var min=1; 
+        var max=totalSongs; 
+
+        for(var i = 0; i < 30; i++){
+            var random = Math.random() * (+max - +min) + +min;      //get random in range
+            random = parseInt(random, 10);   //turn random from double to int
+
+            var repeated = true;
+            while(repeated === true){
+                repeated = false;               //set no repeat
+                if(i > 1){                      //start checking after first element
+                    for(var check = i - 10; check < i; check++){         //check between the past 10 random elemnts
+                        if(check < 1){
+                            //skip
+                        } else {                                         //check between the past 10 random elements
+                            if(random === shufflequeue[check]){     //if random is equal to one of the past 10 elements
+                                //generate a new random number
+                                var random = Math.random() * (+max - +min) + +min;      //get random in range
+                                random = parseInt(random, 10);   //turn random from double to int
+                                repeat = true;                  //set repeat to true
+                            }
+                        }
+
+                    }
+                }
+            }
+
+            shufflequeue[i] = random;           //set the random song
+        }
+
+
+        sessionStorage.setItem("shufflequeue", JSON.stringify(shufflequeue));
+        sessionStorage.currentShuffleSong = 0;
+
+        console.log(sessionStorage.queue);
+        console.log(sessionStorage.shufflequeue);
+
+        console.log("tempItem" +sessionStorage.totalSongs);
+
+    </script>
+
+    <script> 
         sessionStorage.recountFriends ="true";
         sessionStorage.hostingSendButtonDisable = false;
-          if (typeof(Storage) !== "undefined") {
+        if (typeof(Storage) !== "undefined") {
             var storaged = sessionStorage.hello;
             console.log(storaged);
-          } else {
+        } else {
             console.log("Sorry, your browser does not support web storage...");
           }
     </script>

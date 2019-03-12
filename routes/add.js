@@ -4,7 +4,7 @@
  */
 
  var addLoc = require('../session.json');
- var songLoc = require('../songs.json');
+ var songLoc = require('../session.json');
 
  exports.addFunction = function(req, res){
     // var toAdd = window.sessionStorage.getItem(friends);
