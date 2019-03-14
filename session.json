@@ -47,14 +47,14 @@
     ], "friend": [{
             "name": "Jake From StateFarm",
             "description": "Only friend with a Navy ship named after them",
-            "imageURL": "/img/filler_profile.png",
+            "imageURL": "/img/jake.png",
             "id": 1,
             "slected": "0"
         },
         {
             "name": "Mark ZuckEZuck",
             "description": "Only friend with a Navy ship named after them",
-            "imageURL": "/img/filler_profile.png",
+            "imageURL": "/img/zucc.png",
             "id": 2,
             "slected": "0"
         },
